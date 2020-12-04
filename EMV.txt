@@ -1,0 +1,26 @@
+EMV:
+steps:
+1.initilization
+2.authentication
+3.authorization
+4.transaction
+5.Termination
+
+Initilization : Terminal selects the application on card and card asks the terminal for DOL data.
+then terminal asks card for its authentication abilities.card sends back AIP to terminal.
+
+Authentication: Terminal chooses the highest priority auth method obtained in AIP.available options are: SDA,DDA,CDA.
+the result of offline auth  will be set in TVR data object{ like checklist in terminal}
+
+Authorization: Now Terminal looks at CVM list that previosly read from DOL and decides which verification should choose for : txn,offline, online, signature.
+and terminal performs the verification and updates in TVR based on Results.
+
+Transaction: now Terminal put together all this info and sends then to issuer in "Bit55" , to do this, it generates : GEN-AC to card and provides all data
+depending on results in STEP:3. Terminal ask for ARQC to send Txn online.TC to approve offline  , AAC  to decline offline.
+card encrypts all data under issuers CAPK and sign it and send back it to terminal.
+If transaction mean to go online, ARQC will be put in DE55:9F26 which is non-refunable and proof geninue and legitimate chip card present for Txn
+
+
+Termination :  When the results are recieved from issuer,in some cases card wants some data to update its chip floor limit. so Terminal GEN AC2 to card
+along with ARPC,TC,AAC that are recieved from issuer . and EMV session gets shutdown
+
