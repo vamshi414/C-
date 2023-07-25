@@ -1,0 +1,49 @@
+========================== Linux/OS - Links ============================
+http://www.codeproject.com/Tips/649491/Enable-Compatibility-mode-in-IE
+http://www.cprogramming.com/tutorial/makefiles.html
+http://www.tutorialspoint.com/operating_system/index.htm
+http://www.di.uevora.pt/~lmr/syscalls.html
+http://www.gnu.org/software/libc/manual/html_node/System-Calls.html
+http://codewiki.wikidot.com/system:page-tags/tag/system-calls#pages
+http://www.academia.edu/1737964/Object_Oriented_Programming_2_Mark_Questions
+http://developeriq.in/articles/2012/may/30/interprocess-communicationipc-programs-in-c-in-ubu/
+http://www.cs.rit.edu/~cslab/vi.html
+https://www.cs.colostate.edu/helpdocs/vi.html
+http://linuxcommand.org/lts0060.php
+http://www.tldp.org/LDP/intro-linux/html/chap_05.html
+
+=========================== Cpp - Links ================================
+http://www.tutorialspoint.com/cplusplus/cpp_multithreading.htm
+https://www.tutorialcup.com/cplusplus/multithreading.htm
+
+============================ C - Links =================================
+http://fresh2refresh.com/c/c-passing-struct-to-function/
+http://www.programiz.com/c-programming/c-structure-function
+http://www.c4learn.com/data-structure/c-program-to-create-singly-linked-list/
+http://www.sanfoundry.com/c-programming-examples-linked-list/
+
+============================= Pthreads =================================
+http://www.questionscompiled.com/pthreads.html
+https://computing.llnl.gov/tutorials/pthreads/
+http://softpixel.com/~cwright/programming/threads/threads.c.php
+http://www.cs.kent.edu/~ruttan/sysprog/lectures/multi-thread/multi-thread.html#definition
+
+=============================== Sockets ================================
+http://www.cs.dartmouth.edu/~campbell/cs50/socketprogramming.html
+http://www.martinbroadhurst.com/server-examples.html#threaded-server
+
+======================== Compiling C++ programs ========================
+c++ thread3.cpp -lpthread	(i.e. -lpthread for threads)
+
+========================== Tortoise SVN links ==========================
+https://mybravenewworld.wordpress.com/2007/11/13/subversion-how-to-revert-a-bad-commit/
+http://tortoisesvn.net/docs/nightly/TortoiseSVN_en/tsvn-howto-rollback.html
+
+============================ PL/SQL - Link =============================
+http://www.tutorialspoint.com/plsql/
+
+============================Hashing Macro===============================
+http://www.mrexcel.com/forum/excel-questions/468698-sha256-hash-function.html
+
+======================Vendor Master Card App============================
+https://vendor.apps.mastercard.com/vpn/index_sv.html
