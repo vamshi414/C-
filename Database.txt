@@ -1,0 +1,35 @@
+To resolve this issue, you'll need to do the following:
+
+Add a File to the Filegroup:
+
+Use the ALTER DATABASE statement to add a file to the filegroup. For example:
+
+sql
+Copy code
+ALTER DATABASE YourDatabase
+ADD FILE (NAME = 'YourFileName', FILENAME = 'Path\To\Your\File\File.ndf')
+TO FILEGROUP PNBD_FL202312;
+Replace "YourDatabase" with the name of your database, "YourFileName" with the desired name for the file, and "Path\To\Your\File\File.ndf" with the actual path to your file.
+
+Ensure the Filegroup is Used for Tables and Indexes:
+
+Once you've added a file to the filegroup, you can create or move tables and indexes to that filegroup. When creating or modifying tables and indexes, use the ON clause to specify the filegroup. For example:
+
+sql
+Copy code
+CREATE TABLE YourTable
+(
+    Column1 INT,
+    Column2 VARCHAR(50)
+)
+ON PNBD_FL202312;
+Modify existing tables or indexes with the MOVE TO clause:
+
+sql
+Copy code
+ALTER INDEX YourIndex
+ON YourTable
+REBUILD
+WITH (DROP_EXISTING = ON)
+ON PNBD_FL202312;
+Make sure to adjust the statements according to your database schema and requirements. After these steps, you should be able to populate tables, indexes, and other objects on the specified filegroup.
