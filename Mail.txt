@@ -25,3 +25,39 @@ These are not executed properly and didn’t tracked any errors at time of execu
 
 The Possible Solutions are:  We can create the Filegroup for the Table which we facing Insert issue if this doesn’t work we need to freshly setup the Database again  in 226 Machine.
 
+
+
+
+
+
+Hi Jon,
+
+I hope this message finds you well.
+
+We've identified an issue related to the "PNBD_FL202312" filegroup in the database. Currently, there are no files assigned to this filegroup. Consequently, tables, indexes, text columns, ntext columns, and image columns cannot be populated until a file is added.
+
+I've successfully reproduced the issue in my local environment.
+
+Upon investigating, we discovered that during the setup of the DN Server Database, certain DDL executions didn't run correctly. The scripts in question are as follows:
+
+bash
+Copy code
+C:\FIS\Server\Setup>osql -S BLR1-LT7VWYY33 -i ADDDBACC.sql -o ADDDBACC.stdout -e -m -E
+C:\FIS\Server\Setup>osql -S BLR1-LT7VWYY33 -i CRTBLSPC.sql -o CRTBLSPC.stdout -e -m -E
+C:\FIS\Server\Setup>osql -S BLR1-LT7VWYY33 -i COBUILD.sql -o COBUILD.stdout -e -m -E
+C:\FIS\Server\Setup>osql -S BLR1-LT7VWYY33 -i CRBUILD.sql -o CRBUILD.stdout -e -m -E
+C:\FIS\Server\Setup>osql -S BLR1-LT7VWYY33 -i ADDDBACD.sql -o ADDDBACD.stdout -e -m -E
+C:\FIS\Server\Setup>osql -S BLR1-LT7VWYY33 -i CRTBLSPD.sql -o CRTBLSPD.stdout -e -m -E
+C:\FIS\Server\Setup>osql -S BLR1-LT7VWYY33 -i DRBUILD.sql -o DRBUILD.stdout -e -m -E
+Unfortunately, we didn't notice any errors during the execution of these scripts.
+
+To address the issue, we propose two possible solutions:
+
+Create the filegroup for the problematic table. If this doesn't resolve the insertion issue, we may need to perform a fresh setup of the database on the 226 machine.
+Please let me know if you have any insights or suggestions on how to proceed.
+
+Best regards,
+
+[Your Name]
+[Your Position]
+[Your Contact Information]
