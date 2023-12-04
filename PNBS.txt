@@ -1,4 +1,14 @@
 SELECT 
+    f.name AS FileGroupName,
+    f.type_desc AS FileType,
+    mf.physical_name AS FilePath
+FROM sys.filegroups AS f
+LEFT JOIN sys.master_files AS mf ON f.data_space_id = mf.data_space_id
+WHERE f.name = 'PNBD_FL202311_X';
+
+
+
+SELECT 
     name AS FileName,
     type_desc AS FileType,
     physical_name AS FilePath
