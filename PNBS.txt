@@ -35,3 +35,30 @@ SELECT
     physical_name AS FilePath
 FROM sys.master_files
 WHERE data_space_id = FILEGROUP_ID('PNBD_FL202311_X');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SELECT 
+    fg.name AS FileGroupName,
+    f.name AS FileName,
+    f.type_desc AS FileType,
+    f.physical_name AS FilePath
+FROM sys.filegroups AS fg
+LEFT JOIN sys.master_files AS f ON fg.data_space_id = f.data_space_id;
