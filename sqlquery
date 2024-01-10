@@ -1,0 +1,2 @@
+ strDocSuffix = CaseDocumentSegment::instance()->getDOC_PATH().substr(
+            CaseDocumentSegment::instance()->getDOC_PATH().find_last_of(".")+1);
