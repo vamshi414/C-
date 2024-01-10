@@ -1,2 +1,5 @@
  strDocSuffix = CaseDocumentSegment::instance()->getDOC_PATH().substr(
             CaseDocumentSegment::instance()->getDOC_PATH().find_last_of(".")+1);
+
+
+\\MKEDDH01\DNDocs\VNT\OUT\202301\CUSA20230104000001REQ_DOC001DO1045KZLMB.TIF
