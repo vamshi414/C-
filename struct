@@ -83,7 +83,8 @@ struct segExceptionDetail
    char sExcpNtwk[3];                // 1085
 };   
 
-
+ char szDATA_BUFFER[sizeof(struct segExceptionDetail)];
+struct segExceptionDetail* p = (struct segExceptionDetail*)szDATA_BUFFER;
 
 if (p->IssSettleExcpAmtSign == ' ')
    {
