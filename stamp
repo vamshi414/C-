@@ -1,0 +1,1 @@
+string strTSTAMP_LOCAL = "20" + string(p->sLocalDate+4,2) + string(p->sLocalDate,4) + string(p->sLocalTime,6);
