@@ -1,0 +1,94 @@
+struct segExceptionDetail
+{
+   char sMsgType[3];                 // 0000
+   char sBatchSeqNo[5];              // 0003
+   char sVersion[2];                 // 0008
+   char cNetwork;                    // 0010 
+   char sExceptionType[4];           // 0011
+   char cIssAcqFlag;                 // 0015      
+   char sTraceNumber[12];            // 0016
+   char sPan[19];                    // 0028
+   char cIssCred;                    // 0047
+   char sAccount1[28];               // 0048
+   char sSwitchTermId[8];            // 0076
+   char sAcqTermId[8];               // 0084
+   char sLocalDate[6];               // 0092
+   char sLocalTime[6];               // 0098
+   char sLocalSeq[12];               // 0104
+   char sActualAmt[13];              // 0116
+   char sActualSurch[9];             // 0129
+   char sReasonCode[2];              // 0138
+   char sRespCode[2];                // 0140
+   char sReqContact[35];             // 0142
+   char sReqEmail[50];               // 0177
+   char sReqPhone[10];               // 0227
+   char sReqPhoneExt[4];             // 0237
+   char sReqFax[10];                 // 0241
+   char sRecContact[35];             // 0251
+   char sRecEmail[50];               // 0286
+   char sRecPhone[10];               // 0336
+   char sRecPhoneExt[4];             // 0346
+   char sRecFax[10];                 // 0350
+   char sText[240];                  // 0360
+   char sExcpDocFileName[36];        // 0600
+   char sDocTraceNum[18];            // 0636
+   char sTranAmt[13];                // 0654
+   char sTranSurch[9];               // 0667
+   char sTranCurr[3];                // 0676
+   char sAcqSettleAmt[13];           // 0679
+   char sAcqSettleSurch[9];          // 0692
+   char sAcqSettleCurr[3];           // 0701
+   char sIssSettleAmt[13];           // 0704
+   char sIssSettleSurch[9];          // 0717
+   char sIssSettleICF[9];            // 0726
+   char sIssSettleCurr[3];           // 0735
+   char sTranExcpAmt[13];            // 0738
+   char sTranExcpSurch[9];           // 0751
+   char sAcqSettleExcpAmt[13];       // 0760
+   char sAcqSettleExcptSurch[9];     // 0773
+   char sIssSettleExcpAmt[13];       // 0782
+   char sIssSettleExcpSurch[9];      // 0795
+   char sIssSettleExcpICF[9];        // 0804
+   char sTranType[3];                // 0813
+   char sDateExpire[6];              // 0816
+   char sIssNetwork[3];              // 0822
+   char sAcqNetwrok[3];              // 0825
+   char sSwitchDate[6];              // 0828
+   char sSwitchTime[6];              // 0834
+   char sSwitchSeq[6];               // 0840
+   char sTermClass[2];               // 0846
+   char sMerchInstName[25];          // 0848
+   char sTermAddr[28];               // 0873
+   char sTermCity[27];               // 0901
+   char sTermState[3];               // 0928
+   char sTermCntry[3];               // 0931
+   char sMcc[4];                     // 0934
+   char cPanEntry;                   // 0938
+   char cPinEntry;                   // 0939
+   char sPosCC[11];                  // 0940
+   char sTermCap[3];                 // 0951
+   char cOnlineRetInd;               // 0954
+   char cFiller;                     // 0955
+   char cSvcCode;                    // 0956
+   char sCardAcceptIdCode[15];       // 0957
+   char sReqFI[9];                   // 0972
+   char sReqFIName[35];              // 0981
+   char sRecFI[9];                   // 1016
+   char sRecFIName[35];              // 1025
+   char sCreateDate[6];              // 1060
+   char sCreateTime[6];              // 1066
+   char cStatus;                     // 1072
+   char sUpdtDate[6];                // 1073
+   char sUpdtTime[6];                // 1079
+   char sExcpNtwk[3];                // 1085
+};   
+
+
+
+if (p->IssSettleExcpAmtSign == ' ')
+   {
+      genericexception::CaseManifest::instance()->add("CardholderAction", "C");
+      genericexception::CaseManifest::instance()->add("AdjustmentAmountType", "CR");
+   }
+   else
+      genericexception::CaseManifest::instance()->add("CardholderAction", "D");
