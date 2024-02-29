@@ -1,0 +1,3 @@
+o	Update XRFINT Interface
+	For situations where you need totals by the Institution perspective (not just Issuer or Acquirer) such as the DTR, have a new XRFINT tag that returns totals when the IssuerInstitution or the AcquirerInstitution is a certain value.  This improves the performance as the correct totals are returned.  Currently, the DTR returns totals for all institutions and keeps them if either the Institution or the Acquirer is a certain value.
+	Tags are defined in TC58 (Totals Version 1) and TC66 (Totals Version 2).  The change should be made for both totals versions to keep them consistent.
