@@ -1,0 +1,160 @@
+&dot./ ADD NAME=RXRFINT
+&FinancialTotalsRsp
+<FinancialTotalsRsp>
+  <RspHdr>
+    <RspHdrVer>2.0.0</RspHdrVer>
+    <RtnCde>~X.RtnCde.</RtnCde>
+    <MsgUuid>~X.MsgUuid.</MsgUuid>
+    <ActyId>~X.ActyId.</ActyId>
+    <Lcl>en-US</Lcl>
++MsgLst
+  </RspHdr>
+  <FinancialTotalsOso>
+   <Totals>
++Total
+   </Totals>
+  </FinancialTotalsOso>
+</FinancialTotalsRsp>
+&MsgLst
+<MsgLst>
++Msg
+</MsgLst>
+&Msg
+<Msg>
+<MsgCde>~X.MsgCde.</MsgCde>
+<Typ>~X.Typ.</Typ>
+<MsgLcl>en-US</MsgLcl>
+<Txt>~X.Txt.</Txt>
+</Msg>
+&Total
+<Total>
++AcquirerAmount
++AcquirerBusiness
++AcquirerDate
++AcquirerImpact
++AcquirerInstitution
++AcquirerNetwork
++AcquirerPrivateData
++AcquirerProcessor
++AcquirerTerminal
++ActionCode
++AuthorizedBy
++CardholderBillingAmount
++Clerk
++DateSettlement
++FinancialType
++FunctionCode
++IssuerAmount
++IssuerDate
++IssuerImpact
++IssuerInstitution
++IssuerNetwork
++IssuerProcessor
++NetworkProgram
++Payee
++ReconciliationAmount
++ReversedBy
++TotalType
++TransactionAmount
++TransactionClass
++TransactionCount
++TransactionDisposition
++TransactionType
+</Total>
+&AcquirerAmount
+<AcquirerAmount currency="~T.CUR_RECON_ACQ.">~T.AMT_RECON_ACQ.</AcquirerAmount>
+<AcquirerAmount currency="~F.CUR_RECON_ACQ.">~F.AMT_RECON_ACQ.</AcquirerAmount>
+&AcquirerBusiness
+<AcquirerBusiness>~T.ENTITY_ID AM_ENTITY_ID.</AcquirerBusiness>
+<AcquirerBusiness>~F.RPT_LVL_ID_B.</AcquirerBusiness>
+&AcquirerDate
+<AcquirerDate>~T.DATE_RECON AP_DATE_RECON.</AcquirerDate>
+<AcquirerDate>~F.DATE_RECON_ACQ.</AcquirerDate>
+&AcquirerImpact
+<AcquirerImpact>~T.IMPACT_TO_ACQ.</AcquirerImpact>
+<AcquirerImpact>~F.IMPACT_TO_ACQ.</AcquirerImpact>
+&AcquirerInstitution
+<AcquirerInstitution>~T.ENTITY_ID AI_ENTITY_ID.</AcquirerInstitution>
+<AcquirerInstitution>~F.INST_ID_RECN_ACQ_B.</AcquirerInstitution>
+&AcquirerNetwork
+<AcquirerNetwork>~T.NET_ID_ACQ.</AcquirerNetwork>
+<AcquirerNetwork>~F.NET_ID_ACQ.</AcquirerNetwork>
+&AcquirerPrivateData
+<AcquirerPrivateData>~F.DATA_PRIV_ACQ.</AcquirerPrivateData>
+&AcquirerProcessor
+<AcquirerProcessor>~T.ENTITY_ID AP_ENTITY_ID.</AcquirerProcessor>
+<AcquirerProcessor>~F.PROC_ID_ACQ_B.</AcquirerProcessor>
+&AcquirerTerminal
+<AcquirerTerminal>~T.ENTITY_ID AT_ENTITY_ID.</AcquirerTerminal>
+<AcquirerTerminal>~F.NET_TERM_ID.</AcquirerTerminal>
+&ActionCode
+<ActionCode>~T.ACT_CODE.</ActionCode>
+<ActionCode>~F.ACT_CODE.</ActionCode>
+&AuthorizedBy
+<AuthorizedBy>~T.AUTH_BY.</AuthorizedBy>
+<AuthorizedBy>~F.AUTH_BY.</AuthorizedBy>
+&CardholderBillingAmount
+<CardholderBillingAmount currency="~T.CUR_CARD_BILL.">~T.AMT_CARD_BILL.</Cardho\
+lderBillingAmount>
+<CardholderBillingAmount currency="~F.CUR_CARD_BILL.">~F.AMT_CARD_BILL.</Cardho\
+lderBillingAmount>
+&Clerk
+<Clerk>~F.CLERK_ID.</Clerk>
+&DateSettlement
+<DateSettlement>~T.DATE_RECON.</DateSettlement>
+<DateSettlement>~F.DATE_RECON_NET.</DateSettlement>
+&FinancialType
+<FinancialType>~T.FIN_TYPE.</FinancialType>
+<FinancialType>~F.FIN_TYPE.</FinancialType>
+&FunctionCode
+<FunctionCode>~T.FUNC_CODE.</FunctionCode>
+<FunctionCode>~F.FUNC_CODE.</FunctionCode>
+&IssuerAmount
+<IssuerAmount currency="~T.CUR_RECON_ISS.">~T.AMT_RECON_ISS.</IssuerAmount>
+<IssuerAmount currency="~F.CUR_RECON_ISS.">~F.AMT_RECON_ISS.</IssuerAmount>
+&IssuerDate
+<IssuerDate>~T.DATE_RECON IP_DATE_RECON.</IssuerDate>
+<IssuerDate>~F.DATE_RECON_ISS.</IssuerDate>
+&IssuerImpact
+<IssuerImpact>~T.IMPACT_TO_ISS.</IssuerImpact>
+<IssuerImpact>~F.IMPACT_TO_ISS.</IssuerImpact>
+&IssuerInstitution
+<IssuerInstitution>~T.ENTITY_ID II_ENTITY_ID.</IssuerInstitution>
+<IssuerInstitution>~F.INST_ID_RECN_ISS_B.</IssuerInstitution>
+&IssuerNetwork
+<IssuerNetwork>~T.NET_ID_ISS.</IssuerNetwork>
+<IssuerNetwork>~F.NET_ID_ISS.</IssuerNetwork>
+&IssuerProcessor
+<IssuerProcessor>~T.ENTITY_ID IP_ENTITY_ID.</IssuerProcessor>
+<IssuerProcessor>~F.PROC_ID_ISS_B.</IssuerProcessor>
+&NetworkProgram
+<NetworkProgram>~T.NETWORK_PROGRAM.</NetworkProgram>
+<NetworkProgram>~F.NETWORK_PROGRAM.</NetworkProgram>
+&Payee
+<Payee>~F.PAYEE.</Payee>
+&ReconciliationAmount
+<ReconciliationAmount currency="~T.CUR_RECON_NET.">~T.AMT_RECON_NET.</Reconcili\
+ationAmount>
+<ReconciliationAmount currency="~F.CUR_RECON_NET.">~F.AMT_RECON_NET.</Reconcili\
+ationAmount>
+&ReversedBy
+<ReversedBy>~T.REV_BY.</ReversedBy>
+<ReversedBy>~F.REV_BY.</ReversedBy>
+&TotalType
+<TotalType>~T.TOTAL_TYPE.</TotalType>
+&TransactionAmount
+<TransactionAmount currency="~T.CUR_TRAN.">~T.AMT_TRAN.</TransactionAmount>
+<TransactionAmount currency="~F.CUR_TRAN.">~F.AMT_TRAN.</TransactionAmount>
+&TransactionClass
+<TransactionClass>~T.TRAN_CLASS.</TransactionClass>
+<TransactionClass>~F.TRAN_CLASS.</TransactionClass>
+&TransactionCount
+<TransactionCount>~T.TRAN_COUNT.</TransactionCount>
+<TransactionCount>~F.ROW_COUNT.</TransactionCount>
+<TransactionCount>~F.*.</TransactionCount>
+&TransactionDisposition
+<TransactionDisposition>~T.TRAN_DISPOSITION.</TransactionDisposition>
+<TransactionDisposition>~F.TRAN_DISPOSITION.</TransactionDisposition>
+&TransactionType
+<TransactionType>~T.TRAN_TYPE_ID.</TransactionType>
+<TransactionType>~F.TRAN_TYPE_ID.</TransactionType>
