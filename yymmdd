@@ -1,0 +1,3 @@
+   m_strDocFile.append(Clock::instance()->getYYYYMMDDHHMMSS(),0,8);
+   m_strDocFile.append(".T");
+   m_strDocFile.append(Clock::instance()->getYYYYMMDDHHMMSS(),8,6);
