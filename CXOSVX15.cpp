@@ -111,7 +111,7 @@ string NYCEUploadFile::buildFile (char& cStatus, const string& strFilename)
    }
    hPendingFile.getBaseName(strTempFileName, true);
    m_strBatchBaseName = strTempFileName;
-   m_strDocFile.append(Clock::instance()->getYYYYMMDDHHMMSS(), 0, 8);
+   m_strDocFile.append(Clock::instance()->getYYYYMMDDHHMMSS(), 2, 6);
    m_strDocFile.append(".TB4");
    m_strBatchOrigName = m_strDocFile;
    m_strDocFile.append(".zip");
@@ -147,7 +147,7 @@ string NYCEUploadFile::buildFile (char& cStatus, const string& strFilename)
       return "Unable to add files to final zip package";
 
    //determine the owner of the files based on the last 4 character extension
-   string strOwner("JHNRY");
+   string strOwner("");
 
    string strFTPDatasetName;
    if (finalizeFiles(strOwner))
