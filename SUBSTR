@@ -1,0 +1,7 @@
+      memcpy(pBuffer->sSwitchTermId, CaseNyceSegment::instance()->getNYCE_TERM_ID().data(), min(sizeof(pBuffer->sSwitchTermId), CaseNyceSegment::instance()->getNYCE_TERM_ID().length()));
+      memcpy(pBuffer->sAcqTermId, CaseSegment::instance()->getCARD_ACPT_TERM_ID().data(), min(sizeof(pBuffer->sAcqTermId), CaseSegment::instance()->getCARD_ACPT_TERM_ID().length()));
+
+
+
+      memcpy(pBuffer->sSwitchTermId,CaseNyceSegment::instance()->getNYCE_TERM_ID().data(),CaseNyceSegment::instance()->getNYCE_TERM_ID().length());
+      memcpy(pBuffer->sAcqTermId,CaseSegment::instance()->getCARD_ACPT_TERM_ID().data(),CaseSegment::instance()->getCARD_ACPT_TERM_ID().length());
