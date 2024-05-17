@@ -1,0 +1,52 @@
+Tokenisation
+Created by Wilson, Darren on Aug 29, 2019
+ 
+To enable DN tokenisation of PANs, is any specific hardware or software required for the encryption of the PAN-token reference table? 
+Nothing additional is needed.  
+ 
+When encrypting/decrypting the tokenization table, we can optionally use the crypto cards on the mainframe? If so, how is this controlled?  
+Actually at this time, DN does not allow use of the crypto cards for AES encryption/decryption.
+There is not much benefit anyway because the encryption is done once a month and the decryption is done once at task start up and does not have any impact on the running system after start up.
+
+  
+
+When encrypting the PANs in the outgoing files, what method would the receiver use to decrypt them? I assume that we would need to do a key exchange with a third party to allow them to decrypt them. Do we provide any tools to help with this? 
+
+We encrypt the outgoing files using 3DES 2 Key encryption.  Each record in the file will contain a header that identifies the key used to encrypt that record.  The header also specifies if the entire record is encrypted or just a part of the record is encrypted. 
+
+ The header record is documented in the Data Distributor User’s Guide.  This is the same specification used by DN. 
+
+So the receiver is required to write custom code to process the header, locate the appropriate key, perform decryption on the entire record or partial record as described in the header. 
+
+We do need to exchange keys and DN does provide tools for generating keys and exporting keys.   The method used is to send a transport key or Key Encrypting Key (KEK) to the receiver in 3 parts which must be assembled into a single key.  Once the receiver has the transport key assembled, then data keys can be exchanged as needed.  The data encrypting keys are encrypted with the transport key before being sent to the receiver. 
+
+ 
+
+ 
+
+Any other recommendations you can make for setting up tokenisation?
+
+Best to setup from the start to avoid process that will update all existing transactions when tokenization is enabled.
+
+  
+
+If tokenisation is active, will the TAF output file contain tokenized PAN’s?  
+
+In TAF, PAN will be in the clear.
+
+The DX_DATA records are tokenized and the File Distributor task untokenizes them.
+
+ 
+
+Overview of where we can use encryption/tokenization in DN:
+
+DataDistributor transmission – Encrypted under SSL. 
+Note: SSL on z/OS is configured using the gskkyman tool.  OpenSSL is not used for this.
+DataDistributor can optionally encrypt the data when the consumer writes to the queue table using either a crypto card or OpenSSL .
+DataNavigator will need to decrypt the data read from the queue table – Again using either a crypto card or OpenSSL.
+DN will then store the PAN in tokenization table (if not present).
+DN tokenizes the PAN and stores the tokenized version in the database.  The decrypting of tokens is done at start up using OpenSSL.  The tokens are stored in memory from then on and do not require further crypto services.
+DN Web interface will be passed unencrypted (but usually masked) PAN data from the DN “CI” service. The web interface doesn’t actually need access to OpenSSL.  The web uses SSL communication between the web client and the web server.  OpenSSL is not used for that. 
+Internally, the web application uses other tools for encryption.   Tim Cincotta could tell you exactly which cryptographic tools they use but I’m pretty sure it is not OpenSSL.
+Outgoing files from the DN server can optionally have their PANs encrypted – using OpenSSL or crypto card.
+  
