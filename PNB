@@ -1,0 +1,5 @@
+Hi James,
+
+In PNB UAT environment Recently upgraded DN version to : V03.3B.R001 U23449. While running LM task we seen there is no tables {DX_DATA and FIN_XX related tables} created.Checked the LM trace the script which is running from the template : CXOXDRCX.txt executed manually in there SSMS env able to create the tables and NDF related files in DN Directory.
+
+Can you assist on SSPI contest issue while running LM task.
