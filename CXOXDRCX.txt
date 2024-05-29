@@ -1,0 +1,68 @@
+-- ./ ADD NAME=DN&custabbr.CRDX
+-- CXOXDRCX.txt DDLSCRPT
+
+USE &dbname.
+go
+
+if not exists (SELECT * FROM sys.filegroups WHERE NAME = '&customer._DX&CYYMMDD.')
+ALTER DATABASE &dbname.
+  ADD FILEGROUP &customer._DX&CYYMMDD.
+go
+
+if not exists (SELECT * FROM sys.database_files WHERE NAME = '&customer._DX&CYYMMDD._1')
+ALTER DATABASE &dbname.
+  ADD FILE
+    ( NAME = '&customer._DX&CYYMMDD._1',
+    FILENAME = '&dbdisk1.\&dbfolder.\&dbname.\&customer.\&customer._DX&CYYMMDD._1.ndf',
+    SIZE = &dx.MB,
+    FILEGROWTH = 5% )
+  TO FILEGROUP &customer._DX&CYYMMDD.
+go
+
+if not exists (SELECT * FROM sys.filegroups WHERE NAME = '&customer._DX&CYYMMDD._X')
+ALTER DATABASE &dbname.
+  ADD FILEGROUP &customer._DX&CYYMMDD._X
+go
+
+if not exists (SELECT * FROM sys.database_files WHERE NAME = '&customer._DX&CYYMMDD._X_1')
+ALTER DATABASE &dbname.
+  ADD FILE
+    ( NAME = '&customer._DX&CYYMMDD._X_1',
+    FILENAME = '&dbdisk2.\&dbfolder.\&dbname.\&customer.\&customer._DX&CYYMMDD._X_1.ndf',
+    SIZE = &dxx.MB,
+    FILEGROWTH = 5% )
+  TO FILEGROUP &customer._DX&CYYMMDD._X
+go
+
+CREATE TABLE &custqual..DX_DATA_&CYYMMDD.
+(
+       DX_FILE_ID           INTEGER NOT NULL,
+       SEQ_NO               INTEGER NOT NULL,
+       ALT_REC_KEY          CHAR(32) NOT NULL,
+       DATA_BUFFER          VARCHAR(3800) NULL,
+  CONSTRAINT X0DX_DATA_&CYYMMDD.
+    PRIMARY KEY NONCLUSTERED
+      (DX_FILE_ID,SEQ_NO)
+  ON "&customer._DX&CYYMMDD._X"
+)
+  ON "&customer._DX&CYYMMDD."
+go
+
+CREATE INDEX X1DX_DATA_&CYYMMDD.
+  ON &custqual..DX_DATA_&CYYMMDD.
+(
+       ALT_REC_KEY          ASC,
+       DX_FILE_ID           ASC
+)
+  ON "&customer._DX&CYYMMDD._X"
+go
+
+GRANT SELECT ON &custqual..DX_DATA_&CYYMMDD.
+  TO DN_SELECT_&custqual.
+go
+
+GRANT INSERT, SELECT, UPDATE, DELETE ON &custqual..DX_DATA_&CYYMMDD.
+  TO DN_CRUD_&custqual.
+go
+
+
