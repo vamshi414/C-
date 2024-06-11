@@ -1,0 +1,5 @@
+Thanks! Yeah, I mean even under the chargeback section for documentation it says ‘none required by law’. So can we ask the person you’re working with at NYCE for the certification the following question? And you can just add me to the email chain. 
+
+With regards to the Fraud file for documentation, is this in regards to when a chargeback is submitted for say reason code ‘UF’ or, a fraud record (fraud reporting) is being submitted for ‘FI, F2, F3’?  If the latter can they provide the documentation where it details the requirements for fraud reporting as there’s nothing in the Exception Item Processing Policies. 
+
+Also, can you confirm for me again, since I know we were talking about this change for software, so for them, will we be sending out the actual chargebacks/adjustments/etc. in the batch file too? Because it wouldn’t make sense to me if we were only going to send the documentation in the file, but the actual chargeback was manual. 
