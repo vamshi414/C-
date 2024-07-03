@@ -12,3 +12,33 @@ the fields for amounts are edited numeric and signed
  positive amounts will contain a leading space(if space filled) or zero (if zero-filled)
  in the first position.for negative amounts the leading space or zero will be replaced with a hyphen
  
+
+
+string CurrencyCode::formatAmount (double dAmount, const string& strCURRENCY_CODE, int iSize, bool bLeftJustified, bool bPrefixZeros, bool bCurrencySymbol)
+{
+  //## begin database::CurrencyCode::formatAmount%451D19B5035B.body preserve=yes
+   string strCUR_SYMBOL;
+   short nDECIMAL_PLACES = 2;
+   getCurrencyDetails (strCURRENCY_CODE,strCUR_SYMBOL,nDECIMAL_PLACES);
+   int iPos = 0;
+   char szFormat[2*PERCENTD+2];
+   char szFormattedAmount[23];
+   if (bCurrencySymbol)
+   {
+      iPos = (int)strCUR_SYMBOL.length();
+      memcpy_s(szFormat,sizeof(szFormat),strCUR_SYMBOL.data(),iPos);
+   }
+   if(iPos < sizeof(szFormat))
+      szFormat[iPos++] = '%';
+   if (bLeftJustified)
+      if(iPos < sizeof(szFormat))
+         szFormat[iPos++] = '-';
+   if (bPrefixZeros)
+      if(iPos < sizeof(szFormat))
+         szFormat[iPos++] = '0';
+   if(iPos < sizeof(szFormat))
+      snprintf(szFormat+iPos,sizeof(szFormat)-iPos,"%d.%df",iSize,nDECIMAL_PLACES);
+   snprintf(szFormattedAmount,sizeof(szFormattedAmount),szFormat,dAmount/pow((double)10,nDECIMAL_PLACES));
+   return string(szFormattedAmount);
+  //## end database::CurrencyCode::formatAmount%451D19B5035B.body
+}
