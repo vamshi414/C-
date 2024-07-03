@@ -8,3 +8,7 @@ the fields for amounts are edited numeric and signed
    
  -> the sign is a leading hyphen for a negative amount
  -> the sign is a leading space for a positive amount
+
+ positive amounts will contain a leading space(if space filled) or zero (if zero-filled)
+ in the first position.for negative amounts the leading space or zero will be replaced with a hyphen
+ 
