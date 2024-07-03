@@ -1,0 +1,10 @@
+the fields for amounts are edited numeric and signed
+
+ -> They are right justified, space or 0 filled and include a decimal point
+ -> the example formats shows 2 decimal positions, which applies to most
+   currencies,place the decimal point in the appropriate place for the
+   currency involved. Currencies with no decimal positions should not include
+   a decimal point
+   
+ -> the sign is a leading hyphen for a negative amount
+ -> the sign is a leading space for a positive amount
