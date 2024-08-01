@@ -1,0 +1,9 @@
+Two sum   : Hash table for efficient lookup
+Best time to buy and sell stock :  Track minimum price and maximum profit
+product of array except self  : left and right product arrays
+maximum sub array : Kadane algo
+find minimum in rotated sorted array  : modified binary search
+search in rotated sorted array : two pass binary search
+subarracy sum equals K : cummulative sum with hash map
+merged sorted array  : start from end, compare and place
+find all numbers disappeared in an array : In-place array manipulation
