@@ -20,7 +20,6 @@
 
 //## begin module%55BF7B800027.includes preserve=yes
 #include "CXODNE00.hpp"
-#include "CXODRU28.hpp"
 //## end module%55BF7B800027.includes
 
 #ifndef CXOSIF16_h
@@ -118,28 +117,28 @@ NYCEExport::NYCEExport()
     while(IF::Extract::instance()->getRecord(i++,strRecord))
     {
        if(strRecord.length() > 16
-          & strRecord.substr(0,16) == "DSPEC   NYCQUAL ")
+          && strRecord.substr(0,16) == "DSPEC   NYCQUAL ")
        {
           if(Buffer::parse(strRecord," ",hTokens) > 4)
              m_hCustomer.insert(map<string,pair<string,string>,less<string> >::value_type(hTokens[2],make_pair(hTokens[3],hTokens[4])));
        }
        if(strRecord.length() >16
-          & strRecord.substr(0,16) == "DSPEC   NYCLOGN1")
+          && strRecord.substr(0,16) == "DSPEC   NYCLOGN1")
           m_strLOGONID1 = strRecord.substr(16,8);
        if(strRecord.length() >16
-          & strRecord.substr(0,16) == "DSPEC   NYCLOGN2")
+          && strRecord.substr(0,16) == "DSPEC   NYCLOGN2")
           m_strLOGONID2 = strRecord.substr(16,8);
        if(strRecord.length() >16
-          & strRecord.substr(0,16) == "DSPEC   NYCRMTID")
+          && strRecord.substr(0,16) == "DSPEC   NYCRMTID")
           m_strREMOTEID = strRecord.substr(16,8);
        if(strRecord.length() >16
-          & strRecord.substr(0,16) == "DSPEC   BATCHID ")
+          && strRecord.substr(0,16) == "DSPEC   BATCHID ")
           m_strBATCHID = strRecord.substr(16,3);
        if(strRecord.length() >16
-          & strRecord.substr(0,16) == "DSPEC   INSTID  ")
+          && strRecord.substr(0,16) == "DSPEC   INSTID  ")
           m_strINSTID= strRecord.substr(16,11);
     }
-    for(int i=0;i<=6;i++)
+    for(i=0;i<=6;i++)
        m_lEXCEPTIONCOUNT[i]=0;
   //## end nyceexception::NYCEExport::NYCEExport%55BF7B300314_const.body
 }
@@ -181,7 +180,7 @@ void NYCEExport::processExports ()
 {
   //## begin nyceexception::NYCEExport::processExports%55C0AE5A02EE.body preserve=yes
    m_strPROCESSDATE = getDATE_RECON() + "23595999";
-   string StartDate = "0000000000000000";
+   const string StartDate = "0000000000000000";
    m_hQuery.reset();
    m_hQuery.attach(this);
    m_hQuery.bind("EMS_CASE_CONTEXT","CASE_ID",Column::LONG,&m_iCASE_ID);
@@ -249,9 +248,9 @@ void NYCEExport::update (Subject* pSubject)
          Console::display("ST205");
          return;
    }
-   struct segExceptionDetail* pBuffer = (struct segExceptionDetail*)(char*)getDATA_BUFFER();
-   memset(pBuffer,' ',sizeof(struct segExceptionDetail));
-   //m_siSEQ_NO++;
+   segExceptionDetail* pBuffer = (struct segExceptionDetail*)getDATA_BUFFER();
+   memset(pBuffer,' ',sizeof(segExceptionDetail));
+   m_siSEQ_NO++;
    m_iBATCHSEQNO++;
    char szBuffer[PERCENTF];
    char* pztemp;
@@ -334,12 +333,6 @@ void NYCEExport::update (Subject* pSubject)
         return;
    memcpy(pBuffer->sExcpDocFileName,m_strFILE_NAME.data(),m_strFILE_NAME.length());
 
-   if (CaseSegment::instance()->getSTATUS() == "REP1")
-   {
-      if (!updateExportInd())
-         return;
-   }
-
    if(CaseSegment::instance()->getSTATUS() =="FWRD")
    {
       if(!transitionCase("PNDR"))
@@ -398,7 +391,7 @@ bool NYCEExport::writeHeader (string strFileDate)
    strDate = hDate.asString("%m%d%y");
    memcpy(pHeader->sDate,strDate.data(),strDate.length());
    memcpy(pHeader->sSetlDate, strDate.data(), strDate.length());
-   writeLine(sizeof(struct segExceptionHeader));
+   writeLine(sizeof(segExceptionHeader));
    return true;
   //## end nyceexception::NYCEExport::writeHeader%55C0AD43011F.body
 }
@@ -406,7 +399,7 @@ bool NYCEExport::writeHeader (string strFileDate)
 bool NYCEExport::writeLine (int iDATA_BUFFER)
 {
   //## begin nyceexception::NYCEExport::writeLine%55C0AE04023A.body preserve=yes
-   char* p = (char*)getDATA_BUFFER();
+   char* p = getDATA_BUFFER();
    write (iDATA_BUFFER,-1,false,false);
    return true;
   //## end nyceexception::NYCEExport::writeLine%55C0AE04023A.body
@@ -415,7 +408,7 @@ bool NYCEExport::writeLine (int iDATA_BUFFER)
 bool NYCEExport::writeTrailer ()
 {
   //## begin nyceexception::NYCEExport::writeTrailer%55C0AD90039F.body preserve=yes
-   struct segExceptionTrailer* pTrailer = (struct segExceptionTrailer*)(char*)getDATA_BUFFER();
+   struct segExceptionTrailer* pTrailer = (struct segExceptionTrailer*)getDATA_BUFFER();
    memset(pTrailer,' ',sizeof(segExceptionTrailer));
    char szTemp[PERCENTD];
    memcpy(pTrailer->sMsgType,"TRL",3);
@@ -434,30 +427,11 @@ bool NYCEExport::writeTrailer ()
    memcpy(pTrailer->sAdjCount,szTemp,snprintf(szTemp,sizeof(szTemp),"%07d",m_lEXCEPTIONCOUNT[0]));
    memcpy(pTrailer->sCBCount,szTemp,snprintf(szTemp,sizeof(szTemp),"%07d",m_lEXCEPTIONCOUNT[1]));
    memcpy(pTrailer->sRepCount,szTemp,snprintf(szTemp,sizeof(szTemp),"%07d",m_lEXCEPTIONCOUNT[2]));
-   memcpy(pTrailer->sFreCount,szTemp,snprintf(szTemp,sizeof(szTemp),"%07d",m_lEXCEPTIONCOUNT[3]));
-   memcpy(pTrailer->sFRCount,szTemp,snprintf(szTemp,sizeof(szTemp),"%07d",m_lEXCEPTIONCOUNT[4]));
-   writeLine(sizeof(struct segExceptionTrailer));
+   memcpy(pTrailer->sFreCount,szTemp,snprintf(szTemp,sizeof(szTemp),"%07d",m_lEXCEPTIONCOUNT[4]));
+   memcpy(pTrailer->sFRCount,szTemp,snprintf(szTemp,sizeof(szTemp),"%07d",m_lEXCEPTIONCOUNT[5]));
+   writeLine(sizeof(segExceptionTrailer));
    return true;
   //## end nyceexception::NYCEExport::writeTrailer%55C0AD90039F.body
-}
-
-bool NYCEExport::updateExportInd()
-{
-   if (m_strEXPORT_IND == "R")
-   {
-      Table hTable("EMS_DOCUMENT");
-      hTable.set("CASE_ID", CaseSegment::instance()->getCASE_ID(), true);
-      hTable.set("SEQ_NO", m_siSEQ_NO, true);
-      hTable.set("EXPORT_IND", "S", false, false);
-      SearchCondition hSearchCondition;
-      hSearchCondition.setBasicPredicate("EMS_DOCUMENT", "CASE_ID", "=", CaseSegment::instance()->getCASE_ID());
-      hSearchCondition.setBasicPredicate("EMS_DOCUMENT", "DELETE_FLG", "=", "N");
-      hSearchCondition.setBasicPredicate("EMS_DOCUMENT", "EXPORT_IND", "=", "X");
-      auto_ptr<Statement> pUpdateStatement((Statement*)DatabaseFactory::instance()->create("UpdateStatement"));
-      if (!pUpdateStatement->execute(hTable, hSearchCondition.getText()))
-         return false;
-   }
-
 }
 
 bool NYCEExport::setDOC_PATH ()
@@ -469,17 +443,14 @@ bool NYCEExport::setDOC_PATH ()
    Query hSubQuery;
 
    hSubQuery.setSubSelect(true);
-   hSubQuery.bind("EMS_DOCUMENT", "SEQ_NO", Column::SHORT, &m_siSEQ_NO, &iNull, "MAX");
+   hSubQuery.bind("EMS_DOCUMENT", "SEQ_NO", Column::SHORT, &iSEQ_NO, &iNull, "MAX");
    hSubQuery.setBasicPredicate("EMS_DOCUMENT", "CASE_ID", "=", CaseSegment::instance()->getCASE_ID());
    auto_ptr<FormatSelectVisitor> pFormatSelectVisitor((FormatSelectVisitor*)DatabaseFactory::instance()->create("FormatSelectVisitor"));
    hSubQuery.accept(*pFormatSelectVisitor);
    string strSubQuery = "(" + pFormatSelectVisitor->SQLText() + ")";
    hQuery.bind("EMS_DOCUMENT", "DOC_PATH", Column::STRING, &m_strFILE_NAME);
-   hQuery.bind("EMS_DOCUMENT", "EXPORT_IND", Column::STRING, &m_strEXPORT_IND);
-   hQuery.bind("EMS_DOCUMENT", "SEQ_NO", Column::SHORT, &m_siSEQ_NO);
    hQuery.setBasicPredicate("EMS_DOCUMENT", "CASE_ID", "=", CaseSegment::instance()->getCASE_ID());
    hQuery.setBasicPredicate("EMS_DOCUMENT", "SEQ_NO", "IN", strSubQuery.c_str());
-
    auto_ptr<SelectStatement> pSelectStatement((SelectStatement*)DatabaseFactory::instance()->create("SelectStatement"));
    if (!pSelectStatement->execute(hQuery))
       return false;
