@@ -1,0 +1,1508 @@
+dzdo su - dnappadm
+++++++++++++++++++++++++
+XT Install:
+Delta/Data  --> Alpha/Data
+
+TESTDATE command to load the transactions
+++++++++++++++++++++++++
+
+TASKKILL /F /FI "IMAGENAME eq CXOP*" /im *
+++++++++++++++++++++++++
+my Local webUI login:
+user: DNSERVER
+Pswd:TheDeadLock@2010
+++++++++++++++++++++++++
+
+LE -> AI -> LR
+
+>sqlcmd -S localhost -Q "SELECT @@VERSION"
+
+Base class : RU05.hpp
+
+first class : RU01.cpp
+
+
+GT = GTWY CA=CUSA MC=MCDP TF=TFND
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Laptop Credentials :
+pswd: TheSecret@september23 
+SSP :
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+GLOBAL VPN:
+
+fisglobal.gpcloudservice.com
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+DN WIKI PAGE:
+https://wiki.fnis.com/pages/viewpage.action?spaceKey=datnav&title=DN+Server+Documentation
++++++++++++++++++++++++++++++++++++++++++++
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++
+T Drive:
+\\VWMAZDNDVWS1902.FISDEV.LOCAL\T-Drive\DN Librarian
+
+
++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+perl script:
+sendmsg.pl RESET XT "CHANGE_ID"                                                                          
+    !INSTALL                                                                                                               
+    sendmsg.pl RESET XT '!EXTRACT'
+ 
+    sendmsg.pl RESET XT '!UPGRADE' 
+
+sendmsg.pl RESET XT " " : C:\Windows\System32\cmd.exe\Sendmsg.pl
+
+
+Dnappid$#2017#
+
+
+++++++++++++++++++++++++++++++++++++++++++++++
+DN Code Revision Details:
+
+V03.2A.R006
+
+V03.2A.R004
+
+++++++++++++++++++++++++++++++++++++++++++++++
+C:\Devel>VcxprojFiles.exe reset
++++++++++++++++++++++++++++++++++++++++++++++++
+code version Details:
+
+V03.2A.R*** : Data Center Version
+V02.9B.R001 is the customer specific version. 
+V03.1B.R001 is a master version : SS Release
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++
+US610671 : Tokenize ACCT_ID_1 using DSPEC
+
+Linux WEb DN UI:
+https://vlltcgrpwasdev1.fisdev.local:44115/dnweb/startApplication.do?who=E3028298
+
++++++++++++++++++++++++++++++++++++++++++++++
+RU00.hpp --> version of code
+
+
+netstat -ano | find "8080"
+++++++++++++++++++++++++++++++
+DN code Base and setup Tools:
+http://10.7.151.155:8080/ConnexPlatformServer
+++++++++++++++++++++++++++++++
+
+C:\Users\E5644299\OneDrive - FIS\Recordings
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++
+IMPORT file to run mandatory Services:
+LE01
+GTAI
+GTLR
+GTQE01
+
+  
+++++++++++++++++++++++++++++++++++++++++++++++++
+w951dyb - Aug@2021
+++++++++++++++++++++++++++++++++++
+Table to check after CED file loading :
+
+  select * from DN1PCOMN.PROCESSOR
+  select * from DN1PCOMN.INSTITUTION
+  select * from DN1PCOMN.DEVICE
+  select * from DN1PCOMN.REPORTING_LVL
+
++++++++++++++++++++++++++++++++++++
+BLR1-LT7VWYY33
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++
+
+DN-WEBUI;
+
+http://localhost:8080/DNWebUI/startApplication.do?who=DNSERVER
+
++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+http://10.7.151.155:8080/vminet.html 
+
+https://regu.fisglobal.com/student/index#/Home : RegU
+
+https://fisglobal.sharepoint.com/sites/fisandme   : RegU
+
+FIS@vipulmedcorp.com
+
+++++++++++++++++++++
+
+FIS Authenticator : 
+
+ticket no:IN21003938504 :OLD
+New ticket : IN21003947194
+
+EMP ID:  E5644299
+RSA token:19892018
+
+pswd : J@hnavi@8971426930
+
+
+
++++++++++++++++++++++++++++
+Support FIS
+
+https://employeesupport.fnfis.com/Legacy/Pages/wfMain.aspx
+
+
++++++++++++++++++++++++++++
+It is the process of labelling code and capuring the server packet
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+MainFrame  Induction:
+
+https://fisglobal-my.sharepoint.com/personal/vamshikrishna_rangam_fisglobal_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fvamshikrishna%5Frangam%5Ffisglobal%5Fcom%2FDocuments%2FRecordings%2FDN%20Session%20on%20Mainframe%20Environment%20Operation%20and%20Controls%2D20210416%5F160303%2DMeeting%20Recording%2Emp4&parent=%2Fpersonal%2Fvamshikrishna%5Frangam%5Ffisglobal%5Fcom%2FDocuments%2FRecordings&originalPath=aHR0cHM6Ly9maXNnbG9iYWwtbXkuc2hhcmVwb2ludC5jb20vOnY6L3AvdmFtc2hpa3Jpc2huYV9yYW5nYW0vRVdWXzZyQVY3Y1pJZzhTQnd3cHlESm9CWDBhaE1OWVRZb0tUT1B5Tk5ONlJWdz9ydGltZT1LSkliSHM0QTJVZw
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Debug Properties :
+
+Command :    C:\FIS\Server\Alpha\Bin\CXOPCS00.exe
+Command args :   -debug -n CS -t
+Working dir :    ..\..\..\..\..\FIS\Server\Alpha\Bin
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+SSL:
+
+https://www.ibm.com/support/knowledgecenter/en/SSFKSJ_7.1.0/com.ibm.mq.doc/sy10670_.htm
+
+just in case for handshake related details  –
+
+https://www.ibm.com/support/knowledgecenter/en/SSFKSJ_7.1.0/com.ibm.mq.doc/sy10660_.htm
+
+
+EMV
+
+https://ussnprdevapp5:8443/pages/viewpage.action?spaceKey=DIV350825REV13&title=EMV+Subcommands+and+Host+Interface+Messages
+
++++++HOST+++++
+CHASE
+ELAVON
+TSYS
+VANTIV
+FAPS
+FDC
+GLOBAL
++++++HOST+++++
+
+
+++++++++++++++++++++++
+SourceInsight
+SI3US-604082-28851
+++++++++++++++++++++++
+
+
+UAN and PF related info:
+-----------------------
+
+https://passbook.epfindia.gov.in/MemberPassBook/Logout
+
+UAN:100424158116  : Girmiti
+UAN:100792804697  : Attra and Indecomm and FIS
+
+Pswd:Latha@12345 
+
+
+++++++++++++++++++++++++++
+
+
+LE -> AI -> LR
+
++++++++++++++++++++++++++++++++
+EFTTOOL
+https://www.eftlab.com/tutorials/bp-tools-cryptographic-calculator-generic-menu/ 
+
++++++++++++++++++++++++++++++++
+
+
+
++++++++++++++++++++++++++++++++
+
+bitbucket windows credentials:
+git:https://bitbucket.fis.dev
+user:e5644299
+pswd:TheSecret@june23
+
+git:https://e5644299@bitbucket.fis.dev
+user:e5644299
+pswd:TheSecret@june23
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+I am currently out of office and will be back to work on 
+How to Get Away with Murder
+
+++++++++++++++++++++++++
+++++++++++++++++++++++++
+my Local webUI login:
+user: DNSERVER
+Pswd:TheDeadLock@2010
+++++++++++++++++++++++++
+
+(P1 - BCFS & CAP1, P6 - USAA, TDBK, AFFN, etc.. & P7)
+
+LE -> AI -> LR
+
+
+TASKKILL /F /FI "IMAGENAME eq CXOP*" /im *
+Now start GTLE01, GTAI1, GTLR1 in the given order. 
+
+
+Base class : RU05.hpp
+
+first class : RU01.cpp
+
+
+GT = GTWY CA=CUSA MC=MCDP TF=TFND
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+LAptop Credentials : 
+SSP :
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+GLOBAL VPN:
+
+fisglobal.gpcloudservice.com
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+DN WIKI PAGE:
+https://wiki.fnis.com/pages/viewpage.action?spaceKey=datnav&title=DN+Server+Documentation
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
++++++++++++++++++++++++++++++++++++++++++++++++
+T Drive:
+\\VWMAZDNDVWS1902.FISDEV.LOCAL\T-Drive\DN Librarian
+
+
++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+perl script:
+sendmsg.pl RESET XT "CHANGE_ID"                                                                          
+    !INSTALL                                                                                                               
+    sendmsg.pl RESET XT '!EXTRACT'
+ 
+    sendmsg.pl RESET XT '!UPGRADE' 
+
+sendmsg.pl RESET XT " " : C:\Windows\System32\cmd.exe\Sendmsg.pl
+
+
+Dnappid$#2017#
+
+
+++++++++++++++++++++++++++++++++++++++++++++++
+DN Code Revision Details:
+
+V03.2A.R006
+
+V03.2A.R004
+
+++++++++++++++++++++++++++++++++++++++++++++++
+C:\Devel>VcxprojFiles.exe reset
++++++++++++++++++++++++++++++++++++++++++++++++
+code version Details:
+
+V03.2A.R*** : Data Center Version
+V02.9B.R001 is the customer specific version. 
+V03.1B.R001 is a master version : SS Release
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++
+US610671 : Tokenize ACCT_ID_1 using DSPEC
+
+Linux WEb DN UI:
+https://vlltcgrpwasdev1.fisdev.local:44115/dnweb/startApplication.do?who=E3028298
+
++++++++++++++++++++++++++++++++++++++++++++++
+RU00.hpp --> version of code
+
+
+netstat -ano | find "8080"
+++++++++++++++++++++++++++++++
+DN code Base and setup Tools:
+http://10.7.151.155:8080/ConnexPlatformServer
+++++++++++++++++++++++++++++++
+
+C:\Users\E5644299\OneDrive - FIS\Recordings
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++
+IMPORT file to run mandatory Services:
+LE01
+GTAI
+GTLR
+GTQE01
+
+  
+++++++++++++++++++++++++++++++++++++++++++++++++
+w951dyb - Aug@2021
+++++++++++++++++++++++++++++++++++
+Table to check after CED file loading :
+
+  select * from DN1PCOMN.PROCESSOR
+  select * from DN1PCOMN.INSTITUTION
+  select * from DN1PCOMN.DEVICE
+  select * from DN1PCOMN.REPORTING_LVL
+
++++++++++++++++++++++++++++++++++++
+BLR1-LT7VWYY33
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++
+
+DN-WEBUI;
+
+http://localhost:8080/DNWebUI/startApplication.do?who=DNSERVER
+
++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+http://10.7.151.155:8080/vminet.html 
+
+https://regu.fisglobal.com/student/index#/Home : RegU
+
+https://fisglobal.sharepoint.com/sites/fisandme   : RegU
+
+FIS@vipulmedcorp.com
+
+++++++++++++++++++++
+
+FIS Authenticator : 
+
+ticket no:IN21003938504 :OLD
+New ticket : IN21003947194
+
+EMP ID:  E5644299
+RSA token:19892018
+
+pswd : J@hnavi@8971426930
+
+
+
++++++++++++++++++++++++++++
+Support FIS
+
+https://employeesupport.fnfis.com/Legacy/Pages/wfMain.aspx
+
+
++++++++++++++++++++++++++++
+It is the process of labelling code and capuring the server packet
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+MainFrame  Induction:
+
+https://fisglobal-my.sharepoint.com/personal/vamshikrishna_rangam_fisglobal_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fvamshikrishna%5Frangam%5Ffisglobal%5Fcom%2FDocuments%2FRecordings%2FDN%20Session%20on%20Mainframe%20Environment%20Operation%20and%20Controls%2D20210416%5F160303%2DMeeting%20Recording%2Emp4&parent=%2Fpersonal%2Fvamshikrishna%5Frangam%5Ffisglobal%5Fcom%2FDocuments%2FRecordings&originalPath=aHR0cHM6Ly9maXNnbG9iYWwtbXkuc2hhcmVwb2ludC5jb20vOnY6L3AvdmFtc2hpa3Jpc2huYV9yYW5nYW0vRVdWXzZyQVY3Y1pJZzhTQnd3cHlESm9CWDBhaE1OWVRZb0tUT1B5Tk5ONlJWdz9ydGltZT1LSkliSHM0QTJVZw
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Debug Properties :
+
+Command :    C:\FIS\Server\Alpha\Bin\CXOPCS00.exe
+Command args :   -debug -n CS -t
+Working dir :    ..\..\..\..\..\FIS\Server\Alpha\Bin
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+SSL:
+
+https://www.ibm.com/support/knowledgecenter/en/SSFKSJ_7.1.0/com.ibm.mq.doc/sy10670_.htm
+
+just in case for handshake related details  –
+
+https://www.ibm.com/support/knowledgecenter/en/SSFKSJ_7.1.0/com.ibm.mq.doc/sy10660_.htm
+
+
+EMV
+
+https://ussnprdevapp5:8443/pages/viewpage.action?spaceKey=DIV350825REV13&title=EMV+Subcommands+and+Host+Interface+Messages
+
++++++HOST+++++
+CHASE
+ELAVON
+TSYS
+VANTIV
+FAPS
+FDC
+GLOBAL
++++++HOST+++++
+
+
+++++++++++++++++++++++
+SourceInsight
+SI3US-604082-28851
+++++++++++++++++++++++
+
+
+UAN and PF related info:
+-----------------------
+
+https://passbook.epfindia.gov.in/MemberPassBook/Logout
+
+UAN:100424158116  : Girmiti
+UAN:100792804697  : Attra and Indecomm and FIS
+
+Pswd:Latha@12345 
+
+
+++++++++++++++++++++++++++
+
+
+LE -> AI -> LR
+
++++++++++++++++++++++++++++++++
+EFTTOOL
+https://www.eftlab.com/tutorials/bp-tools-cryptographic-calculator-generic-menu/ 
+
++++++++++++++++++++++++++++++++
+
+
+
+
+
+
+
+
+
+
+
+ORDER:
+TASKKILL /F /FI "IMAGENAME eq CXOP*" /im *
+Now start GTLE01, GTAI1, GTLR1 in the given order. 
+
+++++++++++++++++++++++++++++++++++++++
+ENCRYPT ON IN DN FOR PAN
+from MMC console -> LM task -> reset -> PADSS -> pan encrytion for fintables ON
+
+USER LOOGN Password: Password@123
++++++++++++++++++++++++++++++++++++
+DB2 PROD Access:
+Bhuvana Credentials
+e5614620,Morgan@03
++++++++++++++++++++++++++++++++++++
+
+
+Software - There are many release versions like 30B, 31B, 32B and 33B apart from customer specific releases like 34C (EFTPOS) and 30D (NAB)
+
+
+
+
++++++++++++++++++++++++++++++++++++
+SQL SERVER PROD DEB Details
+PonkabilanKe5611#
+e5614616
+
+
+[3/8/2022 3:14 PM] B, Anusha
+Ron Seekins, Vamshi
+ like 1
+
+[3/8/2022 3:15 PM] B, Anusha
+R3port#r
+
+[3/8/2022 3:15 PM] B, Anusha
+e5632407
++++++++++++++++++++++++++++++++++++++
+
+
+http://localhost:8080/DNWebUI/startApplication.do?who=E5644299
+
+scp 30D.tar.gz e5644299@vlcapdnappdev01.fisdev.local:/home/e5644299/.
+
+
+
+DN-SERVER PACKETS:
+\\vwmazdndvws1902.fisdev.local\F\T-Drive\Software Business 3\CDN\Server
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+WEBUI Devbox:
+https://vlltcgrpwasdev1.fisdev.local:44115/dnweb/checkLogonType.do
+User ID:  E5644299
+Pasword :  Password@321
+
+
+Deploy WEBUI Patch Local :
+
+\\vwmazpdofile01.fisdev.local\DN\WEB\
+1.first get the war file from shared path
+2. modify application.properties in C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps\DNWebUI\WEB-INF\classes\dn
+3.modify databaseconnection.properties in C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps\DNWebUI\WEB-INF\classes path
+
+rename GOLD to GTWY
+4.C:\Program Files\Apache Software Foundation\Tomcat 7.0\webapps\DNWebUI\WEB-INF\classes\bundles>ren GOLD* GTWY*
+
+
+++++++
+Wiretap to table:
+uncomment wiretap location in file :dnconnector.properties
+C:\Program Files\Apache Software Foundation\Tomcat 7.0\webapps\DNWebUI\WEB-INF\classes\dn
+++++++
+
+
+
+cert files:
+
+T-drive path : T:\DN Librarian\CertShare
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Production Server Details :
+
+bdc1rnardnvap03
+
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++
+GIT COMMANDS:
+git reset --soft HEAD~
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++
+
+
+PROD DB Details:
+pswd :  
+
+
+
+
+
+
+++++++++++++++++++++++++
+my Local webUI login:
+user: DNSERVER
+Pswd:TheDeadLock@2010
+++++++++++++++++++++++++
+
+LE -> AI -> LR
+
+
+
+Base class : RU05.hpp
+
+first class : RU01.cpp
+
+
+GT = GTWY CA=CUSA MC=MCDP TF=TFND
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+LAptop Credentials : 
+SSP :
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+GLOBAL VPN:
+
+fisglobal.gpcloudservice.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+DN WIKI PAGE:
+https://wiki.fnis.com/pages/viewpage.action?spaceKey=datnav&title=DN+Server+Documentation
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
++++++++++++++++++++++++++++++++++++++++++++++++
+T Drive:
+\\VWMAZDNDVWS1902.FISDEV.LOCAL\T-Drive\DN Librarian
+
+
++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+perl script:
+sendmsg.pl RESET XT "CHANGE_ID"                                                                          
+    !INSTALL                                                                                                               
+    sendmsg.pl RESET XT '!EXTRACT'
+ 
+    sendmsg.pl RESET XT '!UPGRADE' 
+
+sendmsg.pl RESET XT " " : C:\Windows\System32\cmd.exe\Sendmsg.pl
+
+
+Dnappid$#2017#
+
+
+++++++++++++++++++++++++++++++++++++++++++++++
+DN Code Revision Details:
+
+V03.2A.R006
+
+V03.2A.R004
+
+++++++++++++++++++++++++++++++++++++++++++++++
+C:\Devel>VcxprojFiles.exe reset
++++++++++++++++++++++++++++++++++++++++++++++++
+code version Details:
+
+V03.2A.R*** : Data Center Version
+V02.9B.R001 is the customer specific version. 
+V03.1B.R001 is a master version : SS Release
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++
+US610671 : Tokenize ACCT_ID_1 using DSPEC
+
+Linux WEb DN UI:
+https://vlltcgrpwasdev1.fisdev.local:44115/dnweb/startApplication.do?who=E3028298
+
++++++++++++++++++++++++++++++++++++++++++++++
+RU00.hpp --> version of code
+
+
+netstat -ano | find "8080"
+++++++++++++++++++++++++++++++
+DN code Base and setup Tools:
+http://10.7.151.155:8080/ConnexPlatformServer
+++++++++++++++++++++++++++++++
+
+C:\Users\E5644299\OneDrive - FIS\Recordings
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++
+IMPORT file to run mandatory Services:
+LE01
+GTAI
+GTLR
+GTQE01
+
+  
+++++++++++++++++++++++++++++++++++++++++++++++++
+w951dyb - Aug@2021
+++++++++++++++++++++++++++++++++++
+Table to check after CED file loading :
+
+  select * from DN1PCOMN.PROCESSOR
+  select * from DN1PCOMN.INSTITUTION
+  select * from DN1PCOMN.DEVICE
+  select * from DN1PCOMN.REPORTING_LVL
+
++++++++++++++++++++++++++++++++++++
+BLR1-LT7VWYY33
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++
+
+DN-WEBUI;
+
+http://localhost:8080/DNWebUI/startApplication.do?who=DNSERVER
+
++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+http://10.7.151.155:8080/vminet.html 
+
+https://regu.fisglobal.com/student/index#/Home : RegU
+
+https://fisglobal.sharepoint.com/sites/fisandme   : RegU
+
+FIS@vipulmedcorp.com
+
+++++++++++++++++++++
+
+FIS Authenticator : 
+
+ticket no:IN21003938504 :OLD
+New ticket : IN21003947194
+
+EMP ID:  E5644299
+RSA token:19892018
+
+pswd : J@hnavi@8971426930
+
+
+
++++++++++++++++++++++++++++
+Support FIS
+
+https://employeesupport.fnfis.com/Legacy/Pages/wfMain.aspx
+
+
++++++++++++++++++++++++++++
+It is the process of labelling code and capuring the server packet
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+MainFrame  Induction:
+
+https://fisglobal-my.sharepoint.com/personal/vamshikrishna_rangam_fisglobal_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fvamshikrishna%5Frangam%5Ffisglobal%5Fcom%2FDocuments%2FRecordings%2FDN%20Session%20on%20Mainframe%20Environment%20Operation%20and%20Controls%2D20210416%5F160303%2DMeeting%20Recording%2Emp4&parent=%2Fpersonal%2Fvamshikrishna%5Frangam%5Ffisglobal%5Fcom%2FDocuments%2FRecordings&originalPath=aHR0cHM6Ly9maXNnbG9iYWwtbXkuc2hhcmVwb2ludC5jb20vOnY6L3AvdmFtc2hpa3Jpc2huYV9yYW5nYW0vRVdWXzZyQVY3Y1pJZzhTQnd3cHlESm9CWDBhaE1OWVRZb0tUT1B5Tk5ONlJWdz9ydGltZT1LSkliSHM0QTJVZw
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Debug Properties :
+
+Command :    C:\FIS\Server\Alpha\Bin\CXOPCS00.exe
+Command args :   -debug -n CS -t
+Working dir :    ..\..\..\..\..\FIS\Server\Alpha\Bin
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+SSL:
+
+https://www.ibm.com/support/knowledgecenter/en/SSFKSJ_7.1.0/com.ibm.mq.doc/sy10670_.htm
+
+just in case for handshake related details  –
+
+https://www.ibm.com/support/knowledgecenter/en/SSFKSJ_7.1.0/com.ibm.mq.doc/sy10660_.htm
+
+
+EMV
+
+https://ussnprdevapp5:8443/pages/viewpage.action?spaceKey=DIV350825REV13&title=EMV+Subcommands+and+Host+Interface+Messages
+
++++++HOST+++++
+CHASE
+ELAVON
+TSYS
+VANTIV
+FAPS
+FDC
+GLOBAL
++++++HOST+++++
+
+
+++++++++++++++++++++++
+SourceInsight
+SI3US-604082-28851
+++++++++++++++++++++++
+
+
+UAN and PF related info:
+-----------------------
+
+https://passbook.epfindia.gov.in/MemberPassBook/Logout
+
+UAN:100424158116  : Girmiti
+UAN:100792804697  : Attra and Indecomm and FIS
+
+Pswd:Latha@12345 
+
+
+++++++++++++++++++++++++++
+
+
+LE -> AI -> LR
+
++++++++++++++++++++++++++++++++
+EFTTOOL
+https://www.eftlab.com/tutorials/bp-tools-cryptographic-calculator-generic-menu/ 
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+BDC1RNARDNVAP03 :  PROD NQP7
+ORDER:
+TASKKILL /F /FI "IMAGENAME eq CXOP*" /im *
+Now start GTLE01, GTAI1, GTLR1 in the given order. 
+
+++++++++++++++++++++++++++++++++++++++
+ENCRYPT ON IN DN FOR PAN
+from MMC console -> LM task -> reset -> PADSS -> pan encrytion for fintables ON
+
+USER LOOGN Password: Password@123
++++++++++++++++++++++++++++++++++++
+DB2 PROD Access:
+Bhuvana Credentials
+e5614620,Morgan@03
++++++++++++++++++++++++++++++++++++
+
+
+Software - There are many release versions like 30B, 31B, 32B and 33B apart from customer specific releases like 34C (EFTPOS) and 30D (NAB)
+
+
+
+
++++++++++++++++++++++++++++++++++++
+SQL SERVER PROD DEB Details
+PonkabilanKe5611#
+e5614616
+
+
+[3/8/2022 3:14 PM] B, Anusha
+Ron Seekins, Vamshi
+ like 1
+
+[3/8/2022 3:15 PM] B, Anusha
+R3port#r
+
+[3/8/2022 3:15 PM] B, Anusha
+e5632407
++++++++++++++++++++++++++++++++++++++
+
+
+http://localhost:8080/DNWebUI/startApplication.do?who=E5644299
+
+scp 30D.tar.gz e5644299@vlcapdnappdev01.fisdev.local:/home/e5644299/.
+
+
+
+DN-SERVER PACKETS:
+\\vwmazdndvws1902.fisdev.local\F\T-Drive\Software Business 3\CDN\Server
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+WEBUI Devbox:
+https://vlltcgrpwasdev1.fisdev.local:44115/dnweb/checkLogonType.do
+User ID:  E5644299
+Pasword :  Password@321
+
+
+Deploy WEBUI Patch Local :
+
+\\vwmazpdofile01.fisdev.local\DN\WEB\
+1.first get the war file from shared path
+2. modify application.properties in C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps\DNWebUI\WEB-INF\classes\dn
+3.modify databaseconnection.properties in C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps\DNWebUI\WEB-INF\classes path
+
+rename GOLD to GTWY
+4.C:\Program Files\Apache Software Foundation\Tomcat 7.0\webapps\DNWebUI\WEB-INF\classes\bundles>ren GOLD* GTWY*
+
+
+++++++
+Wiretap to table:
+uncomment wiretap location in file :dnconnector.properties
+C:\Program Files\Apache Software Foundation\Tomcat 7.0\webapps\DNWebUI\WEB-INF\classes\dn
+++++++
+
+
+
+cert files:
+
+T-drive path : T:\DN Librarian\CertShare
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Production Server Details :
+
+bdc1rnardnvap03
+
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++
+GIT COMMANDS:
+git reset --soft HEAD~
+
+find / -type d -name "apt"  : to fetch dir path
+
+++++++++++++++++++++++++++++++++++++++++++++++
+
+
+PROD DB Details:
+pswd :  
+
+
+
++++++++++++++++++++++++++++++++++++
+Devbox and QC env ips
+
+VLCAPDNAPPDEV01	10.7.13.97	Linux
+VLCAPDNAPPQA01	10.7.13.100	Linux
+VLCAPDNDBDEV01	10.7.13.99	Linux
+VLMAZDNSRV01	10.7.146.54	Linux
+VLMAZEMEADNAPP	10.7.151.55	Linux
+
++++++++++++++++++++++++++++++++++++
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++
+Server Details:
+++++++++++++++++++++++++++++++++++++++++++++++++
+Prod Server:
+ 
+bdc1rnexLPIbs03.fnfis.com
+ 
+Respective Instances:
+P1
+BDC1RNARDNVAP01 1021 CAP1,BCFS
+P5
+BDC1RNARDNVAP05 1022 GLBL
+P6
+BDC1RNARDNVAP07 1024 RGNL,TDBK,EDUC,CU24,CITI,AFFN
+P7
+BDC1RNARDNVAP03 1023 GTWY,FISB,TFND,TRN1,PPSA,MCDP,ISPA,IFSA,FISA,CUSW,CUSA
+P5
+BDC1RNARDNVAP06 1025 GLBL
+++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+
+How to Get Away with Murder
+12004 :JIRA ID
+++++++++++++++++++++++++
+Vidal Health Insurance : Thevamshi@123
+++++++++++++++++++++++++
+my Local webUI login:
+user: DNSERVER
+Pswd:TheDeadLock@2010
+++++++++++++++++++++++++
+
+LE -> AI -> LR
+
+
+
++++++++++++++++++++++++++++++++++
+RECL and BLOCKSIZE calculation in BDOC{Z/os}
+
+BLKSIZE will be calculated like this
+LRECL is 636 = 27998/636 = 44 * 636 = 27,984
++++++++++++++++++++++++++++++++++
+
+
++++++++++++++++++++++++++++++++++
+DDL : Create,ALter and DROP
+DML : SELECT,INSERT,UPDATE,DELETE
+DCL: GRANT,REVOKE
+TCL : COMMIT,ROLLBACK
++++++++++++++++++++++++++++++++++
+
+Base class : RU05.hpp
+
+first class : RU01.cpp
+
+
+GT = GTWY CA=CUSA MC=MCDP TF=TFND
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+VidalHealth Credentials : 
+user id:mail id
+pswd:TheSecret@jan24
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+GLOBAL VPN:
+
+fisglobal.gpcloudservice.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+DN WIKI PAGE:
+https://wiki.fnis.com/pages/viewpage.action?spaceKey=datnav&title=DN+Server+Documentation
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
++++++++++++++++++++++++++++++++++++++++++++++++
+T Drive:
+\\VWMAZDNDVWS1902.FISDEV.LOCAL\T-Drive\DN Librarian
+
+
++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+perl script:
+sendmsg.pl RESET XT "CHANGE_ID"                                                                          
+    !INSTALL                                                                                                               
+    sendmsg.pl RESET XT '!EXTRACT'
+ 
+    sendmsg.pl RESET XT '!UPGRADE' 
+
+sendmsg.pl RESET XT " " : C:\Windows\System32\cmd.exe\Sendmsg.pl
+
+
+Dnappid$#2017#
+
+
+++++++++++++++++++++++++++++++++++++++++++++++
+DN Code Revision Details:
+
+V03.2A.R006
+
+V03.2A.R004
+
+++++++++++++++++++++++++++++++++++++++++++++++
+C:\Devel>VcxprojFiles.exe reset
++++++++++++++++++++++++++++++++++++++++++++++++
+code version Details:
+
+V03.2A.R*** : Data Center Version
+V02.9B.R001 is the customer specific version. 
+V03.1B.R001 is a master version : SS Release
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++
+US610671 : Tokenize ACCT_ID_1 using DSPEC
+
+Linux WEb DN UI:
+https://vlltcgrpwasdev1.fisdev.local:44115/dnweb/startApplication.do?who=E3028298
+
++++++++++++++++++++++++++++++++++++++++++++++
+RU00.hpp --> version of code
+
+
+netstat -ano | find "8080"
+++++++++++++++++++++++++++++++
+DN code Base and setup Tools:
+http://10.7.151.155:8080/ConnexPlatformServer
+++++++++++++++++++++++++++++++
+
+C:\Users\E5644299\OneDrive - FIS\Recordings
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++
+IMPORT file to run mandatory Services:
+LE01
+GTAI
+GTLR
+GTQE01
+
+  
+++++++++++++++++++++++++++++++++++++++++++++++++
+w951dyb - Aug@2021
+++++++++++++++++++++++++++++++++++
+Table to check after CED file loading :
+
+  select * from DN1PCOMN.PROCESSOR
+  select * from DN1PCOMN.INSTITUTION
+  select * from DN1PCOMN.DEVICE
+  select * from DN1PCOMN.REPORTING_LVL
+
++++++++++++++++++++++++++++++++++++
+BLR1-LT7VWYY33
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++
+
+DN-WEBUI;
+
+http://localhost:8080/DNWebUI/startApplication.do?who=DNSERVER
+
++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+http://10.7.151.155:8080/vminet.html 
+
+https://regu.fisglobal.com/student/index#/Home : RegU
+
+https://fisglobal.sharepoint.com/sites/fisandme   : RegU
+
+FIS@vipulmedcorp.com
+
+++++++++++++++++++++
+
+FIS Authenticator : 
+
+ticket no:IN21003938504 :OLD
+New ticket : IN21003947194
+
+EMP ID:  E5644299
+RSA token:19892018
+
+pswd : J@hnavi@8971426930
+
+
+
++++++++++++++++++++++++++++
+Support FIS
+
+https://employeesupport.fnfis.com/Legacy/Pages/wfMain.aspx
+
+
++++++++++++++++++++++++++++
+It is the process of labelling code and capuring the server packet
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+MainFrame  Induction:
+
+https://fisglobal-my.sharepoint.com/personal/vamshikrishna_rangam_fisglobal_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fvamshikrishna%5Frangam%5Ffisglobal%5Fcom%2FDocuments%2FRecordings%2FDN%20Session%20on%20Mainframe%20Environment%20Operation%20and%20Controls%2D20210416%5F160303%2DMeeting%20Recording%2Emp4&parent=%2Fpersonal%2Fvamshikrishna%5Frangam%5Ffisglobal%5Fcom%2FDocuments%2FRecordings&originalPath=aHR0cHM6Ly9maXNnbG9iYWwtbXkuc2hhcmVwb2ludC5jb20vOnY6L3AvdmFtc2hpa3Jpc2huYV9yYW5nYW0vRVdWXzZyQVY3Y1pJZzhTQnd3cHlESm9CWDBhaE1OWVRZb0tUT1B5Tk5ONlJWdz9ydGltZT1LSkliSHM0QTJVZw
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Debug Properties :
+
+Command :    C:\FIS\Server\Alpha\Bin\CXOPCS00.exe
+Command args :   -debug -n CS -t
+Working dir :    ..\..\..\..\..\FIS\Server\Alpha\Bin
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+SSL:
+
+https://www.ibm.com/support/knowledgecenter/en/SSFKSJ_7.1.0/com.ibm.mq.doc/sy10670_.htm
+
+just in case for handshake related details  –
+
+https://www.ibm.com/support/knowledgecenter/en/SSFKSJ_7.1.0/com.ibm.mq.doc/sy10660_.htm
+
+
+EMV
+
+https://ussnprdevapp5:8443/pages/viewpage.action?spaceKey=DIV350825REV13&title=EMV+Subcommands+and+Host+Interface+Messages
+
++++++HOST+++++
+CHASE
+ELAVON
+TSYS
+VANTIV
+FAPS
+FDC
+GLOBAL
++++++HOST+++++
+
+
+++++++++++++++++++++++
+SourceInsight
+SI3US-604082-28851
+++++++++++++++++++++++
+
+
+UAN and PF related info:
+-----------------------
+
+https://passbook.epfindia.gov.in/MemberPassBook/Logout
+
+UAN:100424158116  : Girmiti
+UAN:100792804697  : Attra and Indecomm and FIS
+
+Pswd:Latha@12345 
+
+
+++++++++++++++++++++++++++
+
+
+LE -> AI -> LR
+
++++++++++++++++++++++++++++++++
+EFTTOOL
+https://www.eftlab.com/tutorials/bp-tools-cryptographic-calculator-generic-menu/ 
+
++++++++++++++++++++++++++++++++
+
+
+
+
+
+
+
+
+
+
+
+ORDER:
+TASKKILL /F /FI "IMAGENAME eq CXOP*" /im *
+Now start GTLE01, GTAI1, GTLR1 in the given order. 
+
+++++++++++++++++++++++++++++++++++++++
+ENCRYPT ON IN DN FOR PAN
+from MMC console -> LM task -> reset -> PADSS -> pan encrytion for fintables ON
+
+USER LOOGN Password: Password@123
++++++++++++++++++++++++++++++++++++
+DB2 PROD Access:
+Bhuvana Credentials
+e5614620,Morgan@03
++++++++++++++++++++++++++++++++++++
+
+
+Software - There are many release versions like 30B, 31B, 32B and 33B apart from customer specific releases like 34C (EFTPOS) and 30D (NAB)
+
+
+
+
++++++++++++++++++++++++++++++++++++
+SQL SERVER PROD DEB Details
+PonkabilanKe5611#
+e5614616
+
+
+[3/8/2022 3:14 PM] B, Anusha
+Ron Seekins, Vamshi
+ like 1
+
+[3/8/2022 3:15 PM] B, Anusha
+R3port#r
+
+[3/8/2022 3:15 PM] B, Anusha
+e5632407
++++++++++++++++++++++++++++++++++++++
+
+
+http://localhost:8080/DNWebUI/startApplication.do?who=E5644299
+
+scp 30D.tar.gz e5644299@vlcapdnappdev01.fisdev.local:/home/e5644299/.
+
+
+
+DN-SERVER PACKETS:
+\\vwmazdndvws1902.fisdev.local\F\T-Drive\Software Business 3\CDN\Server
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+WEBUI Devbox:
+https://vlltcgrpwasdev1.fisdev.local:44115/dnweb/checkLogonType.do
+User ID:  E5644299
+Pasword :  Password@321
+
+
+Deploy WEBUI Patch Local :
+
+\\vwmazpdofile01.fisdev.local\DN\WEB\
+1.first get the war file from shared path
+2. modify application.properties in C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps\DNWebUI\WEB-INF\classes\dn
+3.modify databaseconnection.properties in C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps\DNWebUI\WEB-INF\classes path
+
+rename GOLD to GTWY
+4.C:\Program Files\Apache Software Foundation\Tomcat 7.0\webapps\DNWebUI\WEB-INF\classes\bundles>ren GOLD* GTWY*
+
+
+++++++
+Wiretap to table:
+uncomment wiretap location in file :dnconnector.properties
+C:\Program Files\Apache Software Foundation\Tomcat 7.0\webapps\DNWebUI\WEB-INF\classes\dn
+++++++
+
+
+
+cert files:
+
+T-drive path : T:\DN Librarian\CertShare
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Production Server Details :
+
+bdc1rnardnvap03
+
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++
+GIT COMMANDS:
+git reset --soft HEAD~
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++
+
+
+PROD DB Details:
+pswd :  
+
+
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++
+Segments in DN :
+
+Segment 00 : Header
+Segment 01 : Data Required for Settlement
+Segment 02 : Problem Determination data
+Segment 03 : Acquirer data
+Segment 04 : Issuer data
+Segment 05 : Additional Response amounts
+Segment 06 : Authorization Processor Data
+Segment 07 : Additional Response Data
+Segment 08 : Transaction Unique Data
+Segment 09 : Additional Request Amount
+Segment 10 : Bill Counters
+Segment 11 : Acquirer Reference Data
+Segment 12 : Issuer Refrence Data
+Segment 13 : Acquirer Settlement Currency
+Segment 14 : Issuer Settlement Currency
+Segment 15 : Transaction Description
+Segment 16 : Fee Amounts
+Segment 17 : Payee Name
+Segment 18 : Original Data Elements
+Segment 19 : Additional Institutions Ientifiers
+Segment 20 : Additional National Data
+Segment 21 : Acquirer Additional Private Data
+Segment 22 : Issuer Additioanl Private Data
+Segment 23 : Message In Progress and PIN Data
+Segment 24 : Variable length Data {Tokenized Data}
+++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++
+
+
+++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++
+Made necessary change on the Data file which was taken from Alpha/Data and placed it under Delta/Data
+Run XT Service(This will compare the old entries with new entries and make necessary changes to respective table(in our case ONLINE_NETWORK table)
+We will be getting 2 entries for same Network ID, we need to Rollin the change using mmc console->change management->select the respective CHG_GRP_ID and right click select rollin and extract or just rollin
+This will remove the extra and merge it old one as in Overwritten.
+++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++
+
+
+
+++++++++++++++++++++++++++++++++++++++++++
+
+Devbox and QC env ips
+
+VLCAPDNAPPDEV01	10.7.13.97	Linux
+VLCAPDNAPPQA01	10.7.13.100	Linux
+VLCAPDNDBDEV01	10.7.13.99	Linux
+VLMAZDNSRV01	10.7.146.54	Linux
+VLMAZEMEADNAPP	10.7.151.55	Linux
+
+++++++++++++++++++++++++++++++++++++++++++
+
+
+
+++++++++++++++++++++++++++++++++++++++++++
+Server Details:
+++++++++++++++++++++++++++++++++++++++++++
+Prod Server:
+ 
+bdc1rnexLPIbs03.fnfis.com
+ 
+Respective Instances:
+P1
+BDC1RNARDNVAP01 1021 CAP1,BCFS
+P5
+BDC1RNARDNVAP05 1022 GLBL
+P6
+BDC1RNARDNVAP07 1024 RGNL,TDBK,EDUC,CU24,CITI,AFFN
+P7
+BDC1RNARDNVAP03 1023 GTWY,FISB,TFND,TRN1,PPSA,MCDP,ISPA,IFSA,FISA,CUSW,CUSA
+P5
+BDC1RNARDNVAP06 1025 GLBL
+++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++
+
+
+
+++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++
+API Types :
+
+VCR
+MCOM
+MFLD
+
+++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+
+++++++++++++++++++++++++++++++++++++++++++
+Application is available on Company portal app. Please follow below steps to install.
+ 1. Please click on the Windows Start Menu and then the icon called “Company Portal”.
+2. From the company Portal search for the application you want to install.
+3. Click on the icon and select install to complete the installation.Once installed the application will display ‘installed’.
+4. If you can’t see the application Icon you require, please try the following:
+
+    Click on the cog at the bottom of the company portal and press the sync button and repeat the steps above.
+5. Once installed the application will appear in the Start Menu or can be found from the search area. 	
+ ++++++++++++++++++++++++++++++++++++++++++
+ 
+ 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
