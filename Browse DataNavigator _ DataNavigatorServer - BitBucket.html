@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<!-- saved from url=(0117)https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/browse/Windows/Build/packages/librdkafka.redist.1.8.2 -->
+<html lang="en" data-theme="dark:dark light:light spacing:spacing" data-color-mode="light" class="pointer-events cm-s-stash-default"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width"><title>Browse DataNavigator / DataNavigatorServer - BitBucket</title><script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
+WRM._unparsedData["com.atlassian.bitbucket.server.bitbucket-webpack-INTERNAL:user-keyboard-shortcuts-enabled.data"]="true";
+WRM._unparsedData["com.atlassian.bitbucket.server.bitbucket-webpack-INTERNAL:date-format-preference.data"]="\u0022\u0022";
+WRM._unparsedData["com.atlassian.bitbucket.server.config-wrm-data:repository.merge.sync.timeout.data"]="{\u0022value\u0022:\u0022300\u0022,\u0022key\u0022:\u0022plugin.bitbucket-repository-ref-sync.merge.timeout\u0022,\u0022type\u0022:\u0022NUMBER\u0022}";
+WRM._unparsedData["com.atlassian.bitbucket.server.bitbucket-client-web-fragments:clone-dialog-options-location._unused_"]="null";
+WRM._unparsedData["com.atlassian.bitbucket.server.bitbucket-webpack-INTERNAL:determine-language.syntax-highlighters"]="{\u0022text/x-ruby\u0022:{\u0022x\u0022:[\u0022ruby\u0022]},\u0022application/json\u0022:{\u0022e\u0022:[\u0022ipynb\u0022]},\u0022text/x-objectivec\u0022:{\u0022e\u0022:[\u0022m\u0022]},\u0022text/x-python\u0022:{\u0022x\u0022:[\u0022python\u0022]},\u0022text/javascript\u0022:{\u0022x\u0022:[\u0022node\u0022]},\u0022text/x-sh\u0022:{\u0022e\u0022:[\u0022makefile\u0022,\u0022Makefile\u0022],\u0022x\u0022:[\u0022sh\u0022,\u0022bash\u0022,\u0022zsh\u0022]},\u0022text/x-perl\u0022:{\u0022x\u0022:[\u0022perl\u0022]},\u0022text/velocity\u0022:{\u0022e\u0022:[\u0022vm\u0022]},\u0022text/x-erlang\u0022:{\u0022x\u0022:[\u0022escript\u0022]}}";
+WRM._unparsedData["com.atlassian.bitbucket.server.feature-wrm-data:whats.new.data"]="true";
+WRM._unparsedData["com.atlassian.bitbucket.server.config-wrm-data:repository.rebase.sync.timeout.data"]="{\u0022value\u0022:\u0022300\u0022,\u0022key\u0022:\u0022plugin.bitbucket-repository-ref-sync.rebase.timeout\u0022,\u0022type\u0022:\u0022NUMBER\u0022}";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:programmatic-analytics-init.programmatic-analytics-data-provider"]="false";
+WRM._unparsedData["com.atlassian.plugins.atlassian-plugins-webresource-plugin:context-path.context-path"]="\u0022\u0022";
+WRM._unparsedData["com.atlassian.bitbucket.server.bitbucket-repository-ref-sync:ref-sync-diverged-action-items._unused_"]="null";
+WRM._unparsedData["com.atlassian.plugins.atlassian-clientside-extensions-runtime:runtime.atlassianDevMode"]="false";
+WRM._unparsedData["com.atlassian.bitbucket.server.feature-wrm-data:bidi.character.highlighting.data"]="true";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:policy-update-init.policy-update-data-provider"]="false";
+WRM._unparsedData["com.atlassian.bitbucket.server.bitbucket-jira:is-jira-linked.is-jira-linked-id"]="true";
+WRM._unparsedData["com.atlassian.bitbucket.server.bitbucket-webpack-INTERNAL:user-created-version.data"]="\u00226.10.0\u0022";
+WRM._unparsedData["com.atlassian.bitbucket.server.feature-wrm-data:build-version.data"]="\u00228.19.7\u0022";
+WRM._unparsedData["com.atlassian.bitbucket.server.config-wrm-data:page.max.directory.recursive.children.data"]="{\u0022value\u0022:\u0022100000\u0022,\u0022key\u0022:\u0022page.max.directory.recursive.children\u0022,\u0022type\u0022:\u0022NUMBER\u0022}";
+WRM._unparsedData["com.atlassian.bitbucket.server.bitbucket-client-web-fragments:branch-layout-actions-dropdown-location._unused_"]="null";
+WRM._unparsedData["com.onresolve.stash.groovy.groovyrunner:pluginInfoSettingsWebResources.settings-data-provider"]="{\u0022helpBaseUrl\u0022:\u0022https://docs.adaptavist.com/sr4bib/8.34.0/\u0022,\u0022pluginVersion\u0022:\u00228.34.0\u0022,\u0022buildNumber\u0022:8019007,\u0022appKey\u0022:\u0022com.onresolve.stash.groovy.groovyrunner\u0022,\u0022animationsEnabled\u0022:true,\u0022staticResourcePrefix\u0022:\u0022/s/630963042/f0cc7a1/xyowle/_\u0022,\u0022editorSettings\u0022:{\u0022miniMapEnabled\u0022:true,\u0022hapiLinterEnabled\u0022:true}}";
+WRM._unparsedData["com.atlassian.bitbucket.server.feature-wrm-data:user.time.zone.onboarding.data"]="true";
+WRM._unparsedData["com.atlassian.bitbucket.server.bitbucket-mirroring-upstream:preferred-mirror.preferred-mirror-id"]="\u0022\u0022";
+WRM._unparsedData["com.onresolve.stash.groovy.groovyrunner:web-item-response-renderer.web-item-actions-data-provider"]="[]";
+if(window.WRM._dataArrived)window.WRM._dataArrived();</script>
+<link rel="stylesheet" href="./Browse DataNavigator _ DataNavigatorServer - BitBucket_files/batch.css" data-wrm-key="_super" data-wrm-batch-type="context" media="all">
+<link rel="stylesheet" href="./Browse DataNavigator _ DataNavigatorServer - BitBucket_files/batch(1).css" data-wrm-key="bitbucket.page.repository.filebrowser,bitbucket.layout.files,bitbucket.layout.branch,bitbucket.layout.repository,bitbucket.internal.feature.theme,bitbucket.internal.feature.whats.new,atl.general,bitbucket.layout.base,bitbucket.layout.entity,-_super" data-wrm-batch-type="context" media="all">
+<script src="./Browse DataNavigator _ DataNavigatorServer - BitBucket_files/batch.js.download" data-wrm-key="_super" data-wrm-batch-type="context" data-initially-rendered=""></script>
+<script src="./Browse DataNavigator _ DataNavigatorServer - BitBucket_files/batch(1).js.download" data-wrm-key="bitbucket.page.repository.filebrowser,bitbucket.layout.files,bitbucket.layout.branch,bitbucket.layout.repository,bitbucket.internal.feature.theme,bitbucket.internal.feature.whats.new,atl.general,bitbucket.layout.base,bitbucket.layout.entity,-_super" data-wrm-batch-type="context" data-initially-rendered=""></script>
+<script>(function(loader) {loader.load('bitbucket.web.repository.clone.dialog.options', {"com.atlassian.bitbucket.server.bitbucket-mirroring-upstream:mirroring-clone-urls":{"serverCondition":false}});loader.load('bitbucket.refsync.diverged.actions', {"com.atlassian.bitbucket.server.bitbucket-repository-ref-sync:rebase":{"serverCondition":true}});loader.load('bitbucket.layout.repository', {"com.atlassian.bitbucket.server.bitbucket-repository-shortcuts:repository-shortcuts-url-scheme-whitelist-provider":{"urlSchemeWhitelist":["http://","https://","ftp://","ftps://","mailto:","skype:","callto:","facetime:","git:","irc:","irc6:","news:","nntp:","feed:","cvs:","svn:","mvn:","ssh:","itms:","notes:","smb:","hipchat://","sourcetree:","urn:","tel:","xmpp:","telnet:","vnc:","rdp:","whatsapp:","slack:","sip:","sips:","magnet:"]},"com.atlassian.bitbucket.server.bitbucket-page-data:markup-extension-provider":{"extensions":["md","markdown","mdown","mkdn","mkd","txt","text",""],"extensionsRaw":["txt","text",""],"name":"README"}});loader.load('bitbucket.branch.layout.actions.dropdown', {"com.atlassian.bitbucket.server.bitbucket-sourcetree:sourcetree-checkout-action-branch-layout":{"serverCondition":true},"com.atlassian.bitbucket.server.bitbucket-client-web-fragments:download-branch-action":{"serverCondition":true},"com.atlassian.bitbucket.server.bitbucket-branch:create-branch-action":{"serverCondition":true}});}(_PageDataPlugin));</script><meta name="application-name" content="Bitbucket"><link rel="shortcut icon" type="image/x-icon" href="https://bitbucket.fis.dev/s/630963042/f0cc7a1/xyowle/1.0/_/download/resources/com.atlassian.bitbucket.server.bitbucket-webpack-INTERNAL:favicon/favicon.ico"><link rel="search" href="https://bitbucket.fis.dev/plugins/servlet/opensearch-descriptor" type="application/opensearchdescription+xml" title="Bitbucket code search"><style data-emotion="css" data-s=""></style><script src="./Browse DataNavigator _ DataNavigatorServer - BitBucket_files/batch(2).js.download" defer=""></script><script src="./Browse DataNavigator _ DataNavigatorServer - BitBucket_files/batch(3).js.download" defer=""></script><style data-theme="light">
+html[data-color-mode="light"][data-theme~="light:light"],
+html[data-color-mode="dark"][data-theme~="dark:light"] {
+  color-scheme: light;
+  --ds-text: #172B4D;
+  --ds-text-accent-lime: #4C6B1F;
+  --ds-text-accent-lime-bolder: #37471F;
+  --ds-text-accent-red: #AE2E24;
+  --ds-text-accent-red-bolder: #5D1F1A;
+  --ds-text-accent-orange: #A54800;
+  --ds-text-accent-orange-bolder: #702E00;
+  --ds-text-accent-yellow: #7F5F01;
+  --ds-text-accent-yellow-bolder: #533F04;
+  --ds-text-accent-green: #216E4E;
+  --ds-text-accent-green-bolder: #164B35;
+  --ds-text-accent-teal: #206A83;
+  --ds-text-accent-teal-bolder: #164555;
+  --ds-text-accent-blue: #0055CC;
+  --ds-text-accent-blue-bolder: #09326C;
+  --ds-text-accent-purple: #5E4DB2;
+  --ds-text-accent-purple-bolder: #352C63;
+  --ds-text-accent-magenta: #943D73;
+  --ds-text-accent-magenta-bolder: #50253F;
+  --ds-text-accent-gray: #44546F;
+  --ds-text-accent-gray-bolder: #091E42;
+  --ds-text-disabled: #091E424F;
+  --ds-text-inverse: #FFFFFF;
+  --ds-text-selected: #0C66E4;
+  --ds-text-brand: #0C66E4;
+  --ds-text-danger: #AE2E24;
+  --ds-text-warning: #A54800;
+  --ds-text-warning-inverse: #172B4D;
+  --ds-text-success: #216E4E;
+  --ds-text-discovery: #5E4DB2;
+  --ds-text-information: #0055CC;
+  --ds-text-subtlest: #626F86;
+  --ds-text-subtle: #44546F;
+  --ds-link: #0C66E4;
+  --ds-link-pressed: #0055CC;
+  --ds-link-visited: #5E4DB2;
+  --ds-icon: #44546F;
+  --ds-icon-accent-lime: #6A9A23;
+  --ds-icon-accent-red: #C9372C;
+  --ds-icon-accent-orange: #E56910;
+  --ds-icon-accent-yellow: #B38600;
+  --ds-icon-accent-green: #22A06B;
+  --ds-icon-accent-teal: #2898BD;
+  --ds-icon-accent-blue: #1D7AFC;
+  --ds-icon-accent-purple: #8270DB;
+  --ds-icon-accent-magenta: #CD519D;
+  --ds-icon-accent-gray: #758195;
+  --ds-icon-disabled: #091E424F;
+  --ds-icon-inverse: #FFFFFF;
+  --ds-icon-selected: #0C66E4;
+  --ds-icon-brand: #0C66E4;
+  --ds-icon-danger: #C9372C;
+  --ds-icon-warning: #E56910;
+  --ds-icon-warning-inverse: #172B4D;
+  --ds-icon-success: #22A06B;
+  --ds-icon-discovery: #8270DB;
+  --ds-icon-information: #1D7AFC;
+  --ds-icon-subtle: #626F86;
+  --ds-border: #091E4224;
+  --ds-border-accent-lime: #6A9A23;
+  --ds-border-accent-red: #E2483D;
+  --ds-border-accent-orange: #E56910;
+  --ds-border-accent-yellow: #B38600;
+  --ds-border-accent-green: #22A06B;
+  --ds-border-accent-teal: #2898BD;
+  --ds-border-accent-blue: #1D7AFC;
+  --ds-border-accent-purple: #8270DB;
+  --ds-border-accent-magenta: #CD519D;
+  --ds-border-accent-gray: #758195;
+  --ds-border-disabled: #091E420F;
+  --ds-border-focused: #388BFF;
+  --ds-border-input: #091E4224;
+  --ds-border-inverse: #FFFFFF;
+  --ds-border-selected: #0C66E4;
+  --ds-border-brand: #0C66E4;
+  --ds-border-danger: #E2483D;
+  --ds-border-warning: #E56910;
+  --ds-border-success: #22A06B;
+  --ds-border-discovery: #8270DB;
+  --ds-border-information: #1D7AFC;
+  --ds-border-bold: #758195;
+  --ds-background-accent-lime-subtlest: #EFFFD6;
+  --ds-background-accent-lime-subtlest-hovered: #D3F1A7;
+  --ds-background-accent-lime-subtlest-pressed: #B3DF72;
+  --ds-background-accent-lime-subtler: #D3F1A7;
+  --ds-background-accent-lime-subtler-hovered: #B3DF72;
+  --ds-background-accent-lime-subtler-pressed: #94C748;
+  --ds-background-accent-lime-subtle: #94C748;
+  --ds-background-accent-lime-subtle-hovered: #B3DF72;
+  --ds-background-accent-lime-subtle-pressed: #D3F1A7;
+  --ds-background-accent-lime-bolder: #5B7F24;
+  --ds-background-accent-lime-bolder-hovered: #4C6B1F;
+  --ds-background-accent-lime-bolder-pressed: #37471F;
+  --ds-background-accent-red-subtlest: #FFECEB;
+  --ds-background-accent-red-subtlest-hovered: #FFD5D2;
+  --ds-background-accent-red-subtlest-pressed: #FD9891;
+  --ds-background-accent-red-subtler: #FFD5D2;
+  --ds-background-accent-red-subtler-hovered: #FD9891;
+  --ds-background-accent-red-subtler-pressed: #F87168;
+  --ds-background-accent-red-subtle: #F87168;
+  --ds-background-accent-red-subtle-hovered: #FD9891;
+  --ds-background-accent-red-subtle-pressed: #FFD5D2;
+  --ds-background-accent-red-bolder: #C9372C;
+  --ds-background-accent-red-bolder-hovered: #AE2E24;
+  --ds-background-accent-red-bolder-pressed: #5D1F1A;
+  --ds-background-accent-orange-subtlest: #FFF3EB;
+  --ds-background-accent-orange-subtlest-hovered: #FEDEC8;
+  --ds-background-accent-orange-subtlest-pressed: #FEC195;
+  --ds-background-accent-orange-subtler: #FEDEC8;
+  --ds-background-accent-orange-subtler-hovered: #FEC195;
+  --ds-background-accent-orange-subtler-pressed: #FEA362;
+  --ds-background-accent-orange-subtle: #FEA362;
+  --ds-background-accent-orange-subtle-hovered: #FEC195;
+  --ds-background-accent-orange-subtle-pressed: #FEDEC8;
+  --ds-background-accent-orange-bolder: #C25100;
+  --ds-background-accent-orange-bolder-hovered: #A54800;
+  --ds-background-accent-orange-bolder-pressed: #702E00;
+  --ds-background-accent-yellow-subtlest: #FFF7D6;
+  --ds-background-accent-yellow-subtlest-hovered: #F8E6A0;
+  --ds-background-accent-yellow-subtlest-pressed: #F5CD47;
+  --ds-background-accent-yellow-subtler: #F8E6A0;
+  --ds-background-accent-yellow-subtler-hovered: #F5CD47;
+  --ds-background-accent-yellow-subtler-pressed: #E2B203;
+  --ds-background-accent-yellow-subtle: #F5CD47;
+  --ds-background-accent-yellow-subtle-hovered: #E2B203;
+  --ds-background-accent-yellow-subtle-pressed: #CF9F02;
+  --ds-background-accent-yellow-bolder: #946F00;
+  --ds-background-accent-yellow-bolder-hovered: #7F5F01;
+  --ds-background-accent-yellow-bolder-pressed: #533F04;
+  --ds-background-accent-green-subtlest: #DCFFF1;
+  --ds-background-accent-green-subtlest-hovered: #BAF3DB;
+  --ds-background-accent-green-subtlest-pressed: #7EE2B8;
+  --ds-background-accent-green-subtler: #BAF3DB;
+  --ds-background-accent-green-subtler-hovered: #7EE2B8;
+  --ds-background-accent-green-subtler-pressed: #4BCE97;
+  --ds-background-accent-green-subtle: #4BCE97;
+  --ds-background-accent-green-subtle-hovered: #7EE2B8;
+  --ds-background-accent-green-subtle-pressed: #BAF3DB;
+  --ds-background-accent-green-bolder: #1F845A;
+  --ds-background-accent-green-bolder-hovered: #216E4E;
+  --ds-background-accent-green-bolder-pressed: #164B35;
+  --ds-background-accent-teal-subtlest: #E7F9FF;
+  --ds-background-accent-teal-subtlest-hovered: #C6EDFB;
+  --ds-background-accent-teal-subtlest-pressed: #9DD9EE;
+  --ds-background-accent-teal-subtler: #C6EDFB;
+  --ds-background-accent-teal-subtler-hovered: #9DD9EE;
+  --ds-background-accent-teal-subtler-pressed: #6CC3E0;
+  --ds-background-accent-teal-subtle: #6CC3E0;
+  --ds-background-accent-teal-subtle-hovered: #9DD9EE;
+  --ds-background-accent-teal-subtle-pressed: #C6EDFB;
+  --ds-background-accent-teal-bolder: #227D9B;
+  --ds-background-accent-teal-bolder-hovered: #206A83;
+  --ds-background-accent-teal-bolder-pressed: #164555;
+  --ds-background-accent-blue-subtlest: #E9F2FF;
+  --ds-background-accent-blue-subtlest-hovered: #CCE0FF;
+  --ds-background-accent-blue-subtlest-pressed: #85B8FF;
+  --ds-background-accent-blue-subtler: #CCE0FF;
+  --ds-background-accent-blue-subtler-hovered: #85B8FF;
+  --ds-background-accent-blue-subtler-pressed: #579DFF;
+  --ds-background-accent-blue-subtle: #579DFF;
+  --ds-background-accent-blue-subtle-hovered: #85B8FF;
+  --ds-background-accent-blue-subtle-pressed: #CCE0FF;
+  --ds-background-accent-blue-bolder: #0C66E4;
+  --ds-background-accent-blue-bolder-hovered: #0055CC;
+  --ds-background-accent-blue-bolder-pressed: #09326C;
+  --ds-background-accent-purple-subtlest: #F3F0FF;
+  --ds-background-accent-purple-subtlest-hovered: #DFD8FD;
+  --ds-background-accent-purple-subtlest-pressed: #B8ACF6;
+  --ds-background-accent-purple-subtler: #DFD8FD;
+  --ds-background-accent-purple-subtler-hovered: #B8ACF6;
+  --ds-background-accent-purple-subtler-pressed: #9F8FEF;
+  --ds-background-accent-purple-subtle: #9F8FEF;
+  --ds-background-accent-purple-subtle-hovered: #B8ACF6;
+  --ds-background-accent-purple-subtle-pressed: #DFD8FD;
+  --ds-background-accent-purple-bolder: #6E5DC6;
+  --ds-background-accent-purple-bolder-hovered: #5E4DB2;
+  --ds-background-accent-purple-bolder-pressed: #352C63;
+  --ds-background-accent-magenta-subtlest: #FFECF8;
+  --ds-background-accent-magenta-subtlest-hovered: #FDD0EC;
+  --ds-background-accent-magenta-subtlest-pressed: #F797D2;
+  --ds-background-accent-magenta-subtler: #FDD0EC;
+  --ds-background-accent-magenta-subtler-hovered: #F797D2;
+  --ds-background-accent-magenta-subtler-pressed: #E774BB;
+  --ds-background-accent-magenta-subtle: #E774BB;
+  --ds-background-accent-magenta-subtle-hovered: #F797D2;
+  --ds-background-accent-magenta-subtle-pressed: #FDD0EC;
+  --ds-background-accent-magenta-bolder: #AE4787;
+  --ds-background-accent-magenta-bolder-hovered: #943D73;
+  --ds-background-accent-magenta-bolder-pressed: #50253F;
+  --ds-background-accent-gray-subtlest: #F1F2F4;
+  --ds-background-accent-gray-subtlest-hovered: #DCDFE4;
+  --ds-background-accent-gray-subtlest-pressed: #B3B9C4;
+  --ds-background-accent-gray-subtler: #DCDFE4;
+  --ds-background-accent-gray-subtler-hovered: #B3B9C4;
+  --ds-background-accent-gray-subtler-pressed: #8590A2;
+  --ds-background-accent-gray-subtle: #8590A2;
+  --ds-background-accent-gray-subtle-hovered: #B3B9C4;
+  --ds-background-accent-gray-subtle-pressed: #DCDFE4;
+  --ds-background-accent-gray-bolder: #626F86;
+  --ds-background-accent-gray-bolder-hovered: #44546F;
+  --ds-background-accent-gray-bolder-pressed: #2C3E5D;
+  --ds-background-disabled: #091E4208;
+  --ds-background-input: #FFFFFF;
+  --ds-background-input-hovered: #F7F8F9;
+  --ds-background-input-pressed: #FFFFFF;
+  --ds-background-inverse-subtle: #00000029;
+  --ds-background-inverse-subtle-hovered: #0000003D;
+  --ds-background-inverse-subtle-pressed: #00000052;
+  --ds-background-neutral: #091E420F;
+  --ds-background-neutral-hovered: #091E4224;
+  --ds-background-neutral-pressed: #091E424F;
+  --ds-background-neutral-subtle: #00000000;
+  --ds-background-neutral-subtle-hovered: #091E420F;
+  --ds-background-neutral-subtle-pressed: #091E4224;
+  --ds-background-neutral-bold: #44546F;
+  --ds-background-neutral-bold-hovered: #2C3E5D;
+  --ds-background-neutral-bold-pressed: #172B4D;
+  --ds-background-selected: #E9F2FF;
+  --ds-background-selected-hovered: #CCE0FF;
+  --ds-background-selected-pressed: #85B8FF;
+  --ds-background-selected-bold: #0C66E4;
+  --ds-background-selected-bold-hovered: #0055CC;
+  --ds-background-selected-bold-pressed: #09326C;
+  --ds-background-brand-subtlest: #E9F2FF;
+  --ds-background-brand-subtlest-hovered: #CCE0FF;
+  --ds-background-brand-subtlest-pressed: #85B8FF;
+  --ds-background-brand-bold: #0C66E4;
+  --ds-background-brand-bold-hovered: #0055CC;
+  --ds-background-brand-bold-pressed: #09326C;
+  --ds-background-brand-boldest: #1C2B41;
+  --ds-background-brand-boldest-hovered: #09326C;
+  --ds-background-brand-boldest-pressed: #0055CC;
+  --ds-background-danger: #FFECEB;
+  --ds-background-danger-hovered: #FFD5D2;
+  --ds-background-danger-pressed: #FD9891;
+  --ds-background-danger-bold: #C9372C;
+  --ds-background-danger-bold-hovered: #AE2E24;
+  --ds-background-danger-bold-pressed: #5D1F1A;
+  --ds-background-warning: #FFF7D6;
+  --ds-background-warning-hovered: #F8E6A0;
+  --ds-background-warning-pressed: #F5CD47;
+  --ds-background-warning-bold: #F5CD47;
+  --ds-background-warning-bold-hovered: #E2B203;
+  --ds-background-warning-bold-pressed: #CF9F02;
+  --ds-background-success: #DCFFF1;
+  --ds-background-success-hovered: #BAF3DB;
+  --ds-background-success-pressed: #7EE2B8;
+  --ds-background-success-bold: #1F845A;
+  --ds-background-success-bold-hovered: #216E4E;
+  --ds-background-success-bold-pressed: #164B35;
+  --ds-background-discovery: #F3F0FF;
+  --ds-background-discovery-hovered: #DFD8FD;
+  --ds-background-discovery-pressed: #B8ACF6;
+  --ds-background-discovery-bold: #6E5DC6;
+  --ds-background-discovery-bold-hovered: #5E4DB2;
+  --ds-background-discovery-bold-pressed: #352C63;
+  --ds-background-information: #E9F2FF;
+  --ds-background-information-hovered: #CCE0FF;
+  --ds-background-information-pressed: #85B8FF;
+  --ds-background-information-bold: #0C66E4;
+  --ds-background-information-bold-hovered: #0055CC;
+  --ds-background-information-bold-pressed: #09326C;
+  --ds-blanket: #091E427D;
+  --ds-blanket-selected: #388BFF14;
+  --ds-blanket-danger: #EF5C4814;
+  --ds-interaction-hovered: #00000029;
+  --ds-interaction-pressed: #00000052;
+  --ds-skeleton: #091E420F;
+  --ds-skeleton-subtle: #091E4208;
+  --ds-chart-categorical-1: #2898BD;
+  --ds-chart-categorical-1-hovered: #227D9B;
+  --ds-chart-categorical-2: #5E4DB2;
+  --ds-chart-categorical-2-hovered: #352C63;
+  --ds-chart-categorical-3: #E56910;
+  --ds-chart-categorical-3-hovered: #C25100;
+  --ds-chart-categorical-4: #943D73;
+  --ds-chart-categorical-4-hovered: #50253F;
+  --ds-chart-categorical-5: #09326C;
+  --ds-chart-categorical-5-hovered: #1C2B41;
+  --ds-chart-categorical-6: #8F7EE7;
+  --ds-chart-categorical-6-hovered: #8270DB;
+  --ds-chart-categorical-7: #50253F;
+  --ds-chart-categorical-7-hovered: #3D2232;
+  --ds-chart-categorical-8: #A54800;
+  --ds-chart-categorical-8-hovered: #702E00;
+  --ds-chart-lime-bold: #6A9A23;
+  --ds-chart-lime-bold-hovered: #5B7F24;
+  --ds-chart-lime-bolder: #5B7F24;
+  --ds-chart-lime-bolder-hovered: #4C6B1F;
+  --ds-chart-lime-boldest: #4C6B1F;
+  --ds-chart-lime-boldest-hovered: #37471F;
+  --ds-chart-neutral: #8590A2;
+  --ds-chart-neutral-hovered: #758195;
+  --ds-chart-red-bold: #F15B50;
+  --ds-chart-red-bold-hovered: #E2483D;
+  --ds-chart-red-bolder: #E2483D;
+  --ds-chart-red-bolder-hovered: #C9372C;
+  --ds-chart-red-boldest: #AE2E24;
+  --ds-chart-red-boldest-hovered: #5D1F1A;
+  --ds-chart-orange-bold: #E56910;
+  --ds-chart-orange-bold-hovered: #C25100;
+  --ds-chart-orange-bolder: #C25100;
+  --ds-chart-orange-bolder-hovered: #A54800;
+  --ds-chart-orange-boldest: #A54800;
+  --ds-chart-orange-boldest-hovered: #702E00;
+  --ds-chart-yellow-bold: #B38600;
+  --ds-chart-yellow-bold-hovered: #946F00;
+  --ds-chart-yellow-bolder: #946F00;
+  --ds-chart-yellow-bolder-hovered: #7F5F01;
+  --ds-chart-yellow-boldest: #7F5F01;
+  --ds-chart-yellow-boldest-hovered: #533F04;
+  --ds-chart-green-bold: #22A06B;
+  --ds-chart-green-bold-hovered: #1F845A;
+  --ds-chart-green-bolder: #1F845A;
+  --ds-chart-green-bolder-hovered: #216E4E;
+  --ds-chart-green-boldest: #216E4E;
+  --ds-chart-green-boldest-hovered: #164B35;
+  --ds-chart-teal-bold: #2898BD;
+  --ds-chart-teal-bold-hovered: #227D9B;
+  --ds-chart-teal-bolder: #227D9B;
+  --ds-chart-teal-bolder-hovered: #206A83;
+  --ds-chart-teal-boldest: #206A83;
+  --ds-chart-teal-boldest-hovered: #164555;
+  --ds-chart-blue-bold: #388BFF;
+  --ds-chart-blue-bold-hovered: #1D7AFC;
+  --ds-chart-blue-bolder: #1D7AFC;
+  --ds-chart-blue-bolder-hovered: #0C66E4;
+  --ds-chart-blue-boldest: #0055CC;
+  --ds-chart-blue-boldest-hovered: #09326C;
+  --ds-chart-purple-bold: #8F7EE7;
+  --ds-chart-purple-bold-hovered: #8270DB;
+  --ds-chart-purple-bolder: #8270DB;
+  --ds-chart-purple-bolder-hovered: #6E5DC6;
+  --ds-chart-purple-boldest: #5E4DB2;
+  --ds-chart-purple-boldest-hovered: #352C63;
+  --ds-chart-magenta-bold: #DA62AC;
+  --ds-chart-magenta-bold-hovered: #CD519D;
+  --ds-chart-magenta-bolder: #CD519D;
+  --ds-chart-magenta-bolder-hovered: #AE4787;
+  --ds-chart-magenta-boldest: #943D73;
+  --ds-chart-magenta-boldest-hovered: #50253F;
+  --ds-chart-gray-bold: #8590A2;
+  --ds-chart-gray-bold-hovered: #758195;
+  --ds-chart-gray-bolder: #758195;
+  --ds-chart-gray-bolder-hovered: #626F86;
+  --ds-chart-gray-boldest: #44546F;
+  --ds-chart-gray-boldest-hovered: #2C3E5D;
+  --ds-chart-brand: #1D7AFC;
+  --ds-chart-brand-hovered: #0C66E4;
+  --ds-chart-danger: #F15B50;
+  --ds-chart-danger-hovered: #E2483D;
+  --ds-chart-danger-bold: #AE2E24;
+  --ds-chart-danger-bold-hovered: #5D1F1A;
+  --ds-chart-warning: #B38600;
+  --ds-chart-warning-hovered: #946F00;
+  --ds-chart-warning-bold: #7F5F01;
+  --ds-chart-warning-bold-hovered: #533F04;
+  --ds-chart-success: #22A06B;
+  --ds-chart-success-hovered: #1F845A;
+  --ds-chart-success-bold: #216E4E;
+  --ds-chart-success-bold-hovered: #164B35;
+  --ds-chart-discovery: #8F7EE7;
+  --ds-chart-discovery-hovered: #8270DB;
+  --ds-chart-discovery-bold: #5E4DB2;
+  --ds-chart-discovery-bold-hovered: #352C63;
+  --ds-chart-information: #388BFF;
+  --ds-chart-information-hovered: #1D7AFC;
+  --ds-chart-information-bold: #0055CC;
+  --ds-chart-information-bold-hovered: #09326C;
+  --ds-surface: #FFFFFF;
+  --ds-surface-hovered: #F1F2F4;
+  --ds-surface-pressed: #DCDFE4;
+  --ds-surface-overlay: #FFFFFF;
+  --ds-surface-overlay-hovered: #F1F2F4;
+  --ds-surface-overlay-pressed: #DCDFE4;
+  --ds-surface-raised: #FFFFFF;
+  --ds-surface-raised-hovered: #F1F2F4;
+  --ds-surface-raised-pressed: #DCDFE4;
+  --ds-surface-sunken: #F7F8F9;
+  --ds-shadow-overflow: 0px 0px 8px #091E4229, 0px 0px 1px #091E421F;
+  --ds-shadow-overflow-perimeter: #091e421f;
+  --ds-shadow-overflow-spread: #091e4229;
+  --ds-shadow-overlay: 0px 8px 12px #091E4226, 0px 0px 1px #091E424F;
+  --ds-shadow-raised: 0px 1px 1px #091E4240, 0px 0px 1px #091E424F;
+  --ds-opacity-disabled: 0.4;
+  --ds-opacity-loading: 0.2;
+  --ds-UNSAFE-transparent: transparent;
+  --ds-elevation-surface-current: #FFFFFF;
+}
+</style><style data-theme="spacing">
+html[data-theme~="spacing:spacing"] {
+  --ds-space-0: 0rem;
+  --ds-space-025: 0.125rem;
+  --ds-space-050: 0.25rem;
+  --ds-space-075: 0.375rem;
+  --ds-space-100: 0.5rem;
+  --ds-space-150: 0.75rem;
+  --ds-space-200: 1rem;
+  --ds-space-250: 1.25rem;
+  --ds-space-300: 1.5rem;
+  --ds-space-400: 2rem;
+  --ds-space-500: 2.5rem;
+  --ds-space-600: 3rem;
+  --ds-space-800: 4rem;
+  --ds-space-1000: 5rem;
+  --ds-space-negative-025: -0.125rem;
+  --ds-space-negative-050: -0.25rem;
+  --ds-space-negative-075: -0.375rem;
+  --ds-space-negative-100: -0.5rem;
+  --ds-space-negative-150: -0.75rem;
+  --ds-space-negative-200: -1rem;
+  --ds-space-negative-250: -1.25rem;
+  --ds-space-negative-300: -1.5rem;
+  --ds-space-negative-400: -2rem;
+}
+</style></head><body class="aui-page-sidebar bitbucket-theme aui-theme-design-tokens aui-sidebar-collapsed" data-aui-version="9.10.0"><script type="text/javascript">require('@bitbucket/internal/feature/theme').init();</script><ul id="assistive-skip-links" class="assistive"><li><a href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/browse/Windows/Build/packages/librdkafka.redist.1.8.2#aui-sidebar-content">Skip to sidebar navigation</a></li><li><a href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/browse/Windows/Build/packages/librdkafka.redist.1.8.2#aui-page-panel-content-body">Skip to content</a></li></ul><div id="page"><!-- start #header --><header id="header" role="banner"><section class="notifications"><script type="text/javascript">var aDiv = '</br></br><a href=" https://atyourserviceportal.service-now.com/nav_to.do?uri=%2Fkb_view.do%3Fsysparm_article%3DKB000031116%26sysparm_stack%3D%26sysparm_view%3D" id="access_snow" class="btn btn-primary btn-large">Request login access</a>';setTimeout(function() {if(AJS.$("#try-again-button") ){AJS.$("#try-again-button").append(aDiv);} else if(AJS.$("#error-section") ){AJS.$("#error-section").append(aDiv);}}, 500);</script></section><nav class="aui-header aui-dropdown2-trigger-group" aria-label="site" data-aui-responsive="true"><div class="aui-header-inner"><div class="aui-header-before"><button class=" aui-dropdown2-trigger app-switcher-trigger aui-dropdown2-trigger-arrowless" aria-controls="app-switcher" aria-haspopup="true" role="button" data-aui-trigger="" href="#app-switcher" resolved="" aria-expanded="false"><span class="aui-icon aui-icon-small aui-iconfont-appswitcher">Linked Applications</span></button><div id="app-switcher" class="aui-dropdown2 aui-style-default aui-layer" role="menu" hidden="" data-is-user-admin="false" data-is-switcher="true" resolved="" tabindex="-1"><div class="aui-dropdown2-section"><ul class="nav-links"><li class="nav-link"><a href="https://jira.fis.dev/secure/MyJiraHome.jspa" class="aui-dropdown2-radio" title="https://jira.fis.dev/secure/MyJiraHome.jspa" resolved="" aria-checked="false" tabindex="0"><span class="nav-link-label">Azure FNIS JIRA</span></a></li><li class="nav-link"><a href="https://etojira.fnfis.com/secure/MyJiraHome.jspa" class="aui-dropdown2-radio" title="https://etojira.fnfis.com/secure/MyJiraHome.jspa" resolved="" aria-checked="false" tabindex="0"><span class="nav-link-label">FIS ETO JIRA</span></a></li><li class="nav-link"><a href="https://jira.wra.fisglobal.com/secure/MyJiraHome.jspa" class="aui-dropdown2-radio" title="https://jira.wra.fisglobal.com/secure/MyJiraHome.jspa" resolved="" aria-checked="false" tabindex="0"><span class="nav-link-label">FIS Wealth &amp; Retirement Administration Issue Tracking System</span></a></li><li class="nav-link"><a href="http://emeastojira.tqa.corp:8090/secure/MyJiraHome.jspa" class="aui-dropdown2-radio" title="http://emeastojira.tqa.corp:8090/secure/MyJiraHome.jspa" resolved="" aria-checked="false" tabindex="0"><span class="nav-link-label">Jira</span></a></li><li class="nav-link"><a href="https://wiki.fisglobal.com/" class="aui-dropdown2-radio" title="https://wiki.fisglobal.com/" resolved="" aria-checked="false" tabindex="0"><span class="nav-link-label">FIS Enterprise Wiki</span></a></li><li class="nav-link"><a href="https://fisheye.fis.dev/" class="aui-dropdown2-radio" title="https://fisheye.fis.dev/" resolved="" aria-checked="false" tabindex="0"><span class="nav-link-label">Fisheye + Crucible</span></a></li><li class="nav-link nav-link-local"><a href="https://bitbucket.fis.dev/" class="aui-dropdown2-radio aui-dropdown2-checked checked" title="https://bitbucket.fis.dev/" resolved="" aria-checked="true" tabindex="0"><span class="nav-link-label">BitBucket</span></a></li><li class="nav-link"><a href="http://vlmazbamboosvr.fisdev.local:8085/" class="aui-dropdown2-radio" title="http://vlmazbamboosvr.fisdev.local:8085/" resolved="" aria-checked="false" tabindex="0"><span class="nav-link-label">Atlassian Bamboo</span></a></li></ul></div></div></div><div class="aui-header-primary"><span id="logo" class="aui-header-logo bitbucket-header-logo" style=""><a href="https://bitbucket.fis.dev/"><img src="./Browse DataNavigator _ DataNavigatorServer - BitBucket_files/bitbucket.svg" alt="Bitbucket" data-aui-responsive-header-index="0"></a></span><ul class="aui-nav" resolved="" style="width: auto;"><li class=" dashboard-link" style=""><a href="https://bitbucket.fis.dev/dashboard" class="dashboard-link" data-web-item-key="com.atlassian.bitbucket.server.bitbucket-server-web-fragments:dashboard-menu">Your work</a></li><li class=" projects-link" style=""><a href="https://bitbucket.fis.dev/projects" class="projects-link" data-web-item-key="com.atlassian.bitbucket.server.bitbucket-server-web-fragments:projects-menu">Projects</a></li><li class="selected recent-repositories" style=""><a id="repositories-menu-trigger" class=" aui-dropdown2-trigger" aria-controls="com.atlassian.bitbucket.server.bitbucket-server-web-fragments-repositories-menu" aria-haspopup="true" role="button" tabindex="0" data-aui-trigger="" resolved="" aria-expanded="false" href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/browse/Windows/Build/packages/librdkafka.redist.1.8.2#com.atlassian.bitbucket.server.bitbucket-server-web-fragments-repositories-menu">Repositories</a><div id="com.atlassian.bitbucket.server.bitbucket-server-web-fragments-repositories-menu" class="aui-dropdown2 aui-style-default aui-layer recent-repositories-menu" role="menu" hidden="" data-aui-dom-container="body" resolved="" tabindex="-1"><div class="aui-dropdown2-section recent-repositories-section repository-list-container" id="recent-repositories-list-container"><span aria-hidden="true" class="aui-dropdown2-heading">Recently viewed</span><ul class="repository-list search-results-container"><li class="search-results-item repository"><a href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/browse" class="repository-link" data-entity="repository" data-repository-id="18638" data-repository-slug="datanavigatorserver" data-project-id="7867" data-project-key="DN" title="DataNavigatorServer"><span class="aui-avatar aui-avatar-medium aui-avatar-project"><span class="aui-avatar-inner"><img alt="DataNavigator" src="./Browse DataNavigator _ DataNavigatorServer - BitBucket_files/avatar.png" title="DataNavigator"></span></span><div class="item-wrapper"><strong class="item-name">DataNavigatorServer</strong><p class="item-description" aria-hidden="true">DataNavigator</p></div></a></li></ul></div></div></li></ul></div><div class="aui-header-secondary"><ul class="aui-nav" resolved="" style="display: flex;"><li><div id="quick-search-loader"><div><form class="aui-quicksearch" method="GET" action="https://bitbucket.fis.dev/plugins/servlet/search"><div class="quick-search-trigger"><label class="assistive" for="quick-search">Search for code, commits or repositories</label><input id="quick-search" name="q" type="text" autocomplete="off" placeholder="Search" aria-activedescendant="" aria-autocomplete="both" aria-busy="false" aria-controls="quick-search-dialog" aria-expanded="false" aria-haspopup="true" role="combobox"></div></form></div></div><script>jQuery(document).ready(function () {require(['bitbucket-plugin-search/internal/component/quick-search/quick-search-loader'], function (loader) {loader.onReady('#quick-search-loader');}) ;}) ;</script></li><li class=" help-link" title="Help"><a class=" aui-dropdown2-trigger aui-dropdown2-trigger-arrowless" aria-controls="com.atlassian.bitbucket.server.bitbucket-server-web-fragments-help-menu" aria-haspopup="true" role="button" tabindex="0" data-aui-trigger="" resolved="" aria-expanded="false" href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/browse/Windows/Build/packages/librdkafka.redist.1.8.2#com.atlassian.bitbucket.server.bitbucket-server-web-fragments-help-menu"><span class="aui-icon aui-icon-small aui-icon-small aui-iconfont-question-filled">Help</span></a><div id="com.atlassian.bitbucket.server.bitbucket-server-web-fragments-help-menu" class="aui-dropdown2 aui-style-default aui-layer" role="menu" hidden="" data-aui-dom-container="body" resolved="" tabindex="-1"><div class="aui-dropdown2-section help-items-section"><ul class="aui-list-truncate" role="presentation"><li role="presentation"><a href="https://docs.atlassian.com/bitbucketserver/docs-0819/Bitbucket+Data+Center+and+Server+documentation?utm_campaign=in-app-help&amp;amp;utm_medium=in-app-help&amp;amp;utm_source=stash" title="Go to the online documentation for Bitbucket" data-web-item-key="com.atlassian.bitbucket.server.bitbucket-server-web-fragments:general-help">Online help</a></li><li role="presentation"><a href="https://www.atlassian.com/git?utm_campaign=learn-git&amp;utm_medium=in-app-help&amp;utm_source=stash" title="Learn about Git commands &amp; workflows" data-web-item-key="com.atlassian.bitbucket.server.bitbucket-server-web-fragments:learn-git">Learn Git</a></li><li role="presentation"><a href="https://bitbucket.fis.dev/getting-started" class="getting-started-page-link" title="Overview of Bitbucket features" data-web-item-key="com.atlassian.bitbucket.server.bitbucket-server-web-fragments:getting-started-page-help-link">Welcome to Bitbucket</a></li><li role="presentation"><a href="https://bitbucket.fis.dev/#" class="keyboard-shortcut-link" title="Discover keyboard shortcuts in Bitbucket" data-web-item-key="com.atlassian.bitbucket.server.bitbucket-server-web-fragments:keyboard-shortcuts-help-link">Keyboard shortcuts</a></li><li role="presentation"><div><button class="whats-new-button css-1luyhz2" tabindex="0" type="button"><span class="css-178ag6o"><span>What's new</span></span></button></div></li><li role="presentation"><a href="https://confluence.atlassian.com/display/BitbucketServer/release+notes?utm_campaign=in-app-help&amp;utm_medium=in-app-help&amp;utm_source=stash" title="View all release notes for Bitbucket" data-web-item-key="com.atlassian.bitbucket.server.bitbucket-server-web-fragments:release-notes-link">Release notes</a></li><li role="presentation"><a href="https://go.atlassian.com/bitbucket-server-community?utm_campaign=in-app-help&amp;utm_medium=in-app-help&amp;utm_source=stash" title="Explore the Atlassian community" data-web-item-key="com.atlassian.bitbucket.server.bitbucket-server-web-fragments:community-link">Community</a></li><li role="presentation"><a href="https://bitbucket.fis.dev/about" title="About Bitbucket" data-web-item-key="com.atlassian.bitbucket.server.bitbucket-server-web-fragments:about">About</a></li></ul></div></div></li><li class=" alerts-menu" title="View system alerts"><a href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/browse/Windows/Build/packages/librdkafka.redist.1.8.2#alerts" id="alerts-trigger" class="alerts-menu hidden" title="View system alerts" data-web-item-key="com.atlassian.bitbucket.server.bitbucket-server-web-fragments:global-alerts-menu-item" data-aui-trigger="true" aria-controls="alerts-content" resolved="" aria-expanded="false" aria-haspopup="true"><span class="aui-icon aui-icon-small aui-iconfont-check">Alerts</span></a></li><li class="inbox-menu" title="View your unapproved pull requests"><a href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/browse/Windows/Build/packages/librdkafka.redist.1.8.2#inbox" id="inbox-trigger" data-aui-trigger="" aria-controls="inline-dialog-inbox-pull-requests-content" aria-label="View your 0 unapproved pull requests" resolved="" aria-expanded="false" aria-haspopup="true" data-countloaded="true"><span class="aui-icon aui-icon-small aui-iconfont-tray" role="img" aria-label="Inbox"></span></a><aui-inline-dialog id="inline-dialog-inbox-pull-requests-content" alignment="bottom right" data-aui-dom-container="body" resolved="" class="aui-layer" tabindex="0" role="group"><div class="aui-inline-dialog-contents"><aui-spinner size="medium" resolved=""><div class="aui-spinner spinner"><svg focusable="false" size="30" height="30" width="30" viewBox="0 0 30 30"><circle cx="15" cy="15" r="13.5"></circle></svg></div></aui-spinner></div></aui-inline-dialog></li><li class="user-dropdown"><a class=" aui-dropdown2-trigger user-dropdown-trigger aui-dropdown2-trigger-arrowless" aria-controls="user-dropdown-menu" aria-haspopup="true" role="button" title="Logged in as Rangam, VamshiKrishna (e5644299)" data-container=".aui-header-secondary" tabindex="0" data-aui-trigger="" resolved="" aria-expanded="false" href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/browse/Windows/Build/packages/librdkafka.redist.1.8.2#user-dropdown-menu"><span id="current-user" class="aui-avatar aui-avatar-small" data-emailaddress="VamshiKrishna.Rangam@fisglobal.com" data-username="e5644299" data-avatarurl-small="https://secure.gravatar.com/avatar/ec944d1c242335f672c209a57bf3bb44.jpg?s=48&amp;d=mm"><span class="aui-avatar-inner"><img src="./Browse DataNavigator _ DataNavigatorServer - BitBucket_files/ec944d1c242335f672c209a57bf3bb44.jpg.png" alt="Logged in as Rangam, VamshiKrishna (e5644299)"></span></span></a><div id="user-dropdown-menu" class="aui-dropdown2 aui-style-default aui-layer" role="menu" hidden="" data-aui-dom-container="body" resolved="" tabindex="-1"><div class="aui-dropdown2-section user-settings-section"><ul class="aui-list-truncate" role="presentation"><li role="presentation"><a href="https://bitbucket.fis.dev/profile" data-web-item-key="com.atlassian.bitbucket.server.bitbucket-server-web-fragments:profile-menu-item">View profile</a></li><li role="presentation"><a href="https://bitbucket.fis.dev/account" data-web-item-key="com.atlassian.bitbucket.server.bitbucket-server-web-fragments:account-menu-item">Manage account</a></li><li role="presentation"><button class="interactive theme-wrapper css-1pifu9q" tabindex="0" type="button"><span class="css-178ag6o"><span>Theme</span><span data-testid="theme-menu-onboarding" class="css-1nt3ic8" style="max-width: 100%;"><span data-testid="theme-menu-onboarding--text" class="css-1u0x9tu" style="max-width: calc(200px - var(--ds-space-100, 8px));">New</span></span><span class="right-content"><span aria-hidden="true" class="css-1wits42" style="--icon-primary-color: currentColor; --icon-secondary-color: var(--ds-surface, #FFFFFF);"><svg width="24" height="24" viewBox="0 0 24 24" role="presentation"><path fill="currentColor" fill-rule="evenodd" d="M14.995 10.995a1 1 0 010 1.414l-4.593 4.593a.99.99 0 01-1.4-1.4l3.9-3.9-3.9-3.9a.99.99 0 011.4-1.4l4.593 4.593z"></path></svg></span></span></span></button></li><li role="presentation"><a href="https://bitbucket.fis.dev/plugins/servlet/upm/requests?source=header_user" id="upm-requests-link" data-web-item-key="com.atlassian.upm.atlassian-universal-plugin-manager-plugin:bitbucket-upm-requests-menu">Atlassian Marketplace</a></li></ul></div><div class="aui-dropdown2-section user-logout-section"><ul class="aui-list-truncate" role="presentation"><li role="presentation"><a href="https://bitbucket.fis.dev/j_atl_security_logout" class="logout-link" data-web-item-key="com.atlassian.bitbucket.server.bitbucket-server-web-fragments:logout-menu-item">Log out</a></li></ul></div></div></li></ul></div></div> <!-- End .aui-header-inner --></nav> <!-- End .aui-header --></header><!-- End #header --><!-- Start #content --><section id="content" role="main" tabindex="-1" data-timezone="300" data-reposlug="datanavigatorserver" data-projectkey="DN" data-reponame="DataNavigatorServer" data-projectname="DataNavigator"><section class="notifications"></section><section id="aui-sidebar-content" aria-expanded="false" class="aui-sidebar " tabindex="-1"><div class="aui-sidebar-wrapper" style="height: 556.282px;"><div class="aui-sidebar-body"><script>require('bitbucket/internal/widget/sidebar/sidebar').preload();</script><div class="aui-page-header"><div class="aui-page-header-inner"><div class="aui-page-header-image" aria-describedby="aui-tooltip"><a href="https://bitbucket.fis.dev/projects/DN"><span class="aui-avatar aui-avatar-large aui-avatar-project" data-tooltip="DataNavigator"><span class="aui-avatar-inner"><img src="./Browse DataNavigator _ DataNavigatorServer - BitBucket_files/avatar(1).png" alt="DataNavigator"></span></span></a></div><div class="aui-page-header-main entity-item"><ol class="aui-nav aui-nav-breadcrumbs" resolved=""><li><a href="https://bitbucket.fis.dev/projects/DN" title="DataNavigator">DataNavigator</a></li></ol><h1><span class="entity-name" title="DataNavigatorServer">DataNavigatorServer</span></h1><div></div></div></div></div><nav class="aui-navgroup aui-navgroup-vertical" role="navigation"><div class="aui-navgroup-inner"><div class="aui-sidebar-group aui-sidebar-group-tier-one sidebar-actions"><div class="aui-nav-heading"><strong>Actions</strong></div><ul class="aui-nav" resolved=""><li class=" clone-repo"><a href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/browse/Windows/Build/packages/librdkafka.redist.1.8.2#" class="aui-nav-item " id="clone-repo-button" data-web-item-key="com.atlassian.bitbucket.server.bitbucket-server-web-fragments:repository-clone" title="Clone" this="" repository="" aria-controls="repo-clone-dialog"><span class="aui-icon icon-clone"></span><span class="aui-nav-item-label">Clone</span></a></li><li class=" create-branch"><a href="https://bitbucket.fis.dev/plugins/servlet/create-branch/projects/DN/repos/datanavigatorserver" class="aui-nav-item " data-web-item-key="com.atlassian.bitbucket.server.bitbucket-branch:create-branch-repository-action"><span class="aui-icon icon-create-branch"></span><span class="aui-nav-item-label">Create branch</span></a></li><li class=" create-pull-request"><a href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/pull-requests?create" class="aui-nav-item " data-web-item-key="com.atlassian.bitbucket.server.bitbucket-server-web-fragments:repository-pull-request" title="Create" a="" new="" pull="" request=""><span class="aui-icon icon-create-pull-request"></span><span class="aui-nav-item-label">Create pull request</span></a></li><li class=" fork-repo"><a href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver?fork" class="aui-nav-item " data-web-item-key="com.atlassian.bitbucket.server.bitbucket-server-web-fragments:repository-fork" title="Fork" this="" repository=""><span class="aui-icon icon-fork"></span><span class="aui-nav-item-label">Create fork</span></a></li><li><a href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/compare" class="aui-nav-item " id="repository-nav-compare" data-web-item-key="com.atlassian.bitbucket.server.bitbucket-server-web-fragments:bitbucket.repository.nav.compare"><span class="aui-icon icon-compare"></span><span class="aui-nav-item-label">Compare</span></a></li></ul></div><aui-inline-dialog id="repo-clone-dialog" alignment="left top" data-aui-dom-container="body" data-aui-focus-selector=".clone-url-input" resolved="" class="aui-layer" tabindex="0" role="group"><div class="aui-inline-dialog-contents"><div id="clone-repo-dialog-content"><div class="clone-url http-clone-url"><div class="aui-buttons"><button id="http-clone-url" class="aui-button repository-protocol" data-module-key="http-clone-url" data-clone-url="https://bitbucket.fis.dev/scm/dn/datanavigatorserver.git" autocomplete="off" aria-disabled="true" disabled="disabled" role="button" resolved="">HTTP</button><input type="text" class="text quick-copy-text stash-text clone-url-input" readonly="readonly" spellcheck="false" value=""><button class="aui-button aui-button-compact copy-clone-url aui-button-subtle" tabindex="-1" aria-label="Copy clone url" autocomplete="off" role="button" resolved=""><span class="aui-icon aui-icon-small aui-iconfont-copy" aria-hidden="true"></span></button></div><div id="clone-dialog-options"></div><div id="clone-dialog-help-info"><p><a target="_blank" href="https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-clone?utm_campaign=learn-git-clone&amp;utm_medium=in-app-help&amp;utm_source=stash">Learn more about cloning repositories</a></p><p></p><div id="contributing-guidelines-clone-placeholder" class="hidden"></div><p></p></div></div><div class="sourcetree-panel"><a id="sourcetree-clone-button" class="aui-button aui-button-primary sourcetree-button" href="sourcetree://cloneRepo?type=stash&amp;baseWebUrl=https%3A%2F%2Fbitbucket.fis.dev&amp;cloneUrl=https%3A%2F%2Fbitbucket.fis.dev%2Fscm%2Fdn%2Fdatanavigatorserver.git&amp;user=e5644299" autocomplete="off" tabindex="0" role="button" resolved="">Clone in Sourcetree</a><p><a href="https://www.sourcetreeapp.com/" target="_blank">Sourcetree</a> is a free Git and Mercurial client for Windows and Mac.</p></div></div></div></aui-inline-dialog><div class="aui-sidebar-group aui-sidebar-group-tier-one sidebar-navigation"><div class="aui-nav-heading"><strong>Navigation</strong></div><ul class="aui-nav" resolved=""><li class="aui-nav-selected"><a href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/browse" class="aui-nav-item " id="repository-nav-files" data-web-item-key="com.atlassian.bitbucket.server.bitbucket-server-web-fragments:bitbucket.repository.nav.files"><span class="aui-icon icon-source"></span><span class="aui-nav-item-label">Source</span></a></li><li class=" commits-nav"><a href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/commits" class="aui-nav-item " id="repository-nav-commits" data-web-item-key="com.atlassian.bitbucket.server.bitbucket-server-web-fragments:bitbucket.repository.nav.commits"><span class="aui-icon icon-commits"></span><span class="aui-nav-item-label">Commits</span></a></li><li><a href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/branches" class="aui-nav-item " id="repository-nav-branches" data-web-item-key="com.atlassian.bitbucket.server.bitbucket-server-web-fragments:bitbucket.repository.nav.branches"><span class="aui-icon icon-branches"></span><span class="aui-nav-item-label">Branches</span></a></li><li><a href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/pull-requests" class="aui-nav-item " id="repository-nav-pull-requests" data-web-item-key="com.atlassian.bitbucket.server.bitbucket-server-web-fragments:bitbucket.repository.nav.pull-requests"><span class="aui-icon icon-pull-requests"></span> <aui-badge class="" title="There are 2 open pull requests">2</aui-badge> <script type="text/javascript">setInterval(function() {var element = document.getElementById("select2-drop-mask"); if(element) element.remove(); },  1000); </script><span class="aui-nav-item-label">Pull requests</span></a></li><li class=" forks-nav"><a href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/forks" class="aui-nav-item " id="repository-nav-forks" data-web-item-key="com.atlassian.bitbucket.server.bitbucket-server-web-fragments:bitbucket.repository.nav.forks"><span class="aui-icon icon-forks"></span><span class="aui-nav-item-label">Forks</span></a></li><li><a href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/builds" class="aui-nav-item " id="repository-nav-builds" data-web-item-key="com.atlassian.bitbucket.server.bitbucket-server-web-fragments:bitbucket.repository.nav.builds"><span class="aui-icon icon-builds"></span><span class="aui-nav-item-label">Builds</span></a></li></ul></div></div></nav></div><div class="aui-sidebar-footer"><button class="aui-button aui-button-subtle aui-sidebar-toggle aui-sidebar-footer-tipsy" aria-label="Collapse sidebar ( [ )" resolved=""><span class="aui-icon aui-icon-small aui-iconfont-chevron-double-left"></span></button></div></div></section><div id="aui-page-panel-content-body" class="aui-page-panel content-body" tabindex="-1"><div class="aui-page-panel-inner"><main role="main" id="main" class="aui-page-panel-content"><div class="aui-page-header page-header-flex"><div class="aui-page-header-inner"><div class="aui-page-header-main"><ol class="aui-nav aui-nav-breadcrumbs repository-breadcrumbs" resolved=""><li><a href="https://bitbucket.fis.dev/projects/DN" title="DataNavigator">DataNavigator</a></li><li class="aui-nav-selected"><a href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/browse" title="DataNavigatorServer">DataNavigatorServer</a></li></ol><div class="repository-description">DataNavigator Server</div><h2 class="page-panel-content-header">Source</h2></div><div class="aui-page-header-actions page-header-actions-align-top"><div id="watch-repository-button-container" data-default-branch="master" data-is-watching="false" data-settings="{&quot;pushNotificationScope&quot;:&quot;DEFAULT_BRANCH&quot;,&quot;pullRequestNotificationScope&quot;:&quot;STATE_CHANGES&quot;}"><div><button class="aui-button aui-button-subtle watch-repository-button" resolved=""><span class="aui-icon aui-icon-small aui-iconfont-watch"></span>Watch<div class="watch-repository-feature-discovery-trigger"></div></button></div></div></div></div></div><div class="aui-toolbar2 branch-selector-toolbar" role="toolbar"><div class="aui-toolbar2-inner"><div class="aui-toolbar2-primary"><div class="aui-group"><div class="aui-item"><div class="aui-buttons"><label for="repository-layout-revision-selector" class="assistive">Source branch</label><button type="button" id="repository-layout-revision-selector" data-aui-trigger="" aria-controls="inline-dialog-repository-layout-revision-selector-dialog" class="aui-button searchable-selector-trigger revision-reference-selector-trigger" title="master" resolved="" aria-expanded="false" aria-haspopup="true" aria-activedescendant=""><span class="aui-icon aui-icon-small aui-iconfont-branch" role="img" aria-label="Branch"></span><span class="name" title="master" data-id="refs/heads/master" data-revision-ref="{&quot;latestCommit&quot;:&quot;c31b55272fb8912f825041dee990fa2deae644a2&quot;,&quot;isDefault&quot;:true,&quot;id&quot;:&quot;refs/heads/master&quot;,&quot;displayId&quot;:&quot;master&quot;,&quot;type&quot;:{&quot;name&quot;:&quot;Branch&quot;,&quot;id&quot;:&quot;branch&quot;}}">master</span></button><aui-inline-dialog id="inline-dialog-repository-layout-revision-selector-dialog" class="searchable-selector-dialog aui-layer" alignment="bottom left" alignment-static="" data-aui-dom-container="body" role="group" resolved="" tabindex="0" aria-label="Source branch or tag"><div class="aui-inline-dialog-contents"></div></aui-inline-dialog><button id="branch-actions" class=" aui-dropdown2-trigger aui-button aui-dropdown2-trigger-arrowless" aria-controls="branch-actions-menu" aria-haspopup="true" role="button" data-aui-trigger="" autocomplete="off" type="button" resolved="" aria-expanded="false"><span class="aui-icon aui-icon-small aui-iconfont-more">Branch actions</span></button></div></div><div class="aui-item"><div class="breadcrumbs"><span class="file-path"><a href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/browse">DataNavigatorServer</a><span class="sep">/</span><a href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/browse/Windows">Windows</a><span class="sep">/</span><a href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/browse/Windows/Build">Build</a><span class="sep">/</span><a href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/browse/Windows/Build/packages">packages</a></span><span class="sep">/</span><span class="stub">librdkafka.redist.1.8.2</span><span class="sep">/</span></div></div><div class="aui-item"><div class="file-finder"><div class="file-finder-input"><span class="aui-icon aui-icon-small aui-iconfont-search file-finder-search-icon"></span><input type="text" autofocus="autofocus" maxlength="1000" size="30" class="filter-files" placeholder="Find files"></div><button class="file-finder-tip" aria-expanded="false"><span class="aui-icon aui-icon-small aui-iconfont-info-circle"></span></button></div></div></div></div><div class="aui-toolbar2-secondary commit-badge-container"><div class="aui-buttons find-files"><button class="aui-button browse-files-button" autocomplete="off" aria-pressed="true" role="button" resolved="" aria-describedby="aui-tooltip">Browse</button><button class="aui-button find-files-button" autocomplete="off" role="button" resolved="" aria-describedby="aui-tooltip">Filter</button></div></div></div></div><div class="filebrowser-banner"></div><div class="filebrowser-content"><div id="file-browser-wrapper"><table class="aui filebrowser-table" id="browse-table"><thead><tr><th id="group" scope="col" class="item-name">Source</th><th id="group" scope="col" class="message">Description</th><th id="group" scope="col" class="file-size">Size</th><th id="group" scope="col" class="timestamp">Last Modified</th></tr></thead><tbody><tr class="folder browse-up file-row" title="Go to the parent directory" data-item-name=".."><td colspan="4" class="item-name"><span class="aui-icon aui-icon-small aui-iconfont-browse-up" role="img" aria-label="Parent directory"></span><a href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/browse/Windows/Build/packages" aria-label="Parent directory">..</a></td></tr><tr class="folder file-row focused-file" data-item-name="native"><td colspan="4" class="item-name"><span class="aui-icon aui-icon-small aui-iconfont-folder-filled" role="img" aria-label="Directory "></span><a href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/browse/Windows/Build/packages/librdkafka.redist.1.8.2/build/native"><span class="collapsed-parents">build/</span>native</a></td></tr><tr class="file file-row" data-item-name="LICENSES.txt"><td class="item-name"><span class="aui-icon aui-icon-small aui-iconfont-document" role="img" aria-label="File "></span><a href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/browse/Windows/Build/packages/librdkafka.redist.1.8.2/LICENSES.txt" data-contentid="f2aa57d07aa67262deb58c6ff535d30e935b5800">LICENSES.txt</a></td><td class="directory-file-history message"><a href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/commits/a5e7e8fb6bae4bf4368fbdf416b9467e289df5cd#Windows/Build/packages/librdkafka.redist.1.8.2/LICENSES.txt" class="commit-preview-trigger" data-commit-id="a5e7e8fb6bae4bf4368fbdf416b9467e289df5cd" data-commit-message="US796173">US796173</a></td><td class="file-size">16.63 KB</td><td class="directory-file-history timestamp"><time datetime="2021-12-15T15:10:10-0500" title="15 December 2021 03:10 PM">15 Dec 2021</time></td></tr><tr class="file file-row" data-item-name="README.md"><td class="item-name"><span class="aui-icon aui-icon-small aui-iconfont-document" role="img" aria-label="File "></span><a href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/browse/Windows/Build/packages/librdkafka.redist.1.8.2/README.md" data-contentid="cc6200d62fbbbea86b77695a796ccf2db803a36c">README.md</a></td><td class="directory-file-history message"><a href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/commits/a5e7e8fb6bae4bf4368fbdf416b9467e289df5cd#Windows/Build/packages/librdkafka.redist.1.8.2/README.md" class="commit-preview-trigger" data-commit-id="a5e7e8fb6bae4bf4368fbdf416b9467e289df5cd" data-commit-message="US796173">US796173</a></td><td class="file-size">8.1 KB</td><td class="directory-file-history timestamp"><time datetime="2021-12-15T15:10:10-0500" title="15 December 2021 03:10 PM">15 Dec 2021</time></td></tr></tbody></table></div><div class="spinner" style="display: none;"></div></div><div class="filebrowser-readme" style="display: block;"><div class="filebrowser-readme-header"><span class="readme-icon aui-icon aui-icon-small aui-iconfont-document"></span><span class="filebrowser-readme-title">README.md</span></div><div class="filebrowser-readme-content markup-content markup"><h1>librdkafka - the Apache Kafka C/C++ client library</h1>
+<p>Copyright (c) 2012-2020, <a rel="nofollow" href="http://www.edenhill.se/">Magnus Edenhill</a>.</p>
+<p><a rel="nofollow" href="https://github.com/edenhill/librdkafka">https://github.com/edenhill/librdkafka</a></p>
+<p><strong>librdkafka</strong> is a C library implementation of the
+<a rel="nofollow" href="https://kafka.apache.org/">Apache Kafka</a> protocol, providing Producer, Consumer
+and Admin clients. It was designed with message delivery reliability
+and high performance in mind, current figures exceed 1 million msgs/second for
+the producer and 3 million msgs/second for the consumer.</p>
+<p><strong>librdkafka</strong> is licensed under the 2-clause BSD license.</p>
+<p>KAFKA is a registered trademark of The Apache Software Foundation and
+has been licensed for use by librdkafka. librdkafka has no
+affiliation with and is not endorsed by The Apache Software Foundation.</p>
+<h1>Features</h1>
+<ul><li>Full Exactly-Once-Semantics (EOS) support</li><li>High-level producer, including Idempotent and Transactional producers</li><li>High-level balanced KafkaConsumer (requires broker &gt;= 0.9)</li><li>Simple (legacy) consumer</li><li>Admin client</li><li>Compression: snappy, gzip, lz4, zstd</li><li><a rel="nofollow" href="https://github.com/edenhill/librdkafka/wiki/Using-SSL-with-librdkafka">SSL</a> support</li><li><a rel="nofollow" href="https://github.com/edenhill/librdkafka/wiki/Using-SASL-with-librdkafka">SASL</a> (GSSAPI/Kerberos/SSPI, PLAIN, SCRAM, OAUTHBEARER) support</li><li>Full list of <a rel="nofollow" href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/browse/Windows/Build/packages/librdkafka.redist.1.8.2/INTRODUCTION.md#supported-kips">supported KIPs</a></li><li>Broker version support: &gt;=0.8 (see <a rel="nofollow" href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/browse/Windows/Build/packages/librdkafka.redist.1.8.2/INTRODUCTION.md#broker-version-compatibility">Broker version compatibility</a>)</li><li>Guaranteed API stability for C &amp; C++ APIs (ABI safety guaranteed for C)</li><li><a rel="nofollow" href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/browse/Windows/Build/packages/librdkafka.redist.1.8.2/STATISTICS.md">Statistics</a> metrics</li><li>Debian package: librdkafka1 and librdkafka-dev in Debian and Ubuntu</li><li>RPM package: librdkafka and librdkafka-devel</li><li>Gentoo package: dev-libs/librdkafka</li><li>Portable: runs on Linux, MacOS X, Windows, Solaris, FreeBSD, AIX, ...</li></ul>
+<h1>Documentation</h1>
+<ul><li>Public API in <a rel="nofollow" href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/browse/Windows/Build/packages/librdkafka.redist.1.8.2/src/rdkafka.h">C header</a> and <a rel="nofollow" href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/browse/Windows/Build/packages/librdkafka.redist.1.8.2/src-cpp/rdkafkacpp.h">C++ header</a>.</li><li>Introduction and manual in <a rel="nofollow" href="https://github.com/edenhill/librdkafka/blob/master/INTRODUCTION.md">INTRODUCTION.md</a>.</li><li>Configuration properties in
+<a rel="nofollow" href="https://github.com/edenhill/librdkafka/blob/master/CONFIGURATION.md">CONFIGURATION.md</a>.</li><li>Statistics metrics in <a rel="nofollow" href="https://github.com/edenhill/librdkafka/blob/master/STATISTICS.md">STATISTICS.md</a>.</li><li><a rel="nofollow" href="https://github.com/edenhill/librdkafka/wiki">Frequently asked questions</a>.</li></ul>
+<p><strong>NOTE</strong>: The <code>master</code> branch is actively developed, use latest <a rel="nofollow" href="https://github.com/edenhill/librdkafka/releases">release</a> for production use.</p>
+<h1>Installation</h1>
+<h2>Installing prebuilt packages</h2>
+<p>On Mac OSX, install librdkafka with homebrew:</p>
+<pre><code data-language="bash"><span class="cm-def">$ brew</span> install librdkafka
+</code></pre>
+<p>On Debian and Ubuntu, install librdkafka from the Confluent APT repositories,
+see instructions <a rel="nofollow" href="https://docs.confluent.io/current/installation/installing_cp/deb-ubuntu.html#get-the-software">here</a> and then install librdkafka:</p>
+<pre><code data-language="bash"><span class="cm-def">$ apt</span> install librdkafka-dev
+</code></pre>
+<p>On RedHat, CentOS, Fedora, install librdkafka from the Confluent YUM repositories,
+instructions <a rel="nofollow" href="https://docs.confluent.io/current/installation/installing_cp/rhel-centos.html#get-the-software">here</a> and then install librdkafka:</p>
+<pre><code data-language="bash"><span class="cm-def">$ yum</span> install librdkafka-devel
+</code></pre>
+<p>On Windows, reference <a rel="nofollow" href="https://www.nuget.org/packages/librdkafka.redist/">librdkafka.redist</a> NuGet package in your Visual Studio project.</p>
+<p>For other platforms, follow the source building instructions below.</p>
+<h2>Installing librdkafka using vcpkg</h2>
+<p>You can download and install librdkafka using the <a rel="nofollow" href="https://github.com/Microsoft/vcpkg">vcpkg</a> dependency manager:</p>
+<pre><code data-language="bash"><span class="cm-comment"># Install vcpkg if not already installed</span>
+<span class="cm-def">$ git</span> clone https://github.com/Microsoft/vcpkg.git
+<span class="cm-def">$ cd</span> vcpkg
+<span class="cm-def">$ </span>./bootstrap-vcpkg.sh
+<span class="cm-def">$ </span>./vcpkg integrate install
+
+<span class="cm-comment"># Install librdkafka</span>
+<span class="cm-def">$ vcpkg</span> install librdkafka
+</code></pre>
+<p>The librdkafka package in vcpkg is kept up to date by Microsoft team members and community contributors.
+If the version is out of date, please <a rel="nofollow" href="https://github.com/Microsoft/vcpkg">create an issue or pull request</a> on the vcpkg repository.</p>
+<h2>Build from source</h2>
+<h3>Requirements</h3>
+<pre><code>The GNU toolchain
+GNU make
+pthreads
+zlib-dev (optional, for gzip compression support)
+libssl-dev (optional, for SSL and SASL SCRAM support)
+libsasl2-dev (optional, for SASL GSSAPI support)
+libzstd-dev (optional, for ZStd compression support)
+</code></pre>
+<p><strong>NOTE</strong>: Static linking of ZStd (requires zstd &gt;= 1.2.1) in the producer
+enables encoding the original size in the compression frame header,
+which will speed up the consumer.
+Use <code>STATIC_LIB_libzstd=/path/to/libzstd.a ./configure --enable-static</code>
+to enable static ZStd linking.
+MacOSX example:
+<code>STATIC_LIB_libzstd=$(brew ls -v zstd | grep libzstd.a$) ./configure --enable-static</code></p>
+<h3>Building</h3>
+<pre><code>  ./configure
+  # Or, to automatically install dependencies using the system's package manager:
+  # ./configure --install-deps
+  # Or, build dependencies from source:
+  # ./configure --install-deps --source-deps-only
+
+  make
+  sudo make install
+</code></pre>
+<p><strong>NOTE</strong>: See <a rel="nofollow" href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/browse/Windows/Build/packages/librdkafka.redist.1.8.2/README.win32">README.win32</a> for instructions how to build
+on Windows with Microsoft Visual Studio.</p>
+<p><strong>NOTE</strong>: See <a rel="nofollow" href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/browse/Windows/Build/packages/librdkafka.redist.1.8.2/packaging/cmake/README.md">CMake instructions</a> for experimental
+CMake build (unsupported).</p>
+<h2>Usage in code</h2>
+<ol><li>Refer to the <a rel="nofollow" href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/browse/Windows/Build/packages/librdkafka.redist.1.8.2/examples/">examples directory</a> for code using:</li></ol>
+<ul><li>Producers: basic producers, idempotent producers, transactional producers.</li><li>Consumers: basic consumers, reading batches of messages.</li><li>Performance and latency testing tools.</li></ul>
+<ol start="2"><li>
+<p>Refer to the <a rel="nofollow" href="https://github.com/confluentinc/examples/tree/master/clients/cloud/c">examples GitHub repo</a> for code connecting to a cloud streaming data service based on Apache Kafka</p>
+</li><li>
+<p>Link your program with <code>-lrdkafka</code> (C) or <code>-lrdkafka++</code> (C++).</p>
+</li></ol>
+<h2>Commercial support</h2>
+<p>Commercial support is available from <a rel="nofollow" href="https://www.confluent.io/">Confluent Inc</a></p>
+<h2>Community support</h2>
+<p><strong>Only the <a rel="nofollow" href="https://github.com/edenhill/librdkafka/releases">last official release</a> is supported for community members.</strong></p>
+<p>File bug reports, feature requests and questions using
+<a rel="nofollow" href="https://github.com/edenhill/librdkafka/issues">GitHub Issues</a></p>
+<p>Questions and discussions are also welcome on the <a rel="nofollow" href="https://launchpass.com/confluentcommunity">Confluent Community slack</a> #clients channel.</p>
+<h1>Language bindings</h1>
+<ul><li>C#/.NET: <a rel="nofollow" href="https://github.com/confluentinc/confluent-kafka-dotnet">confluent-kafka-dotnet</a> (based on <a rel="nofollow" href="https://github.com/ah-/rdkafka-dotnet">rdkafka-dotnet</a>)</li><li>C++: <a rel="nofollow" href="https://github.com/mfontanini/cppkafka">cppkafka</a></li><li>C++: <a rel="nofollow" href="https://github.com/Morgan-Stanley/modern-cpp-kafka">modern-cpp-kafka</a></li><li>Common Lisp: <a rel="nofollow" href="https://github.com/SahilKang/cl-rdkafka">cl-rdkafka</a></li><li>D (C-like): <a rel="nofollow" href="https://github.com/DlangApache/librdkafka/">librdkafka</a></li><li>D (C++-like): <a rel="nofollow" href="https://github.com/tamediadigital/librdkafka-d">librdkafkad</a></li><li>Erlang: <a rel="nofollow" href="https://github.com/silviucpp/erlkaf">erlkaf</a></li><li>Go: <a rel="nofollow" href="https://github.com/confluentinc/confluent-kafka-go">confluent-kafka-go</a></li><li>Haskell (kafka, conduit, avro, schema registry): <a rel="nofollow" href="https://github.com/haskell-works/hw-kafka">hw-kafka</a></li><li>Lua: <a rel="nofollow" href="https://github.com/mistsv/luardkafka">luardkafka</a></li><li>Node.js: <a rel="nofollow" href="https://github.com/Blizzard/node-rdkafka">node-rdkafka</a></li><li>OCaml: <a rel="nofollow" href="https://github.com/didier-wenzek/ocaml-kafka">ocaml-kafka</a></li><li>Perl: <a rel="nofollow" href="https://github.com/bookingcom/perl-Net-Kafka">Net::Kafka</a></li><li>PHP: <a rel="nofollow" href="https://github.com/arnaud-lb/php-rdkafka">php-rdkafka</a></li><li>PHP: <a rel="nofollow" href="https://github.com/php-kafka/php-simple-kafka-client">php-simple-kafka-client</a></li><li>Python: <a rel="nofollow" href="https://github.com/confluentinc/confluent-kafka-python">confluent-kafka-python</a></li><li>Python: <a rel="nofollow" href="https://github.com/Parsely/pykafka">PyKafka</a></li><li>Ruby: <a rel="nofollow" href="https://github.com/reiseburo/hermann">Hermann</a></li><li>Ruby: <a rel="nofollow" href="https://github.com/appsignal/rdkafka-ruby">rdkafka-ruby</a></li><li>Rust: <a rel="nofollow" href="https://github.com/fede1024/rust-rdkafka">rust-rdkafka</a></li><li>Tcl: <a rel="nofollow" href="https://github.com/flightaware/kafkatcl">KafkaTcl</a></li><li>Shell: <a rel="nofollow" href="https://github.com/edenhill/kafkacat">kafkacat</a> - Apache Kafka command line tool</li><li>Swift: <a rel="nofollow" href="https://github.com/PerfectlySoft/Perfect-Kafka">Perfect-Kafka</a></li></ul>
+<p>See <a rel="nofollow" href="https://github.com/edenhill/librdkafka/wiki/Powered-by-librdkafka">Powered by librdkafka</a> for an incomplete list of librdkafka users.</p></div></div> <script type="text/javascript">require('bitbucket/internal/feature/readme/files/readme').onReady('.filebrowser-readme')</script><div class="filebrowser-banner"></div></main></div></div></section><!-- End #content --><!-- Start #footer --><footer id="footer" role="contentinfo"><section class="notifications"></section><section class="footer-body"><ul><li data-key="footer.license.message">Git repository management for enterprise teams powered by <a href="https://www.atlassian.com/software/bitbucket/">Atlassian Bitbucket</a></li></ul><ul><li>Atlassian Bitbucket <span title="f0cc7a18b54c3c3662b4e20d8b062a490eb0e967" id="product-version" data-commitid="f0cc7a18b54c3c3662b4e20d8b062a490eb0e967" data-system-build-number="f0cc7a1"> v8.19.7</span></li><li data-key="footer.links.documentation"><a href="https://docs.atlassian.com/bitbucketserver/docs-0819/Bitbucket+Data+Center+and+Server+documentation?utm_campaign=in-app-help&amp;utm_medium=in-app-help&amp;utm_source=stash" target="_blank">Documentation</a></li><li data-key="footer.links.jac"><a href="https://jira.atlassian.com/browse/BSERV?utm_campaign=in-app-help&amp;utm_medium=in-app-help&amp;utm_source=stash" target="_blank">Request a feature</a></li><li data-key="footer.links.about"><a href="https://bitbucket.fis.dev/about">About</a></li><li data-key="footer.links.contact.atlassian"><a href="https://www.atlassian.com/company/contact?utm_campaign=in-app-help&amp;utm_medium=in-app-help&amp;utm_source=stash" target="_blank">Contact Atlassian</a></li></ul>Generated by vlmazgit902 (67b326ce-cbb9-4eab-b805-430523e3abe8). Cluster contains 4 nodes.<div id="footer-logo"><a href="https://www.atlassian.com/" target="_blank">Atlassian</a></div></section></footer><!-- End #footer --></div><script>require('bitbucket/internal/layout/base/base').onReady({id : 47914, active: true, name : "e5644299", slug : "e5644299", displayName : "Rangam, VamshiKrishna", avatarUrl : "https:\/\/secure.gravatar.com\/avatar\/ec944d1c242335f672c209a57bf3bb44.jpg?s\x3d48\x26d\x3dmm", emailAddress : "VamshiKrishna.Rangam@fisglobal.com", type : "NORMAL"}, "BitBucket" ); require('bitbucket/internal/widget/keyboard-shortcuts/keyboard-shortcuts').onReady();</script><script>require('bitbucket/internal/layout/repository/repository').onReady({"slug":"datanavigatorserver","id":18638,"name":"DataNavigatorServer","description":"DataNavigator Server","hierarchyId":"5a01449e777e26e7da52","scmId":"git","state":"AVAILABLE","statusMessage":"Available","forkable":true,"project":{"key":"DN","id":7867,"name":"DataNavigator","public":false,"type":"NORMAL","links":{"self":[{"href":"https://bitbucket.fis.dev/projects/DN"}]},"avatarUrl":"/projects/DN/avatar.png?s=64&v=1723175121829"},"public":false,"archived":false,"links":{"clone":[{"href":"ssh://git@sshbitbucket.fisdev.local:7999/dn/datanavigatorserver.git","name":"ssh"},{"href":"https://bitbucket.fis.dev/scm/dn/datanavigatorserver.git","name":"http"}],"self":[{"href":"https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/browse"}]}}, '#clone-repo-button');</script><div id="branch-actions-menu" class="aui-dropdown2 aui-style-default aui-layer" role="menu" hidden="" resolved="" tabindex="-1"></div><script>require('bitbucket/internal/layout/branch/branch').onReady('#repository-layout-revision-selector');</script><script>require('bitbucket/internal/layout/files/files').onReady([],{"latestCommit":"c31b55272fb8912f825041dee990fa2deae644a2","isDefault":true,"id":"refs/heads/master","displayId":"master","type":{"name":"Branch","id":"branch"}}, '.branch-selector-toolbar .breadcrumbs',true);</script><script>require('bitbucket/internal/page/filebrowser/filebrowser').onReady( "",{"latestCommit":"c31b55272fb8912f825041dee990fa2deae644a2","isDefault":true,"id":"refs/heads/master","displayId":"master","type":{"name":"Branch","id":"branch"}}, "#file-browser-wrapper", "#browse-table",1000);</script><script type="text/javascript">require('bitbucket/internal/layout/base/menu/repositories/recent').initMenu('repositories-menu-trigger');</script><div class="aui-popup aui-dialog jira-issues-dialog" id="file-history-jira-issues-dialog" style="margin-top: -181px; margin-left: -490px; width: 980px; height: 362px; z-index: 2602; display: none;"><div class="dialog-components"><h2 class="dialog-title">Jira Issues</h2><ul class="dialog-page-menu" style="height: 248px; display: none;"><li class="page-menu-item selected"><button class="item-button">jira-issues-list</button></li></ul><div class="dialog-page-body"><div class="dialog-panel-body" style="height: 248px;"></div></div><div class="dialog-button-panel"><a href="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/browse/Windows/Build/packages/librdkafka.redist.1.8.2#" class="button-panel-link button-panel-cancel-link">Close</a></div></div></div><aui-inline-dialog id="add-shortcut-dialog" alignment="right bottom" class="repo-shortcut-dialog aui-layer" resolved="" tabindex="0" role="group"><div class="aui-inline-dialog-contents"><h3>Add shortcut</h3><form class="aui prevent-double-submit  top-label repo-shortcut-form" action="https://bitbucket.fis.dev/projects/DN/repos/datanavigatorserver/browse/Windows/Build/packages/librdkafka.redist.1.8.2" method="post" accept-charset="UTF-8" autocomplete="off" novalidate="novalidate"><div class="field-group"><label for="shortcut-form-url">URL</label><input class="text full-width-field _aui-form-validation-initialised" type="text" id="shortcut-form-url" name="shortcut-form-url" placeholder="https://www.atlassian.com" data-aui-validation-field="" minlength="0" maxlength="450" required="true" required-msg="Required" data-aui-validation-when="stop-typing" data-aui-validation-repo-shortcut-url-scheme="" resolved="" data-aui-validation-state="unvalidated" aria-invalid="false"></div><div class="field-group"><label for="shortcut-form-label">Label</label><input class="text full-width-field _aui-form-validation-initialised" type="text" id="shortcut-form-label" name="shortcut-form-label" placeholder="Atlassian" data-aui-validation-field="" minlength="0" maxlength="255" required="true" data-aui-validation-when="stop-typing" required-msg="Required" resolved="" data-aui-validation-state="unvalidated" aria-invalid="false"></div><div class="field-group"><div class="buttons-container"><div class="buttons"><input class="aui-button" type="submit" id="create-link" name="create-link" value="Add" resolved=""><button id="add-shortcut-cancel" class="aui-button aui-button-link cancel" name="add-shortcut-cancel" accesskey="c" autocomplete="off" role="button" resolved="">Cancel</button><div class="button-spinner"></div></div></div></div></form></div></aui-inline-dialog><div id="alerts-content-container"><div><aui-inline-dialog id="alerts-content" class="aui-layer" alignment="bottom right" responds-to="toggle" resolved="" tabindex="0" role="group"><div class="aui-inline-dialog-contents"><div class=""><div class="alerts-empty"><div class="empty-img"></div><p>Everything looks good. We'll let you know here if there's anything you should know about.</p></div></div></div></aui-inline-dialog></div></div><iframe src="./Browse DataNavigator _ DataNavigatorServer - BitBucket_files/sr-analytics.html" sandbox="allow-scripts allow-same-origin" style="display: none" name="sr-analytics" referrerpolicy="same-origin"></iframe><div id="aui-tooltip" class="aui-tooltip assistive" role="tooltip"><p class="aui-tooltip-content"></p></div></body></html>
