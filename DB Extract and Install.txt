@@ -1,0 +1,40 @@
+Made necessary change on the Data file which was taken from Alpha/Data and placed it under Delta/Data
+Run XT Service(This will compare the old entries with new entries and make necessary changes to respective table(in our case ONLINE_NETWORK table)
+We will be getting 2 entries for same Network ID, we need to Rollin the change using mmc console->change management->select the respective CHG_GRP_ID and right click select rollin and extract or just rollin
+This will remove the extra and merge it old one as in Overwritten.
+
+
+In RHEL, we can do that in below steps from bin/ directory
+
+you can use sendmsg.pl script to give command for extract and install
+ 
+----------------------------------------------------------------------------
+
+sendmsg.pl "RESET" "XT" "!EXTRACT"
+ 
+above command will create PSTAGE FOLDER newly
+ 
+12:14:51 9148 ST2712019011912145100                                                                                                                                                                                                                                                             
+
+12:14:51 9148 !EXTRACT
+
+12:14:51 9148 Start: CR ## CR51 EXTRACT CR TO PSTAGE
+ 
+-----------------------------------------------------------------------------
+
+sendmsg.pl "RESET" "XT" "!INSTALL"
+ 
+above command will move PSTAGE -> PPROD -> PPREV
+ 
+12:19:42 9148 ST2712019011912194201                                                                                                                                                                                                                                                             
+
+12:19:42 9148 !INSTALL
+
+12:19:46 9148 Start: DR ## DR71 COMMIT
+ 
+----------------------------------------------------------------------------
+ 
+if double quotes not working, can u try sendmsg.pl "RESET" "XT" '!INSTALL'
+ 
+from bin folder
+ 
