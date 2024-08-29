@@ -1,0 +1,575 @@
+FIS DataNavigator is a comprehensive solution that collects and connects transactional data across the enterprise allowing banks to harness the power of information that resides in every transaction and giving fresh insights into customers and their activities. Helping to improve customer service levels, track fraud patterns or simplify cash management at ATMs, FIS DataNavigator can provide the basis for faster responsiveness, better decision-making and improved operations. FIS DataNavigator provides Transaction Research, Exception Management, Device Management, Settlement and Reporting from one central database and a single point of user access. It operates as a standalone platform for real-time EFT data management, 24 hours a day, 7 days a week, making data available seconds after the transaction is complete, with no impact on switching performance.
+
+Data Navigator : 
+designed to meet specific business needs related to :  settlement process and transaction research
+
+a replacement for : financial txn inquiry, connex management systems{settlement}, txn exception system,procesing services
+
+it splits to two parts :  DN client and DN server
+DN client :  GUI app, connection to the commn network that access the server
+DN server :  support all the clients logged on to the system, manage the data repo
+
+
+DN functions :  Txn research, exception management, data mgmt reporting
+                continous settlement, device mgmt services
+
+Txn Research :  it used to search based on number of keys or variables:
+             --> PAN
+			 --> ATM number
+			 --> business date
+			 
+	        disposition filters :  to refine the search results
+
+
+Exception mgmt system:
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++
+DN services:
+
+CRQ : validate security access
+EV event manager :  
+Fault manager  :
+AI : acq interface  : 
+AU : auto recon  : 
+CED : common entity DB :  list of Bank IDs and ATM IDs in CED file
+in ASCII and HEX formats based on switch specific
+
+DF01: Data formatter: 
+
+
+DN meets the :  Settlement process and Txn research
+DN server  : supports all the customers are logged on to the system
+and manage the data repo
+
+Acquring platforms :  Tandem,Advantage and IBM connex
+
+
+Table: [EVENT_CNTL]: to trigger the service in event management 
+
+CED{Common entity Database}
+
+EMS :  Exception Management service
+ supporting in these are  : Device inquiry, Cash management,courier services and auto balance
+ 
+LR,LE and AI {concurrently runs} while loading data
+ 
+
+
+Mainframe environment operation and controls:
++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+
+Mainframe IP : hog3270
+
+first command : old
+scroll f10
+up f7
+down f8
+home f3
+
+
+ispf -. go to DN server page
+
+
+utilities in DN server page (option 3)
+
+
+NQTB 
+
+
+to access DB :
+
+
+
+insync
+
+
+B2T5
+
+
+
+
+
+\r\n
+
+++++++++++++++++++++++++++++++++++++++++++++++++
+EMS:
+-------
+cases:
+standard
+fraud
+FEE
+
+
+
+Imp terms:
+Phase:
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++
+Data distribution:
+files types: pdf, csv and xls
+
+
+States: table[DX_DATA_CONTROL]
+   select * from DN1PCOMN.DX_REPORT_COLUMN   where field: COLUMN_NAME to FIN_Lxxxx tables
+   DX_FILE_TYPE ,
+   
+Here DX_DATA_CONTROL data depends on config : DX_FILE_TYPE, DX_REPORT_COLUMN, 
+
+[DX_DATA_20210422] daily table where data store with csv
+
+the DX_DATA_20210422 taken  from FIN_L202104 table 
+
+DX_STATE;
+
+FI,DC,FW,'DI','DW','DE'
+
+cxosdt01.cpp :  distribute() API
+
+
+
+Data formatter DF01
+Data distributor DT01
+
+exporting the files : 
+
+Import files:  handled by exception tasks  { exception files in import }
+
+
+ 
+
+
+DX_FILE_TYPE
+DX_FILE_GROUP
+DX_PROC_GRP_DEST
+
++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Design Patterns on DN server:
+FM.txt
+SITESPEC.txt
+
+
+
+obersever and Subsriber patterns:
+
+
+CLient command BC01
+Client commandlist BC02
+
+
+
+
+Code flow :
+
+
+
+RU01   : subject
+RU02   : observer
+
+
+RU05 && CXOSPO10.sqx
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+00001870S001010000000160QXLCASE AEPS2388:2018061115484900                  06906043340198772736x                                00020201108CUSAE                        S055010000001532                              1478    <CaseListRqst><RqstHdr><ServPrmtrsLst><ServPrmtrs><FeId>TEST</FeId><ApplId>DN</ApplId><ServId>XLTRAN</ServId><ServVer>1.0</ServVer></ServPrmtrs></ServPrmtrsLst><Sec/><LclPref>en-US</LclPref><TstInd>Y</TstInd><MsgUuid>00000000-0000-0000-0000-000000000000</MsgUuid><ActyId>TEST</ActyId><SrcId>2.5B</SrcId><RqstHdrVer>2.0.0</RqstHdrVer></RqstHdr><CaseListOsi><Comment><Text/></Comment><Transition><Status/><RequestType/></Transition><Phase><IssuerImpact/><AdjustmentAmount/><ReasonCode/></Phase><SearchCriteria><MaxRows>20</MaxRows><CaseMC/><Case><EMSNetwork>GEN</EMSNetwork><CaseNumber operator="IN">20210326000002,20210407000001,20210330000001</CaseNumber></Case></SearchCriteria><CardHolder><FirstName1/><LastName1/><AddressLine1/><City/><Region/><PostalCode/><CountryCode/><AddressLine2/><Email/><HomePhone/></CardHolder><PhaseVNT/><CaseEBT><ActualResolutionDate/><CloseReason/><StateId/><StateCaseNumber/><ProgramType/><ExceptionType/><FNSNumber/><ClaimInitiator/></CaseEBT><CaseMC/><PhaseMC/><CaseVNT/><Case><AccountNumber/><AcquirerLink/><InstitutionName/><TransactionType/><TransactionAmount/><Surcharge/><SystemTraceAuditNumber/><CaseID/><CaseNumber/><ExpirationDateTime/><CardAcceptorTerminal/><RequestType/><Status/><StateDescription/><TransactionDateTime/><UniquenessKey/><EMSNetwork/><CaseExtension/><CaseTypeIndicator/><MerchantCountryCode/><IssuerNetwork/><LocalDateTime/><AcquirerBusiness/><TranDisposition/><TransitionDateTime/></Case></CaseListOsi></CaseListRqst>S05301000000011220201214150526652020121415051645202012140335160020201214033516002020121415051759                S400010000000058                                      0000
+
+00001870  --> total length
+S001      --> segment
+0100      --> segmentversion
+00000160  --> segmentlength
+QXLCASE AEPS2388:2018061115484900                  06906043340198772736x                                00020201108CUSAE                        
+S055    --> generic segement
+0100
+00001532
+                              1478    <CaseListRqst><RqstHdr><ServPrmtrsLst><ServPrmtrs><FeId>TEST</FeId><ApplId>DN</ApplId><ServId>XLTRAN</ServId><ServVer>1.0</ServVer></ServPrmtrs></ServPrmtrsLst><Sec/><LclPref>en-US</LclPref><TstInd>Y</TstInd><MsgUuid>00000000-0000-0000-0000-000000000000</MsgUuid><ActyId>TEST</ActyId><SrcId>2.5B</SrcId><RqstHdrVer>2.0.0</RqstHdrVer></RqstHdr><CaseListOsi><Comment><Text/></Comment><Transition><Status/><RequestType/></Transition><Phase><IssuerImpact/><AdjustmentAmount/><ReasonCode/></Phase><SearchCriteria><MaxRows>20</MaxRows><CaseMC/><Case><EMSNetwork>GEN</EMSNetwork><CaseNumber operator="IN">20210326000002,20210407000001,20210330000001</CaseNumber></Case></SearchCriteria><CardHolder><FirstName1/><LastName1/><AddressLine1/><City/><Region/><PostalCode/><CountryCode/><AddressLine2/><Email/><HomePhone/></CardHolder><PhaseVNT/><CaseEBT><ActualResolutionDate/><CloseReason/><StateId/><StateCaseNumber/><ProgramType/><ExceptionType/><FNSNumber/><ClaimInitiator/></CaseEBT><CaseMC/><PhaseMC/><CaseVNT/><Case><AccountNumber/><AcquirerLink/><InstitutionName/><TransactionType/><TransactionAmount/><Surcharge/><SystemTraceAuditNumber/><CaseID/><CaseNumber/><ExpirationDateTime/><CardAcceptorTerminal/><RequestType/><Status/><StateDescription/><TransactionDateTime/><UniquenessKey/><EMSNetwork/><CaseExtension/><CaseTypeIndicator/><MerchantCountryCode/><IssuerNetwork/><LocalDateTime/><AcquirerBusiness/><TranDisposition/><TransitionDateTime/></Case></CaseListOsi></CaseListRqst>S05301000000011220201214150526652020121415051645202012140335160020201214033516002020121415051759                S400010000000058                                      0000
+							  
+							  
+							  
+							  
+Singleton
+Subscriber and Observer
+
+Chain of Responsibility
+
+Factory - Clone Factory
+
+
+
+Delegate Pattern :
+
+
+Visitor :
+
+DB Connection :
+Oracle :
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+Totals Engine:
++++++++++++++++++
+
+totals services :  GTTE,GTTI, GTTP, GTCM
+
+
+241111124
+
+241121029
+
+20210421
+
+
+20210421        
+
+
+
+202104221111123
+
+                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                               
+
+
+ADMIN PROGRESS       : 202104221121029  
+    
+Totals Engine:
+	
+TE: accumulates the txn based on category..
+Tables :
+[TASK_CONTEXT]
+TXNACT file generated by the total engine service for totals.
+
+[T_FIN_ENTITY_GROUP]
+[T_FIN_ENTITY]
+[T_FIN_CATEGORY]  --> [TRAN_TYPE_ID]
+[T_FIN_TOTAL]  --> accumulated values based on category
+[T_FIN_ENTITY] - > CED File 
+               --> CU : customer
+			   --> AT : device id{Terminal}
+			   --> AM :  reporting level
+			   --> AI : acq instituion
+			   --> AP : acq processor
+			   --> II : issuer instituion
+			   --> IP : issuer processeor
+			   
+
+[T_FIN_ENTITY_GROUP] --> load the intervals based on hours
+[T_FIN_PERIOD]  -->  T_FIN_PERIOD  && T_FIN_ENTITY and cutoff times
+[INSTITUTION]  --> [CUTOFF_TIME]
+
+
+
+
+txn clock and total clock
+
+total clock < txn clock   :  always
+
+[FIN_RECORD202104] -- > [INSERT_SEQUENCE_NO] from total clock
+241111128  -- >  first 2 bytes age of DN
+                 three byte is julian date
+				 two byte is hours
+				 two byte is min
+[TASK_CONTEXT]   --> where we maintain progress of dfnt tasks 
+                TRANSACTION PROGRESS 202104221111123 
+                                     YYYYMMDDJJJHHMM
+
+241111123	
+
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+DB connectivity:
+
+https://docs.oracle.com/cd/B10501_01/appdev.920/a96109/pco10ady.htm
+
+
+oracle   : Prod
+DB2      : Main Frame
+sql-server  : WIndows
+
+BULK select
+BULK insert
+BULK update and delete
+
+
+
+
+
+reg .sqx files:
+: Dodll, D2dll  : DN 
+: Podll, P2dll  : Connex Platform
+
+EXEC SQL ALLOCATE DESCRIPTOR GLOBAL '00' WITH MAX 1024;   for no/;of columns we support this 1024 currenty we doing 650 columns 
+EXEC SQL ALLOCATE DESCRIPTOR GLOBAL '10' WITH MAX 768; ;  for no:of varchars we support this 768
+
+
+OracleFormatSelectVisitor hFormatSelectVisitor(&m_hOracleSQLDA);  this forms the sql query : cxospo10.sqx
+strSQL = hFormatSelectVisitor.SQLText();  : holdss the actual sql string
+
+
+
+postgres-sql
+
+{Oracle} 
+PO : ANSI dynamic  
+DO  : static
+
+
+PZ :   
+DZ : 
+
+
+{Sql}
+PQ:  
+DQ:
+
+DB2
+P2: 
+D2:
+
+
+
+INSERT  : --> PO09
+UPDATE : PO11
+DELETE :  PO08
+Select  : PO10
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Code labelling and build process:
+
+
+WSL: windows substitute linux
+
+infinite while loop() : // ONResume() API in DN source
+
+FIles:  FM.txt , SITESPEC.txt
+								 
+
+Visitor Pattern in our DN code:
+
+
+
+
+
+
+DN Web Navigation:
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Reports and user administration
+
+US523884
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+DN back office provides with:
+Txn search
+dispute resolution
+Real time settlement
+Reconciliation
+reporting
+ATM management
+
+
+								 
+								 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+Rules Editor KT Session:
+++++++++++++++++++++++++++++++++++++
+
+
+Rule Editor :  for Dispute flows
+
+
+
+
+
+
+
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+MainFrame Tokenize Steps:
+
+
+    First , We need to delete all records from current FIN_* Tables
+
+    delete all records that was manually inserted into DN_DYMBOLS etc.
+
+    from the console, we need to give the command RESET caLM PADSS BEGIN
+
+    ca -> Customer Abbreviation
+
+    we then need to verify whether DN_SYMBOLS got populated correctly or not
+
+    then we need to refresh LR,AI and LE tasks
+
+    and then load the logs
+
+    as a part of cleaning up the previous entries , please delete all records in TASK_CONTEXT_COMN with a CONTEXT_TYPE = 'K'
+
+
+
+    PADSS BEGIN Command will insert them 
+
+    also if there are any CONTEXT_TYPE ='K' in TASK_CONTEXT table , please delete them as well
+
+    make sure to refresh the tasks after the command before loading the logs
+
+    we generally tend to forget it
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+select PROCESSING_SOURCE,CASE_ID,CASE_NO,TSTAMP_TRANS,UNIQUENESS_KEY,NET_ID_ACQ,NET_ID_ISS,NET_ID_EMS,NET_RULES,CASE_EXTENSION from NQP7TFND.EMS_CASE where TSTAMP_TRANS=' ' and TRAN_TYPE_ID=' ' and CASE_NO IN('20211016000009','20211017000001','20210927000506','20210922000456','20210827000455','20210821000190') order by CASE_ID DESC;
+
+
+select PROCESSING_SOURCE,CASE_ID,CASE_NO,TSTAMP_TRANS,UNIQUENESS_KEY,NET_ID_ACQ,NET_ID_ISS,NET_ID_EMS,NET_RULES,CASE_EXTENSION from NQP7TFND.EMS_CASE where TSTAMP_TRANS=' ' and TRAN_TYPE_ID=' ' and CASE_NO='20211017000001' order by CASE_ID DESC;
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+SQL:                   
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+types of Joins:
+Inner Join
+Left Join
+Right Join
+Full OUTER Join
+
+INNER Join :
+Returns dataset that have matching values in both tables
+query:
+select column_name() from tabe1 INNER JOIN table2
+ON table1.column_name = table2.column_name
+
+Left Join:
+Returns all records from the left table and matched records from the right
+query:
+select column_name() from tabe1 LEFT JOIN table2
+ON table1.column_name = table2.column_name
+
+Right Join:
+Returns all records from right table and matched records from the left
+query :
+select column_name() from tabe1 Right JOIN table2
+ON table1.column_name = table2.column_name
+
+Full OUTER Join:
+Returns all records when there is a match in either left or right table
+query :
+select column_name() from tabe1 FULL OUTER JOIN table2
+ON table1.column_name = table2.column_name
+where condition;
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+
+
+
+
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[Yesterday 13:24] Arumugam, Aravinthkumar
+sqlplus e5350313/S3rvic#s@DNP7
+
+[Yesterday 13:25] Arumugam, Aravinthkumar
+ssh BDC1RNARDNVAP03
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To Check logon Users :
+last | head -20
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+MCOM & VCR
+
+
+
+XML issues
+
+
+Chargeback      :  Issuer asks to merchant
+Representment   :  Merchant asks to Issuer
+Pre-arbitration :
+arbitration     : Network will come here
+
+MCOM and VCR {VISA CLAIM RESOULITION} :
+
+
+API : Request and Response : XML
+
+tables:
+API_QUEUE_CONTROL
+API_QUEUE_REQUEST
+API_QUEUE_RESPONSE
+
+
+AW : waiting state 
+AP : pending state
+AS : sent
+SP : server processing
+AC : completed
+PE : processing error
+
+
+
+
+
+ME39 and ME40 : master card
+
+VE20 and VE21 and VE22 :  VISA
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
