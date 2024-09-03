@@ -1,0 +1,130 @@
+FLOWS:
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+File distribution : 
++++++++++++++++++++++++
+DT00,  EXPORTING:-
+DT01.CPP--distribute ()
+PF04.CPP--distribute ()
+GE02.CPP—DEPORT ()
+DZ03.CPP—CREATE ()
+GE16.CPP DEPORT ()
+BC15.CPP WRITE ()
+
+Totals Engine Flow:
++++++++++++++++++++++++
+TE00-ONRESUME()
+ST33-TOTAL()
+ST01-TOTAL(){ST01-INSER_SEQUENCE_NO()}
+ST33-UPDATE()
+DB27-REPLICATE()
+ST41-ADD()
+PF26-REPLICATE()
+
+AMT_RECON work:
++++++++++++++++++++++++
+Dz03.cpp -> case 113 
+GE02.cpp  import () method
+Ve02.cpp start element & end element
+Es01.cpp -> _field method
+Ve02-> you can see import and addcase calls above and after below  the changes we applied
+GE59.cpp-> deport method , you can see the alias name of sengments
+
+
+
+STAR import work:
++++++++++++++++++++++++
+EI00:
+ONRESUME, INITIALIZE, and line 1084 (ImportFile::instance()->onResume();)
+BC18:
+ON RESUME, and line no 267(bool b = pSelectStatement->execute(hQuery);)
+BC19: 
+EXECUTE and line 268( bool b = parse(m_hDATA_BUFFER);)
+SE01:
+PARSE and line no 352 
+sE03:
+RETRIVE and update 
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+Rose File {postingfile.cat}
+CXOXCRFX.txt
+
+ON/OFF:
+
+Changes DIr folder in Desktop; and
+QE00.cpp
+CI00.cpp
+PF39.cpp
+DB51.cpp
+
+
+++++++ New changes for set and bind
+set("ACCT_ID_1"
+bind("ACCT_ID_1"
+
+
+files:
+
+DQ04.cpp
+PF02.cpp
+PF16.cpp
+PF17.cpp
+RX08.cpp
+RX11.cpp
+RX15.cpp
+ST02.cpp
+ST30.cpp
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+debugging the client simulator flow :
+
+[8:22 PM] Esakky, Balakumaran
+Start CI first then put break point  in  CS initialize method and then start in debug mode .
+
+[8:22 PM] Esakky, Balakumaran
+Then start GM and attach
+
+[8:23 PM] Esakky, Balakumaran
+in different VS
+
+[8:23 PM] Esakky, Balakumaran
+then press F5 in CS Initialize
+
+[8:24 PM] Rangam, VamshiKrishna
+got it bala, i forgot this queue file in cs.cpp file
+
+[8:24 PM] Esakky, Balakumaran
+We need to make few changes in CI13 . You can get it from Kabilan
+
+[8:25 PM] Esakky, Balakumaran
+to make CS to pick our request
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+VLCAPDNAPPDEV01,32100
+
+sendmsg.pl RESET GTEI "SETTLE  MCI"
+
+
+C:\FIS\Server\Alpha\Bin>sendmsg.pl RESET GTEI "SETTLE  MCI"
+
+C:\FIS\Server\Alpha\Bin>sendmsg.pl RESET GTEI "SETTLE"
+
+
+Source File : WM10.cpp
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
