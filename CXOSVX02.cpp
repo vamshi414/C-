@@ -1181,6 +1181,8 @@ bool UploadFile::zipImages ()
       }
       if (m_strBatchBaseName.length() > 5 && m_strBatchBaseName.substr(0,6) == "ECHIST")
          hLocalImageFiles.setMember("DOCHIST*");
+      if (m_strBatchBaseName.length() > 3 && m_strBatchBaseName.substr(0, 4) == "NYCE")
+         hLocalImageFiles.setMember("DOCNYCE*");
       else if (m_strBatchBaseName.length() > 2 && m_strBatchBaseName.substr(0,3) == "UA5")
          hLocalImageFiles.setMember("TUA5*");
       else
@@ -1209,6 +1211,20 @@ bool UploadFile::zipImages ()
          {
             string strTemp = *pItr;
             hOutFile.write((char*)strTemp.data(),strTemp.length());
+         }
+         hOutFile.close();
+      }
+      if (m_strBatchBaseName.length() > 3 && m_strBatchBaseName.substr(0, 4) == "NYCE")
+      {
+         FlatFile hOutFile("UPENDING");
+         hOutFile.setMember(("C" + m_strBatchBaseName).c_str());
+         if (!hOutFile.open(FlatFile::CX_OPEN_OUTPUT))
+            return false;
+         vector<string>::iterator pItr;
+         for (pItr = m_hTifCommands.begin(); pItr != m_hTifCommands.end(); pItr++)
+         {
+            string strTemp = *pItr;
+            hOutFile.write((char*)strTemp.data(), strTemp.length());
          }
          hOutFile.close();
       }
