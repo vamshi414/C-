@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dispute-image-bundle xmlns="http://estarstation.com/ep/image/schema">
+<user-information>
+<group-id>00V034</group-id>
+<user-id>FILE</user-id>
+</user-information>
+<file-date-time>2024-08-20T05:44:57</file-date-time>
+<file-id>240820_054238_EP00V034</file-id>
+<ep-routing-id>EP00V034</ep-routing-id>
+<case>
+<case-id>23050510002089</case-id>
+<cardnumber>4788209999991927</cardnumber>
+<original-auth-amt>000000032.60</original-auth-amt>
+<system-trace-audit-number>003895</system-trace-audit-number>
+<tran-type>PUR</tran-type>
+<tran-local-date-time>2024-08-08T13:06:09</tran-local-date-time>
+<switch-terminal-id>W67020</switch-terminal-id>
+<action-type>SR</action-type>
+<action-reason>8000</action-reason>
+<actual-amt>000000000.00</actual-amt>
+<image>
+<image-file-name>TDM5000001.jpg</image-file-name>
+<image-format>image/jpeg</image-format>
+<image-description>01</image-description>
+<EFUNDS_CMD1>
+copy \\vwltc4dbtdndap1.fisdev.local\DN\NQQ1\Docs\STR\OUT\202408\CUSA20240820000005REQ_DOC060TF37539QTP2.JPG TDM5000001.jpg
+</EFUNDS_CMD1>
+</image>
+</case>
+</dispute-image-bundle>

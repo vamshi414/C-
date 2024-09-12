@@ -1,0 +1,11 @@
+w951dd7
+Jul@2023
+2021
+open doe1.fnfis.com
+binary
+quote SITE MGMTCLAS=TESTSMAL
+quote SITE UNIT=DISK
+quote SITE CYL
+quote SITE LRECL=80 BLKSIZE=27920 RECFM=FB
+put \\vwltc4dbtdndap1.fisdev.local\DN\NQQ1\Docs\VROL\Upload\Complete\2024-08-20\ImageIn_20240820_055519_EP00V034.zip 'TSNQN.OPER.NQQ1.CPP.CPPEXPI'
+bye
