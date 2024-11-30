@@ -1,0 +1,57 @@
+get access to below location.
+		need these to get access. 
+		[1:39 PM] Ruona, Gary
+Linux Servers - EMAC
+A) BASTION: BASTION-DEPT_LPCI_ACCESS from UNIX in EMAC.
+B) PROD DN Servers (BDC1RNARDNVAP01 to 08, PDC2RNARDNVAP01 to 08)
+DN ASG has “su – appadm” level access via the following user classes (All 3 User Classes below must
+be requested via EMAC) Anyone who needs to work on PROD server validations need to raise this
+request
+UC_3002.501000.9349_PROD_SSH_SH_ACCESS
+UC_3002.501000.9349_PROD_SCP_SFTP_ACCESS
+UC_3002.501000.9349_PROD_APPSYS_ACCESS
+
+
+ems and eq
+
+CED.D230717.T020852.txt 
+--production access to system.
+ssh PDC2RNARDNVAP01.prod.local  -- phenox server
+ssh bdc1rnardnvap01.prod.local  -- BDOC server
+    PDC2RNARDNVAP03             --p7 -- phenox
+    bdc1rnardnvap03               --p7  bdoc
+    PDC2RNARDNVAP07             --p6
+
+
+--need this enter dnappadm
+su - appadm 
+
+--this is for dev
+sudo su - dnappadm
+
+dnhome - takes to home directory.
+shutOff/TurnOn Server - Alpha/Bin scripts are there to run. 
+dntrcd -- get todays trace 
+dnprcs -- get processes running
+
+ps -ef - list all processes running
+
+bc = bcfs
+cp = cap1
+
+
+copy from p7 or whichever to original logon. 
+
+when in winspc you will need to open directory and go to opt/FIS to be able to reach P7
+
+
+## to find processes running you can run this command. 
+dnprcs | grep CXOPEV
+
+
+ grep -r "ChargebackReject" 2022_12_13_19_33_36_77~RDM5CD77.txt
+
+
+
+ ************************************************************************************************    for DN UTA USAA
+ssh PDC8RNARDNVAP01 to 08

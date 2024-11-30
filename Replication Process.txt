@@ -1,0 +1,31 @@
+Insert sequence number: 240620102- 24 age of DN, 062- date(Julian date)(jan 1 is 1 , feb 1 is 32nd – the continuation…..)01-hr,02 -min. 
+
+TXNACT (transaction activity).
+
+Report related tables DX_FILE_GROUP ,DX_REPORT_COLUMN, DX_PROC_DEST,DX_REPORT.
+
+
+	
+make sure all the report related tables are loaded with the respective report id & names,
+	
+EX: Tstamptrans:2021030100054255, Insert sequence number:240600202
+
+
+In TASK_CONTEXT table, CUTOFF PROGRESS, ADMIN PROGRESS should be 202103010600202, and the TRANSACTION PROGRESS  should be a minute lesser then this I.e, 202103010600201.
+
+
+	
+Then the report values will be loaded in daily table(daily table date=date recon of the file which you processed) 
+	
+Change the state of that triggered file to DW (make sure all others are in DC). then start DT01. Then 
+
+
+Report will be exported in DN1PGTWY/EXPORT
+
+
+
+
+DE71554 : INT21000017704 :Document tab missing on STAR case  20210115000314
+
+FIS is now enhancing DN to be its next generation settlement platform,will replace its
+legacy mainframe based settlement application known as CMS
