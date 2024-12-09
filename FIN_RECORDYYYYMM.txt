@@ -1,0 +1,981 @@
+CREATE TABLESPACE FR&YYYYMM
+  USING STOGROUP &sgcomn.
+    PRIQTY &fin_transactions. SECQTY &msecqty.
+  IN &custqual.
+  DSSIZE 16 G
+  FREEPAGE 0 PCTFREE 0
+  NUMPARTS 28
+  BUFFERPOOL &bp8.
+  CLOSE NO
+  COMPRESS YES
+  LOCKSIZE PAGE
+  SEGSIZE 64
+;
+
+ /* +Transaction */
+CREATE TABLE &custqual..FIN_RECORD&YYYYMM
+(
+ /* -TransactionDateTime */
+       TSTAMP_TRANS         CHAR(16) NOT NULL,
+ /* */
+       UNIQUENESS_KEY       SMALLINT NOT NULL,
+       PARTITION_KEY        SMALLINT NOT NULL,
+ /* -InsertSequenceNumber */
+       INSERT_SEQUENCE_NO   INTEGER NOT NULL,
+ /* -MTI */
+       MTI                  CHAR(4) NOT NULL,
+ /* -4:TransactionAmount */
+ /* -30-1:OriginalTransactionAmount */
+       AMT_TRAN             DECIMAL(18) NOT NULL,
+       CUR_TRAN             CHAR(3) NOT NULL,
+ /* */
+       AMT_RECON_NET        DECIMAL(18) NOT NULL,
+       CUR_RECON_NET        CHAR(3) NOT NULL,
+ /* -6:CardholderBillingAmount */
+ /* -Surcharge */
+       AMT_CARD_BILL        DECIMAL(18) NOT NULL,
+       CUR_CARD_BILL        CHAR(3) NOT NULL,
+ /* -9:ConversionRateNet */
+       CNV_RCN_NET_RATE     DECIMAL(7) NOT NULL,
+       CNV_RCN_NET_DE_POS   DECIMAL(1) NOT NULL,
+ /* -ConversionRateAcquirer */
+       CNV_RCN_ACQ_RATE     DECIMAL(7) NOT NULL,
+       CNV_RCN_ACQ_DE_POS   DECIMAL(1) NOT NULL,
+ /* -ConversionRateIssuer */
+       CNV_RCN_ISS_RATE     DECIMAL(7) NOT NULL,
+       CNV_RCN_ISS_DE_POS   DECIMAL(1) NOT NULL,
+ /* -10:ConversionRateCardholderBilling */
+       CNV_CRD_BIL_RATE     DECIMAL(7) NOT NULL,
+       CNV_CRD_BIL_DE_POS   DECIMAL(1) NOT NULL,
+ /* -13:DateEffective */
+       DATE_EFFECTIVE       CHAR(4) NOT NULL,
+ /* -14:DateExpiration */
+       DATE_EXP             CHAR(4) NOT NULL,
+ /* -15:DateSettlement */
+       DATE_RECON_NET       CHAR(8) NOT NULL,
+ /* -16:AcquirerDateConversion */
+       DATE_CNV_ACQ         CHAR(4) NOT NULL,
+ /* -IssuerDateConversion */
+       DATE_CNV_ISS         CHAR(4) NOT NULL,
+ /* -17:DateCapture */
+       DATE_CAPTURE         CHAR(4) NOT NULL,
+ /* -19:AcquirerCountryCode */
+       COUNTRY_ACQ_INST     CHAR(3) NOT NULL,
+ /* -20:IssuerCountryCode */
+       COUNTRY_ISS_INST     CHAR(3) NOT NULL,
+ /* -22-1:PosCardReadingMethod */
+       POS_CRD_DAT_IN_MOD   CHAR(1) NOT NULL,
+ /* -22-2:PosCardholderVerificationMethod */
+       POS_CRDHLDR_A_METH   CHAR(1) NOT NULL,
+ /* -22-3:PosEnvironment */
+       POS_OPER_ENV         CHAR(1) NOT NULL,
+ /* -PosCardholderPresent */
+       POS_CRDHLDR_PRESNT   CHAR(1) NOT NULL,
+ /* -PosCardPresent */
+       POS_CARD_PRES        CHAR(1) NOT NULL,
+ /* -PosCardholderAuthenticationEntity */
+       POS_CRDHLDR_AUTH     CHAR(1) NOT NULL,
+ /* -23:CardSequenceNumber */
+       CARD_SEQ_NO          CHAR(5) NOT NULL,
+ /* */
+       FUNC_CODE            CHAR(3) NOT NULL,
+ /* -25:AcquirerMessageReasonCode */
+       MSG_RESON_CODE_ACQ   CHAR(4) NOT NULL,
+ /* -26:MCC */
+       CARD_ACPT_BUS_CODE   CHAR(4) NOT NULL,
+ /* -27-1:PosCardReadingCapability */
+       POS_CRD_DAT_IN_CAP   CHAR(1) NOT NULL,
+ /* -27-2:PosCardholderVerificationCapability */
+       POS_CRDHLDR_AUTH_C   CHAR(1) NOT NULL,
+ /* -27-6:PosTerminalOutputCapability */
+       POS_TERM_OUT_CAP     CHAR(1) NOT NULL,
+ /* -27-9:PosMagneticStripeRewriteCapability */
+       POS_CRD_DAT_OT_CAP   CHAR(1) NOT NULL,
+ /* -27-10:PosCardCaptureCapability */
+       POS_CARD_CAPT_CAP    CHAR(1) NOT NULL,
+ /* -27-11:PosPinInputLengthCapability */
+       POS_PIN_CAPT_CAP     CHAR(1) NOT NULL,
+ /* -28:AcquirerDate */
+       DATE_RECON_ACQ       CHAR(8) NOT NULL,
+ /* -IssuerDate */
+       DATE_RECON_ISS       CHAR(8) NOT NULL,
+ /* -30-1:OriginalTransactionAmount */
+       O_AMT_TRAN           DECIMAL(18) NOT NULL,
+ /* -30-2:OriginalReconciliationAmount */
+       O_AMT_RECON_NET      DECIMAL(18) NOT NULL,
+ /* -40:ServiceCode */
+       SRV_GRP_INTCHG_IND   CHAR(1) NOT NULL,
+       SRV_GRP_SERV_CODE    CHAR(2) NOT NULL,
+ /* -42:CardAcceptorID */
+ /* -42:CPPCardAcceptorID */
+       CARD_ACPT_ID         CHAR(15) NOT NULL,
+ /* -43:Clerk */
+       CLERK_ID             CHAR(28) NOT NULL,
+ /* -MerchantCountryCode */
+       CARD_ACPT_COUNTRY    CHAR(3) NOT NULL,
+ /* -MerchantPostalCode */
+       CARD_ACPT_PST_CODE   CHAR(10) NOT NULL,
+ /* -MerchantCountrySubEntityCode */
+       CARD_ACPT_REGION     CHAR(3) NOT NULL,
+ /* -MultiClearSeqNumber */
+       MULTI_CLEAR_SEQ_NO   CHAR(2),
+ /* -MultiClearCount */
+       MULTI_CLEAR_COUNT    CHAR(2),
+ /* -46:Fees */
+ /* -Surcharge */
+ /* -AcquirerFee */
+ /* -IssuerFee */
+ /* -SwitchFee */
+ /* -TransfereeFee */
+ /* -CrossBorderFee */
+       F_TYPE0              CHAR(2) NOT NULL,
+       F_TYPE1              CHAR(2) NOT NULL,
+       F_TYPE2              CHAR(2) NOT NULL,
+       F_TYPE3              CHAR(2) NOT NULL,
+       F_TYPE4              CHAR(2) NOT NULL,
+       F_TYPE5              CHAR(2) NOT NULL,
+       F_INITIATOR0         CHAR(1) NOT NULL,
+       F_INITIATOR1         CHAR(1) NOT NULL,
+       F_INITIATOR2         CHAR(1) NOT NULL,
+       F_INITIATOR3         CHAR(1) NOT NULL,
+       F_INITIATOR4         CHAR(1) NOT NULL,
+       F_INITIATOR5         CHAR(1) NOT NULL,
+       F_MEMO0              CHAR(1) NOT NULL,
+       F_MEMO1              CHAR(1) NOT NULL,
+       F_MEMO2              CHAR(1) NOT NULL,
+       F_MEMO3              CHAR(1) NOT NULL,
+       F_MEMO4              CHAR(1) NOT NULL,
+       F_MEMO5              CHAR(1) NOT NULL,
+       F_AMT0               INTEGER NOT NULL,
+       F_AMT1               INTEGER NOT NULL,
+       F_AMT2               INTEGER NOT NULL,
+       F_AMT3               INTEGER NOT NULL,
+       F_AMT4               INTEGER NOT NULL,
+       F_AMT5               INTEGER NOT NULL,
+       F_CUR_CODE0          CHAR(3) NOT NULL,
+       F_CUR_CODE1          CHAR(3) NOT NULL,
+       F_CUR_CODE2          CHAR(3) NOT NULL,
+       F_CUR_CODE3          CHAR(3) NOT NULL,
+       F_CUR_CODE4          CHAR(3) NOT NULL,
+       F_CUR_CODE5          CHAR(3) NOT NULL,
+       F_ADL_DEC_POS0       DECIMAL(1) NOT NULL,
+       F_ADL_DEC_POS1       DECIMAL(1) NOT NULL,
+       F_ADL_DEC_POS2       DECIMAL(1) NOT NULL,
+       F_ADL_DEC_POS3       DECIMAL(1) NOT NULL,
+       F_ADL_DEC_POS4       DECIMAL(1) NOT NULL,
+       F_ADL_DEC_POS5       DECIMAL(1) NOT NULL,
+       F_CNV_ACQ_RATE0      DECIMAL(7) NOT NULL,
+       F_CNV_ACQ_RATE1      DECIMAL(7) NOT NULL,
+       F_CNV_ACQ_RATE2      DECIMAL(7) NOT NULL,
+       F_CNV_ACQ_RATE3      DECIMAL(7) NOT NULL,
+       F_CNV_ACQ_RATE4      DECIMAL(7) NOT NULL,
+       F_CNV_ACQ_RATE5      DECIMAL(7) NOT NULL,
+       F_CNV_ACQ_DEC_POS0   DECIMAL(1) NOT NULL,
+       F_CNV_ACQ_DEC_POS1   DECIMAL(1) NOT NULL,
+       F_CNV_ACQ_DEC_POS2   DECIMAL(1) NOT NULL,
+       F_CNV_ACQ_DEC_POS3   DECIMAL(1) NOT NULL,
+       F_CNV_ACQ_DEC_POS4   DECIMAL(1) NOT NULL,
+       F_CNV_ACQ_DEC_POS5   DECIMAL(1) NOT NULL,
+       F_AMT_RECON_ACQ0     INTEGER NOT NULL,
+       F_AMT_RECON_ACQ1     INTEGER NOT NULL,
+       F_AMT_RECON_ACQ2     INTEGER NOT NULL,
+       F_AMT_RECON_ACQ3     INTEGER NOT NULL,
+       F_AMT_RECON_ACQ4     INTEGER NOT NULL,
+       F_AMT_RECON_ACQ5     INTEGER NOT NULL,
+       F_CUR_RECON_ACQ0     CHAR(3) NOT NULL,
+       F_CUR_RECON_ACQ1     CHAR(3) NOT NULL,
+       F_CUR_RECON_ACQ2     CHAR(3) NOT NULL,
+       F_CUR_RECON_ACQ3     CHAR(3) NOT NULL,
+       F_CUR_RECON_ACQ4     CHAR(3) NOT NULL,
+       F_CUR_RECON_ACQ5     CHAR(3) NOT NULL,
+       F_CNV_ISS_RATE0      DECIMAL(7) NOT NULL,
+       F_CNV_ISS_RATE1      DECIMAL(7) NOT NULL,
+       F_CNV_ISS_RATE2      DECIMAL(7) NOT NULL,
+       F_CNV_ISS_RATE3      DECIMAL(7) NOT NULL,
+       F_CNV_ISS_RATE4      DECIMAL(7) NOT NULL,
+       F_CNV_ISS_RATE5      DECIMAL(7) NOT NULL,
+       F_CNV_ISS_DEC_POS0   DECIMAL(1) NOT NULL,
+       F_CNV_ISS_DEC_POS1   DECIMAL(1) NOT NULL,
+       F_CNV_ISS_DEC_POS2   DECIMAL(1) NOT NULL,
+       F_CNV_ISS_DEC_POS3   DECIMAL(1) NOT NULL,
+       F_CNV_ISS_DEC_POS4   DECIMAL(1) NOT NULL,
+       F_CNV_ISS_DEC_POS5   DECIMAL(1) NOT NULL,
+       F_AMT_RECON_ISS0     INTEGER NOT NULL,
+       F_AMT_RECON_ISS1     INTEGER NOT NULL,
+       F_AMT_RECON_ISS2     INTEGER NOT NULL,
+       F_AMT_RECON_ISS3     INTEGER NOT NULL,
+       F_AMT_RECON_ISS4     INTEGER NOT NULL,
+       F_AMT_RECON_ISS5     INTEGER NOT NULL,
+       F_CUR_RECON_ISS0     CHAR(3) NOT NULL,
+       F_CUR_RECON_ISS1     CHAR(3) NOT NULL,
+       F_CUR_RECON_ISS2     CHAR(3) NOT NULL,
+       F_CUR_RECON_ISS3     CHAR(3) NOT NULL,
+       F_CUR_RECON_ISS4     CHAR(3) NOT NULL,
+       F_CUR_RECON_ISS5     CHAR(3) NOT NULL,
+       F_AMT_RECON_NET0     INTEGER NOT NULL,
+       F_AMT_RECON_NET1     INTEGER NOT NULL,
+       F_AMT_RECON_NET2     INTEGER NOT NULL,
+       F_AMT_RECON_NET3     INTEGER NOT NULL,
+       F_AMT_RECON_NET4     INTEGER NOT NULL,
+       F_AMT_RECON_NET5     INTEGER NOT NULL,
+ /* -49:CVV */
+       CVV_CVC_RESULT       CHAR(1) NOT NULL,
+ /* -49:CVV2 */
+       CVV2_CVC2_RESULT     CHAR(1) NOT NULL,
+ /* -49-72:AddressVerificationResultCode */
+       CAVV_RESULT          CHAR(1) NOT NULL,
+ /* -54:RequestAmounts */
+ /* -CashbackAmount */
+       ADL_RQST_AMT0        DECIMAL(18) NOT NULL,
+       ADL_RQST_AMT1        DECIMAL(18) NOT NULL,
+       ADL_RQST_AMT2        DECIMAL(18) NOT NULL,
+       ADL_RQST_AMT3        DECIMAL(18) NOT NULL,
+       ADL_RQST_AMT4        DECIMAL(18) NOT NULL,
+       ADL_RQST_AMT5        DECIMAL(18) NOT NULL,
+       ADL_RQST_CUR_CODE0   CHAR(3) NOT NULL,
+       ADL_RQST_CUR_CODE1   CHAR(3) NOT NULL,
+       ADL_RQST_CUR_CODE2   CHAR(3) NOT NULL,
+       ADL_RQST_CUR_CODE3   CHAR(3) NOT NULL,
+       ADL_RQST_CUR_CODE4   CHAR(3) NOT NULL,
+       ADL_RQST_CUR_CODE5   CHAR(3) NOT NULL,
+       ADL_RQST_AMT_TYP0    CHAR(2) NOT NULL,
+       ADL_RQST_AMT_TYP1    CHAR(2) NOT NULL,
+       ADL_RQST_AMT_TYP2    CHAR(2) NOT NULL,
+       ADL_RQST_AMT_TYP3    CHAR(2) NOT NULL,
+       ADL_RQST_AMT_TYP4    CHAR(2) NOT NULL,
+       ADL_RQST_AMT_TYP5    CHAR(2) NOT NULL,
+       ADL_RQST_ACCT_IDX0   SMALLINT NOT NULL,
+       ADL_RQST_ACCT_IDX1   SMALLINT NOT NULL,
+       ADL_RQST_ACCT_IDX2   SMALLINT NOT NULL,
+       ADL_RQST_ACCT_IDX3   SMALLINT NOT NULL,
+       ADL_RQST_ACCT_IDX4   SMALLINT NOT NULL,
+       ADL_RQST_ACCT_IDX5   SMALLINT NOT NULL,
+       ADL_RQST_ACCT_TYP0   CHAR(2) NOT NULL,
+       ADL_RQST_ACCT_TYP1   CHAR(2) NOT NULL,
+       ADL_RQST_ACCT_TYP2   CHAR(2) NOT NULL,
+       ADL_RQST_ACCT_TYP3   CHAR(2) NOT NULL,
+       ADL_RQST_ACCT_TYP4   CHAR(2) NOT NULL,
+       ADL_RQST_ACCT_TYP5   CHAR(2) NOT NULL,
+ /* -56-1:OriginalMTI */
+       ODE_MTI              CHAR(4) NOT NULL,
+ /* -56-2:OriginalSystemTraceAuditNumber */
+       ODE_SYS_TRA_AUD_NO   CHAR(6) NOT NULL,
+ /* -56-3:OriginalLocalDateTime */
+       ODE_TSTAMP_LOCL_TR   CHAR(14) NOT NULL,
+ /* -56-4:OriginalAcquirerInstitution */
+       ODE_INST_ID_ACQ      CHAR(11) NOT NULL,
+ /* -57:AuthorizationLifeCycleCode */
+       AUTH_LCYCLE_TCODE    CHAR(1) NOT NULL,
+       AUTH_LIFECYCLE_INT   DECIMAL(2) NOT NULL,
+ /* -AcquirerNetwork */
+       NET_ID_ACQ           CHAR(3) NOT NULL,
+ /* -IssuerNetwork */
+       NET_ID_ISS           CHAR(3) NOT NULL,
+ /* -66:OriginalFees */
+       FO_TYPE0             CHAR(2) NOT NULL,
+       FO_TYPE1             CHAR(2) NOT NULL,
+       FO_TYPE2             CHAR(2) NOT NULL,
+       FO_TYPE3             CHAR(2) NOT NULL,
+       FO_TYPE4             CHAR(2) NOT NULL,
+       FO_TYPE5             CHAR(2) NOT NULL,
+       FO_INITIATOR0        CHAR(1) NOT NULL,
+       FO_INITIATOR1        CHAR(1) NOT NULL,
+       FO_INITIATOR2        CHAR(1) NOT NULL,
+       FO_INITIATOR3        CHAR(1) NOT NULL,
+       FO_INITIATOR4        CHAR(1) NOT NULL,
+       FO_INITIATOR5        CHAR(1) NOT NULL,
+       FO_MEMO0             CHAR(1) NOT NULL,
+       FO_MEMO1             CHAR(1) NOT NULL,
+       FO_MEMO2             CHAR(1) NOT NULL,
+       FO_MEMO3             CHAR(1) NOT NULL,
+       FO_MEMO4             CHAR(1) NOT NULL,
+       FO_MEMO5             CHAR(1) NOT NULL,
+       FO_AMT0              INTEGER NOT NULL,
+       FO_AMT1              INTEGER NOT NULL,
+       FO_AMT2              INTEGER NOT NULL,
+       FO_AMT3              INTEGER NOT NULL,
+       FO_AMT4              INTEGER NOT NULL,
+       FO_AMT5              INTEGER NOT NULL,
+       FO_CUR_CODE0         CHAR(3) NOT NULL,
+       FO_CUR_CODE1         CHAR(3) NOT NULL,
+       FO_CUR_CODE2         CHAR(3) NOT NULL,
+       FO_CUR_CODE3         CHAR(3) NOT NULL,
+       FO_CUR_CODE4         CHAR(3) NOT NULL,
+       FO_CUR_CODE5         CHAR(3) NOT NULL,
+       FO_CUR_RECON_ACQ0    CHAR(3) NOT NULL,
+       FO_CUR_RECON_ACQ1    CHAR(3) NOT NULL,
+       FO_CUR_RECON_ACQ2    CHAR(3) NOT NULL,
+       FO_CUR_RECON_ACQ3    CHAR(3) NOT NULL,
+       FO_CUR_RECON_ACQ4    CHAR(3) NOT NULL,
+       FO_CUR_RECON_ACQ5    CHAR(3) NOT NULL,
+       FO_CUR_RECON_ISS0    CHAR(3) NOT NULL,
+       FO_CUR_RECON_ISS1    CHAR(3) NOT NULL,
+       FO_CUR_RECON_ISS2    CHAR(3) NOT NULL,
+       FO_CUR_RECON_ISS3    CHAR(3) NOT NULL,
+       FO_CUR_RECON_ISS4    CHAR(3) NOT NULL,
+       FO_CUR_RECON_ISS5    CHAR(3) NOT NULL,
+       FO_DEC_POS0          DECIMAL(1) NOT NULL,
+       FO_DEC_POS1          DECIMAL(1) NOT NULL,
+       FO_DEC_POS2          DECIMAL(1) NOT NULL,
+       FO_DEC_POS3          DECIMAL(1) NOT NULL,
+       FO_DEC_POS4          DECIMAL(1) NOT NULL,
+       FO_DEC_POS5          DECIMAL(1) NOT NULL,
+       FO_CNV_ACQ_RATE0     INTEGER NOT NULL,
+       FO_CNV_ACQ_RATE1     INTEGER NOT NULL,
+       FO_CNV_ACQ_RATE2     INTEGER NOT NULL,
+       FO_CNV_ACQ_RATE3     INTEGER NOT NULL,
+       FO_CNV_ACQ_RATE4     INTEGER NOT NULL,
+       FO_CNV_ACQ_RATE5     INTEGER NOT NULL,
+       FO_CNV_ACQ_DE_POS0   DECIMAL(1) NOT NULL,
+       FO_CNV_ACQ_DE_POS1   DECIMAL(1) NOT NULL,
+       FO_CNV_ACQ_DE_POS2   DECIMAL(1) NOT NULL,
+       FO_CNV_ACQ_DE_POS3   DECIMAL(1) NOT NULL,
+       FO_CNV_ACQ_DE_POS4   DECIMAL(1) NOT NULL,
+       FO_CNV_ACQ_DE_POS5   DECIMAL(1) NOT NULL,
+       FO_AMT_RECON_ACQ0    INTEGER NOT NULL,
+       FO_AMT_RECON_ACQ1    INTEGER NOT NULL,
+       FO_AMT_RECON_ACQ2    INTEGER NOT NULL,
+       FO_AMT_RECON_ACQ3    INTEGER NOT NULL,
+       FO_AMT_RECON_ACQ4    INTEGER NOT NULL,
+       FO_AMT_RECON_ACQ5    INTEGER NOT NULL,
+       FO_CNV_ISS_RATE0     INTEGER NOT NULL,
+       FO_CNV_ISS_RATE1     INTEGER NOT NULL,
+       FO_CNV_ISS_RATE2     INTEGER NOT NULL,
+       FO_CNV_ISS_RATE3     INTEGER NOT NULL,
+       FO_CNV_ISS_RATE4     INTEGER NOT NULL,
+       FO_CNV_ISS_RATE5     INTEGER NOT NULL,
+       FO_CNV_ISS_DE_POS0   DECIMAL(1) NOT NULL,
+       FO_CNV_ISS_DE_POS1   DECIMAL(1) NOT NULL,
+       FO_CNV_ISS_DE_POS2   DECIMAL(1) NOT NULL,
+       FO_CNV_ISS_DE_POS3   DECIMAL(1) NOT NULL,
+       FO_CNV_ISS_DE_POS4   DECIMAL(1) NOT NULL,
+       FO_CNV_ISS_DE_POS5   DECIMAL(1) NOT NULL,
+       FO_AMT_RECON_ISS0    INTEGER NOT NULL,
+       FO_AMT_RECON_ISS1    INTEGER NOT NULL,
+       FO_AMT_RECON_ISS2    INTEGER NOT NULL,
+       FO_AMT_RECON_ISS3    INTEGER NOT NULL,
+       FO_AMT_RECON_ISS4    INTEGER NOT NULL,
+       FO_AMT_RECON_ISS5    INTEGER NOT NULL,
+       FO_AMT_RECON_NET0    INTEGER NOT NULL,
+       FO_AMT_RECON_NET1    INTEGER NOT NULL,
+       FO_AMT_RECON_NET2    INTEGER NOT NULL,
+       FO_AMT_RECON_NET3    INTEGER NOT NULL,
+       FO_AMT_RECON_NET4    INTEGER NOT NULL,
+       FO_AMT_RECON_NET5    INTEGER NOT NULL,
+ /* -67:ExtendedPaymentData */
+       EXTENDED_PAY_DATA    CHAR(2) NOT NULL,
+ /* -73:DateAction */
+       DATE_ACTION          CHAR(8) NOT NULL,
+ /* -AcquirerAmount */
+ /* -Surcharge */
+       AMT_RECON_ACQ        DECIMAL(18) NOT NULL,
+       CUR_RECON_ACQ        CHAR(3) NOT NULL,
+ /* -IssuerAmount */
+       AMT_RECON_ISS        DECIMAL(18) NOT NULL,
+       CUR_RECON_ISS        CHAR(3) NOT NULL,
+ /* -98:Payee */
+       PAYEE                CHAR(25) NOT NULL,
+ /* */
+       ACCT_ID_1            CHAR(28) NOT NULL,
+ /* -103:Account2 */
+       ACCT_ID_2            CHAR(28) NOT NULL,
+ /* -TransactionDisposition */
+       TRAN_DISPOSITION     CHAR(1) NOT NULL,
+ /* -TerminalClass */
+ /* -DeviceTypeChannel */
+       TERM_CLASS           CHAR(2) NOT NULL,
+ /* -CardOwner */
+       CARD_OWNER           CHAR(2) NOT NULL,
+ /* -CardType */
+       CARD_TYPE            CHAR(1) NOT NULL,
+ /* -IssuerMessageReasonCode */
+       MSG_RESON_CODE_ISS   CHAR(4) NOT NULL,
+ /* -Account3 */
+       ACCT_ID_3            CHAR(28) NOT NULL,
+ /* -Platform */
+ /* -Surcharge */
+       ACQ_PLAT_PROD_ID     CHAR(1) NOT NULL,
+ /* -Reimbursement */
+       REIMBURSEMENT_ATTR   CHAR(1) NOT NULL,
+ /* -ReversedBy */
+       REV_BY               CHAR(1) NOT NULL,
+ /* -IssuerAccountTypes */
+       ACCT_TYPES_ISS       CHAR(4) NOT NULL,
+ /* -PinResult */
+       PIN_RESULT           SMALLINT NOT NULL,
+ /* -MastercardAAVResult */
+       MCI_AAV_RESULT_COD   CHAR(1) NOT NULL,
+ /* -SecureCode */
+ /* -SecureCodeLevel */
+       MCI_ECS_LVL_IND      CHAR(3) NOT NULL,
+ /* -CardAcceptorSponsor */
+       CARD_ACPT_SPNSR_ID   CHAR(11) NOT NULL,
+       PAN_TOKEN            CHAR(19),
+ /* -ResponseAmounts */
+ /* -AvailableBalance */
+ /* -LedgerBalance */
+       ADL_RESP_AMT0        DECIMAL(18) NOT NULL,
+       ADL_RESP_AMT1        DECIMAL(18) NOT NULL,
+       ADL_RESP_AMT2        DECIMAL(18) NOT NULL,
+       ADL_RESP_AMT3        DECIMAL(18) NOT NULL,
+       ADL_RESP_AMT4        DECIMAL(18) NOT NULL,
+       ADL_RESP_AMT5        DECIMAL(18) NOT NULL,
+       ADL_RESP_CUR_CODE0   CHAR(3) NOT NULL,
+       ADL_RESP_CUR_CODE1   CHAR(3) NOT NULL,
+       ADL_RESP_CUR_CODE2   CHAR(3) NOT NULL,
+       ADL_RESP_CUR_CODE3   CHAR(3) NOT NULL,
+       ADL_RESP_CUR_CODE4   CHAR(3) NOT NULL,
+       ADL_RESP_CUR_CODE5   CHAR(3) NOT NULL,
+       ADL_RESP_AMT_TYP0    CHAR(2) NOT NULL,
+       ADL_RESP_AMT_TYP1    CHAR(2) NOT NULL,
+       ADL_RESP_AMT_TYP2    CHAR(2) NOT NULL,
+       ADL_RESP_AMT_TYP3    CHAR(2) NOT NULL,
+       ADL_RESP_AMT_TYP4    CHAR(2) NOT NULL,
+       ADL_RESP_AMT_TYP5    CHAR(2) NOT NULL,
+       ADL_RESP_ACCT_IDX0   SMALLINT NOT NULL,
+       ADL_RESP_ACCT_IDX1   SMALLINT NOT NULL,
+       ADL_RESP_ACCT_IDX2   SMALLINT NOT NULL,
+       ADL_RESP_ACCT_IDX3   SMALLINT NOT NULL,
+       ADL_RESP_ACCT_IDX4   SMALLINT NOT NULL,
+       ADL_RESP_ACCT_IDX5   SMALLINT NOT NULL,
+       ADL_RESP_ACCT_TYP0   CHAR(2) NOT NULL,
+       ADL_RESP_ACCT_TYP1   CHAR(2) NOT NULL,
+       ADL_RESP_ACCT_TYP2   CHAR(2) NOT NULL,
+       ADL_RESP_ACCT_TYP3   CHAR(2) NOT NULL,
+       ADL_RESP_ACCT_TYP4   CHAR(2) NOT NULL,
+       ADL_RESP_ACCT_TYP5   CHAR(2) NOT NULL,
+ /* -Canisters */
+       CAN_ITEM_VALUE0      INTEGER NOT NULL,
+       CAN_ITEM_VALUE1      INTEGER NOT NULL,
+       CAN_ITEM_VALUE2      INTEGER NOT NULL,
+       CAN_ITEM_VALUE3      INTEGER NOT NULL,
+       CAN_ITEM_VALUE4      INTEGER NOT NULL,
+       CAN_ITEM_VALUE5      INTEGER NOT NULL,
+       CAN_ITEM_VALUE6      INTEGER NOT NULL,
+       CAN_ITEM_VALUE7      INTEGER NOT NULL,
+       CAN_NO_ITEMS_DISP0   SMALLINT NOT NULL,
+       CAN_NO_ITEMS_DISP1   SMALLINT NOT NULL,
+       CAN_NO_ITEMS_DISP2   SMALLINT NOT NULL,
+       CAN_NO_ITEMS_DISP3   SMALLINT NOT NULL,
+       CAN_NO_ITEMS_DISP4   SMALLINT NOT NULL,
+       CAN_NO_ITEMS_DISP5   SMALLINT NOT NULL,
+       CAN_NO_ITEMS_DISP6   SMALLINT NOT NULL,
+       CAN_NO_ITEMS_DISP7   SMALLINT NOT NULL,
+       CAN_ORIG_NO_ITEMS0   SMALLINT NOT NULL,
+       CAN_ORIG_NO_ITEMS1   SMALLINT NOT NULL,
+       CAN_ORIG_NO_ITEMS2   SMALLINT NOT NULL,
+       CAN_ORIG_NO_ITEMS3   SMALLINT NOT NULL,
+       CAN_ORIG_NO_ITEMS4   SMALLINT NOT NULL,
+       CAN_ORIG_NO_ITEMS5   SMALLINT NOT NULL,
+       CAN_ORIG_NO_ITEMS6   SMALLINT NOT NULL,
+       CAN_ORIG_NO_ITEMS7   SMALLINT NOT NULL,
+ /* -ConfigurationVersion */
+       CED_BUILD_NO         INTEGER NOT NULL,
+ /* -MediaType */
+       CUR_TYPE             SMALLINT NOT NULL,
+ /* -TimeAtAP */
+       TIME_AT_AP           SMALLINT NOT NULL,
+ /* -TimeAtIssuer */
+       TIME_AT_ISS          SMALLINT NOT NULL,
+ /* -TimeAtResponseQueue */
+       TIME_AT_RESP_QUE     SMALLINT NOT NULL,
+ /* -TimeAtResponseSwitch */
+       TIME_AT_RESP_SWTCH   SMALLINT NOT NULL,
+ /* -TimeAtRequestQueue */
+       TIME_AT_RQST_QUE     SMALLINT NOT NULL,
+ /* -TimeAtRequestSwitch */
+       TIME_AT_RQST_SWTCH   SMALLINT NOT NULL,
+ /* -OriginalCardholderBillingAmount */
+       O_AMT_CARD_BILL      DECIMAL(18) NOT NULL,
+ /* -OriginalAcquirerAmount */
+       O_AMT_RECON_ACQ      DECIMAL(18) NOT NULL,
+ /* -OriginalIssuerAmount */
+       O_AMT_RECON_ISS      DECIMAL(18) NOT NULL,
+ /* -APErrorNumber */
+       AP_ERROR_NO          SMALLINT NOT NULL,
+ /* -APErrorTrace */
+       AP_ERROR_TRACE_LOC   SMALLINT NOT NULL,
+ /* -APRejectReason */
+       AP_REJ_REASON_CODE   SMALLINT NOT NULL,
+ /* -AuthorizationTimeout */
+       AUTH_RQST_TIMEOUT    SMALLINT NOT NULL,
+ /* -PinFormat */
+       PIN_DATA_FMT         SMALLINT NOT NULL,
+ /* -PMCError */
+       PMC_ERROR            SMALLINT NOT NULL,
+ /* -PreAuthorizationCompletion */
+       PREAUTH_COMP_OPT     SMALLINT NOT NULL,
+ /* -UsageUpdate */
+       USAGE_UPDATE_BITS    INTEGER NOT NULL,
+ /* -AdjustmentOriginalTransactionAmount */
+       ORIG_AMT_TRAN_ADJ    DECIMAL(18) NOT NULL,
+ /* -AcquirerCircuit */
+       CIRC_ID_ACQ          CHAR(8) NOT NULL,
+ /* -IssuerCircuit */
+       CIRC_ID_ISS          CHAR(8) NOT NULL,
+ /* -MerchantType */
+       MERCH_TYPE           CHAR(4) NOT NULL,
+ /* -Account1Qualifier */
+       ACCT_QUAL_1          CHAR(3) NOT NULL,
+ /* -Account2Qualifier */
+       ACCT_QUAL_2          CHAR(3) NOT NULL,
+ /* -APFlag */
+       AP_FLG               CHAR(1) NOT NULL,
+ /* -DraftCapture */
+       DRAFT_CAPTURE_FLG    CHAR(1) NOT NULL,
+ /* -ExchangeMaster */
+       EXCHG_MASTER         CHAR(1) NOT NULL,
+ /* -ExchangeSettle */
+       EXCHG_SETL           CHAR(1) NOT NULL,
+ /* -HostReceive */
+       HOST_RECV_FLG        CHAR(1) NOT NULL,
+ /* -HostSent */
+       HOST_SENT_FLG        CHAR(1) NOT NULL,
+ /* -OARRequest */
+       OAR_RQST_FLG         CHAR(1) NOT NULL,
+ /* -PrintMaskID */
+       PRINT_MASK_ID        CHAR(8) NOT NULL,
+ /* -ReversalDateTime */
+       TSTAMP_REV_CREATED   CHAR(16) NOT NULL,
+ /* -Account1Type */
+       ACCT_TYPE_1          CHAR(4) NOT NULL,
+ /* -Account2Type */
+       ACCT_TYPE_2          CHAR(4) NOT NULL,
+ /* -Account3Type */
+       ACCT_TYPE_3          CHAR(4) NOT NULL,
+ /* -AlternateRoute */
+       ALT_ROUTE_FLG        CHAR(1) NOT NULL,
+ /* -APApprovalCode */
+       AP_APPROVAL_CODE     CHAR(6) NOT NULL,
+ /* -APCardGroup */
+       AP_CARD_GRP          CHAR(8) NOT NULL,
+ /* -APData */
+       AP_DATA              CHAR(8) NOT NULL,
+ /* -ForwardingInstitutionCountry */
+       CNTRY_RCN_ACQ_INST   CHAR(3) NOT NULL,
+ /* -ReceivingInstitutionCountry */
+       CNTRY_RCN_ISS_INST   CHAR(3) NOT NULL,
+ /* -CardAcceptorCounty */
+       CARD_ACPT_COUNTY     CHAR(3) NOT NULL,
+ /* -CardCapture */
+       CARD_CAPT_FLG        CHAR(1) NOT NULL,
+ /* -DepositOnly */
+       DEPOSIT_ONLY_FLG     CHAR(1) NOT NULL,
+ /* -FromAccountFlag */
+       TRAN_FROM_ACCT_FLG   CHAR(1) NOT NULL,
+ /* -ToAccountFlag */
+       TRAN_TO_ACCT_FLG     CHAR(1) NOT NULL,
+ /* -AcquirerTimePeriod */
+       RECON_IND_ACQ        CHAR(6) NOT NULL,
+ /* -RestrictiveInterchangeGroup */
+       RESTRIC_INTCHG_GRP   CHAR(8) NOT NULL,
+ /* -SourceRouteID */
+       SOURCE_ROUTE_ID      CHAR(8) NOT NULL,
+ /* -StandinAction */
+       STANDIN_ACT          CHAR(1) NOT NULL,
+ /* -StandinOption */
+       STANDIN_OPTION       CHAR(1) NOT NULL,
+ /* -TrackKey */
+       TRACK_INFO_KEY_ID    CHAR(8) NOT NULL,
+       TRACINF_KEYTRAC_NO   CHAR(1) NOT NULL,
+ /* -AdjustmentReceiverCountry */
+       CNTRY_REC_INST_ADJ   CHAR(3) NOT NULL,
+ /* -AdjustmentRequestorCountry */
+       CNTRY_REQ_INST_ADJ   CHAR(3) NOT NULL,
+ /* -AcquirerBranch */
+       BRANCH_ID_ACQ        CHAR(11) NOT NULL,
+ /* -AdjustmentReceiverInstitution */
+       INST_ID_REC_ADJ      CHAR(11) NOT NULL,
+ /* -AdjustmentRequestorInstitution */
+       INST_ID_REQ_ADJ      CHAR(11) NOT NULL,
+ /* -AdjustmentNetworkIndicator */
+       NET_IND_ADJ          CHAR(1) NOT NULL,
+ /* -AdjustmentLocalDateTime */
+       TSTAMP_LOCAL_ADJ     CHAR(14) NOT NULL,
+ /* -AdjustmentDateTime */
+       TSTAMP_TRANS_ADJ     CHAR(16) NOT NULL,
+ /* -AdjustmentRole */
+       REQ_ACQ_ISS_IND      CHAR(1) NOT NULL,
+ /* -AdjustmentTrace */
+       TRACE_DATA_ADJ       CHAR(23) NOT NULL,
+ /* -FeeRole */
+       ISS_ACQ_TYPE_FEE     CHAR(1) NOT NULL,
+ /* -MastercardUCAF */
+       MCI_UCAF_DATA        CHAR(32) NOT NULL,
+ /* -MerchantTier */
+       MERCH_TIER_ID        CHAR(14) NOT NULL,
+ /* -TransactionUniqueData */
+ /* -AVS */
+       TRAN_UNIQ_DATA_FMT   CHAR(2) NOT NULL,
+ /* -BinExclusionGroup */
+       BIN_EXCLUSION_GRP    CHAR(8),
+ /* -CardLogo */
+       CARD_LOGO_ID         CHAR(8),
+ /* -NetworkInterchangeTier */
+       NET_INTRCHG_TIER     CHAR(5),
+ /* -InstitutionTier */
+       INST_TIER            CHAR(2),
+ /* -CardInterchangeID */
+       CARD_INTRCHG_ID      CHAR(8),
+ /* -ProgramID */
+       PROGRAM_ID           CHAR(2),
+ /* -PinFlag */
+       PIN_FLG              CHAR(1),
+ /* -NetworkProgram */
+       NETWORK_PROGRAM      CHAR(10),
+ /* -WeightedAverage */
+       WEIGHTED_AVE_FLG     CHAR(1),
+ /* -TokenAssuranceLevel */
+       TOKEN_ASSURANCE      CHAR(2),
+ /* -TokenRequestorID */
+       TOKEN_REQUESTOR_ID   CHAR(11),
+ /* -AccountNumberRange */
+       PAN_RANGE            CHAR(19),
+ /* -AccountNumberIndicator */
+       PAN_INDICATOR        CHAR(2),
+ /* -TokenExpiration */
+       TOKEN_EXP_DATE       CHAR(4),
+ /* -TokenReferenceNumber */
+       TOKEN_REF_NUMBER     CHAR(48),
+ /* -TokenServiceProvider */
+       TOKEN_SER_PROVIDER   CHAR(11),
+ /* -TokenStatus */
+       TOKEN_STATUS         CHAR(1),
+ /* -TokenType */
+       TOKEN_TYPE           CHAR(2),
+ /* -ActivationVerificationResults */
+       HCE_ACTIVATE_RESULT  CHAR(1),
+ /* -AAMVelocityResult */
+       AAM_VELOCITY_RESULT  CHAR(2),
+ /* -LUKElapsedTime */
+       LUK_ELAPSED_TIME     SMALLINT,
+ /* -LUKTransactionCount */
+       LUK_TRAN_COUNT       SMALLINT,
+ /* -LUKTransactionAmount */
+       LUK_AMT_TRAN         DECIMAL(18),
+ /* -TokenDeviceType */
+       TOKEN_DEVICE_TYPE    CHAR(2),
+ /* -TokenDeviceLocation */
+       TOKEN_DEVICE_LOC     CHAR(25),
+ /* -TokenReferenceNumberExtension */
+       TOKEN_REF_NUMBER_EXT CHAR(16),
+ /* -TokenVersion */
+       TOKEN_VERSION        CHAR(6),
+ /* -TokenCardSequenceNumber */
+       TOKEN_CARD_SEQ_NO    CHAR(3),
+ /* -TokenActionCode */
+       TOKEN_ACT_CODE       CHAR(2),
+ /* -TokenStatusCode */
+       TOKEN_STATUS_CODE    CHAR(2),
+ /* -TokenIssuerProcessor */
+       TOKEN_ISSUER_PROC    CHAR(8),
+ /* -TokenRequestTimestamp */
+       TOKEN_REQ_TSTAMP     CHAR(16),
+ /* -TokenResponseTimestamp */
+       TOKEN_RESP_TSTAMP    CHAR(16),
+ /* -TimeAtTokenServiceProvider */
+       TOKEN_TIME_AT_TSP    CHAR(5),
+ /* -AcquirerRoutingNumber */
+       ACQ_ROUTING_NO       CHAR(11),
+ /* -IssuerRoutingNumber */
+       ISS_ROUTING_NO       CHAR(11),
+ /* -TransferRoutingNumber */
+       TRANS_ROUTING_NO     CHAR(11),
+ /* -DestinationRoutingNumber */
+       DEST_ROUTING_NO      CHAR(11),
+ /* -NetworkTraceNumber */
+       AUTH_LCYCLE_TRACE    CHAR(15),
+ /* */
+       ADDL_TRAN_DISP       CHAR(2),
+ /* -SwiftCode */
+       SWIFT_CODE           CHAR(11),
+ /* -IFSCCode */
+       IFSC_CODE            CHAR(11),
+ /* -LocalRetrievalReferenceNumber */
+       LOCAL_RETRIEVAL_REF_NO CHAR(12),
+ /* -VisaAtmTransactionID */
+       VISA_ATM_TRAN_ID     CHAR(7),
+ /* -DomainControlRestriction */
+       DOMAIN_CTL_RESTR     CHAR(2),
+ /* -AcquirerPrivateData */
+       DATA_PRIV_ACQ_FMT    SMALLINT NOT NULL,
+ /* -AcquirerReferenceData */
+       REF_DATA_ACQ_FMT     SMALLINT NOT NULL,
+ /* -IssuerPrivateData */
+       DATA_PRIV_ISS_FMT    SMALLINT NOT NULL,
+ /* -95:IssuerReferenceData */
+       REF_DATA_ISS_FMT     SMALLINT NOT NULL,
+ /* -CardStyle */
+       CARD_STYLE           CHAR(3),
+ /* -SplitTransType */
+       SPLIT_TRANS_TYPE     CHAR(1),
+ /* -SplitTransInd  */
+       SPLIT_TRANS_IND      SMALLINT,
+ /* -ProcessFlag1 */
+       PROC_FLGS1           VARCHAR(2) FOR BIT DATA NOT NULL,
+ /* -ProcessFlag2 */
+       PROC_FLGS2           VARCHAR(2) FOR BIT DATA NOT NULL,
+ /* -ProcessFlag3 */
+       PROC_FLGS3           VARCHAR(2) FOR BIT DATA NOT NULL,
+ /* -ProcessFlag4 */
+       PROC_FLGS4           VARCHAR(2) FOR BIT DATA NOT NULL,
+ /* -PinBypassFlag */
+ /* -ProcessBillingFlag1 */
+       PROC_BILLING_FLGS1   VARCHAR(2) FOR BIT DATA NOT NULL,
+ /* -ProcessBillingFlag2 */
+       PROC_BILLING_FLGS2   VARCHAR(2) FOR BIT DATA NOT NULL,
+ /* -ProcessBillingFlag3 */
+       PROC_BILLING_FLGS3   VARCHAR(2) FOR BIT DATA NOT NULL,
+ /* -ProcessBillingFlag4 */
+       PROC_BILLING_FLGS4   VARCHAR(2) FOR BIT DATA NOT NULL,
+ /* -35:Track2Data */
+       TRACK_2_DATA         VARCHAR(40) NOT NULL,
+ /* -CardAcceptorLocation */
+ /* -MerchantName */
+ /* -MerchantAddress */
+ /* -MerchantCity */
+ /* -MerchantLocation */
+       CARD_ACPT_NAME_LOC   VARCHAR(84) NOT NULL,
+       CRD_ACP_NAM_FMTFLG   CHAR(1) NOT NULL,
+ /* -44:AdditionalResponseData */
+       ADL_RESP_DATA        VARCHAR(99) NOT NULL,
+ /* -47:AdditionalDataAcquirer */
+ /* -CrossBorderInd */
+ /* -CrossBorderFee */
+ /* -CrossBorderCurrency */
+       ADL_DATA_PRIV_ACQ    VARCHAR(255) NOT NULL,
+ /* -48:AdditionalDataIssuer */
+ /* -CrossBorderInd */
+ /* -CrossBorderFee */
+ /* -CrossBorderCurrency */
+       ADL_DATA_PRIV_ISS    VARCHAR(255) NOT NULL,
+ /* -95:IssuerReferenceData */
+       REF_DATA_ISS         VARCHAR(99) NOT NULL,
+ /* -104:TransactionSpecificData */
+       TRAN_DESC            VARCHAR(100) NOT NULL,
+ /* -AdditionalDataNational */
+ /* -ElectronicCommerceIndicator */
+       ADL_DATA_NATIONAL    VARCHAR(999),
+ /* -AcquirerPrivateData */
+       DATA_PRIV_ACQ        VARCHAR(100) NOT NULL,
+ /* -AcquirerReferenceData */
+       REF_DATA_ACQ         VARCHAR(99) NOT NULL,
+ /* -IssuerPrivateData */
+       DATA_PRIV_ISS        VARCHAR(100) NOT NULL,
+ /* -TransactionUniqueData */
+ /* -AVS */
+       TRAN_UNIQUE_DATA     VARCHAR(50) NOT NULL,
+ /* -FeeData */
+       NET_UNIQUE_DAT_FEE   VARCHAR(80) NOT NULL,
+ /* -AdditionalDataFee */
+       ADTL_DATA_FEE        VARCHAR(254) NOT NULL,
+ /* -AdjustmentData */
+       EXTENSION_DATA_ADJ   VARCHAR(400) NOT NULL,
+ /* -TokenTransactionID */
+       TOKEN_TRANID         VARCHAR(99),
+ /* -RawMICR */
+       UNFORMATTED_MICR_DATA VARCHAR(48),
+ /* -AdditionalTransactionResult */
+       ADDL_TRAN_RESULT     VARCHAR(90),
+ /* -FalconData */
+       FALCON_DATA          VARCHAR(165),
+ /* -TransactionIndicators */
+       TRAN_INDICATORS      CHAR(2),
+       BRIDGE_ACQ_FLG       CHAR(1),
+       BRIDGE_ISS_FLG       CHAR(1),
+ /* -TransetID */
+       TRANSET_ID           CHAR(8),
+ /* -RouteListID */
+       ROUTELIST_ID         CHAR(8),
+ /* -CardOptID */
+       CARD_OPT_ID          CHAR(8),
+ /* -APProcessID */
+       AP_PROCESS_ID        CHAR(6),
+ /* -APRuleID */
+       AP_RULE_ID           CHAR(8),
+ /* -APFileNo */
+       AP_FILE_NO           SMALLINT,
+ /* -BinLength */
+       BIN_LENGTH           SMALLINT,
+ /* -AccountNumberIdentifier */
+       PAN_IDENTIFIER       CHAR(25),
+ /* -PaymentAccountReference */
+       PYMT_ACCT_REF        CHAR(29),
+ /* -MerchantDisplayName */
+       MERCH_DISP_NAME      VARCHAR(100),
+ /* -EMV3DSecureAddressVerificationBy */
+       EMV_3D_CAVV_VER_BY   CHAR(1),
+ /* -EMV3DSecureTransactionID */
+       EMV_3D_TRAN_ID       CHAR(36),
+ /* */
+       AFT_CRD_BILL         INTEGER,
+       ANCILRY_SRVC_CHARGES VARCHAR(84),
+ /* -CooperScore */
+       COOPER_SCORE         CHAR(3),
+ /* -CooperReason */
+       COOPER_REASON        CHAR(2),
+ /* */
+       PGRM_PROTOCOL        CHAR(1),
+       DIR_SERV_TRAN_ID     CHAR(36),
+       TRAN_INT_CLASS       CHAR(2),
+       ACL_ECOM_IND         CHAR(2),
+       COUNTRY_PAN          CHAR(3),
+       ACQ_FIID             CHAR(4),
+       ISS_FIID             CHAR(4),
+ /* -TokenWalletID */
+       TOKEN_WALLET_ID      CHAR(3),
+ /* -TokenReferenceID */
+       TOKEN_REF_NO_2       VARCHAR(48),
+ /* */
+       TRUSTED_MERCH_FLG    CHAR(1),
+       OVERDRAFT_IND        CHAR(3),
+       TOKEN_CRYPTOGRAM     CHAR(28),
+       WLT_ID               CHAR(10),
+       FEE_GROUP            CHAR(6),
+       PAY_SENDER_NAME      VARCHAR(41),
+       PAY_RECEIVER_NAME    VARCHAR(41),
+ /* -AmexFraudData */
+       AMX_FRAUD_DATA       VARCHAR(51),
+ /* -P1CAccountToken */
+       P1C_ACCT_TOKEN       CHAR(20),
+ /* -P1CCardholderToken */
+       P1C_CRDHLDR_TOKEN    CHAR(20),
+ /* -P1CAdditionalResponseData */
+       P1C_ADL_RESP_DATA    CHAR(3),
+ /* -PRMAdditionalResponseData */
+       PRM_ADL_RESP_DATA    CHAR(3),
+ /* -SAPAdditionalResponseData */
+       SAP_ADL_RESP_DATA    CHAR(3),
+ /* -GMASMerchantID */
+       GMAS_MERCH_ID        CHAR(16),
+ /* -MerchantSchemeNumber */
+       MERCH_SCHEME_NUMBER  CHAR(16),
+ /* */
+       ECOM_DATA            VARCHAR(99),
+ /* -ForwardingInstitutionId */
+       INST_ID_FRWD         CHAR(11),
+ /* -TokenDeviceName */
+       TOKEN_DEVICE_NAME    CHAR(25),
+ /* -VisaTransactionID */
+       VISA_TRANSACTION_ID  VARCHAR(15),
+ /* -TokenEntity */
+       TOKEN_ENTITY         CHAR(2),
+ /* -IssuerScriptFlag */
+       ISSUER_SCRIPT_FLG    CHAR(1),
+ /* -SenderDetail */
+       SELLER_EMAIL         VARCHAR(40),
+       SELLER_PHONE         VARCHAR(20),
+       SELLER_ID            VARCHAR(20),
+       FORCE_POST_DROP_IND  CHAR(1),
+       FP_HOLD_MATCH_FLG    CHAR(1),
+ /* -OriginalForwardingInstitutionId */
+       ODE_INST_ID_FRWD     CHAR(11),
+ /* -OriginalTransmissionDateTime */
+       ODE_DATE_TIME_XMIT   CHAR(10),
+ /* -TransmissionDateTime */
+       DATE_TIME_XMIT       CHAR(10),
+ /* -PanTokenBinLength */
+       PAN_TOKEN_BIN_LEN    SMALLINT,
+ /* */
+       TOKEN_DEVICE_ID      VARCHAR(48),
+       WALLET_REASON        CHAR(6),
+ /* */ 
+  CONSTRAINT X0FIN_RECORD&YYYYMM
+    PRIMARY KEY
+      (TSTAMP_TRANS,UNIQUENESS_KEY)
+)
+  IN &custqual..FR&YYYYMM
+  PARTITION BY RANGE (TSTAMP_TRANS ASC)
+   (PARTITION 1 ENDING AT ('&YYYYMM0199999999') INCLUSIVE,
+    PARTITION 2 ENDING AT ('&YYYYMM0299999999') INCLUSIVE,
+    PARTITION 3 ENDING AT ('&YYYYMM0399999999') INCLUSIVE,
+    PARTITION 4 ENDING AT ('&YYYYMM0499999999') INCLUSIVE,
+    PARTITION 5 ENDING AT ('&YYYYMM0599999999') INCLUSIVE,
+    PARTITION 6 ENDING AT ('&YYYYMM0699999999') INCLUSIVE,
+    PARTITION 7 ENDING AT ('&YYYYMM0799999999') INCLUSIVE,
+    PARTITION 8 ENDING AT ('&YYYYMM0899999999') INCLUSIVE,
+    PARTITION 9 ENDING AT ('&YYYYMM0999999999') INCLUSIVE,
+    PARTITION 10 ENDING AT ('&YYYYMM1099999999') INCLUSIVE,
+    PARTITION 11 ENDING AT ('&YYYYMM1199999999') INCLUSIVE,
+    PARTITION 12 ENDING AT ('&YYYYMM1299999999') INCLUSIVE,
+    PARTITION 13 ENDING AT ('&YYYYMM1399999999') INCLUSIVE,
+    PARTITION 14 ENDING AT ('&YYYYMM1499999999') INCLUSIVE,
+    PARTITION 15 ENDING AT ('&YYYYMM1599999999') INCLUSIVE,
+    PARTITION 16 ENDING AT ('&YYYYMM1699999999') INCLUSIVE,
+    PARTITION 17 ENDING AT ('&YYYYMM1799999999') INCLUSIVE,
+    PARTITION 18 ENDING AT ('&YYYYMM1899999999') INCLUSIVE,
+    PARTITION 19 ENDING AT ('&YYYYMM1999999999') INCLUSIVE,
+    PARTITION 20 ENDING AT ('&YYYYMM2099999999') INCLUSIVE,
+    PARTITION 21 ENDING AT ('&YYYYMM2199999999') INCLUSIVE,
+    PARTITION 22 ENDING AT ('&YYYYMM2299999999') INCLUSIVE,
+    PARTITION 23 ENDING AT ('&YYYYMM2399999999') INCLUSIVE,
+    PARTITION 24 ENDING AT ('&YYYYMM2499999999') INCLUSIVE,
+    PARTITION 25 ENDING AT ('&YYYYMM2599999999') INCLUSIVE,
+    PARTITION 26 ENDING AT ('&YYYYMM2699999999') INCLUSIVE,
+    PARTITION 27 ENDING AT ('&YYYYMM2799999999') INCLUSIVE,
+    PARTITION 28 ENDING AT ('&YYYYMM2899999999') INCLUSIVE)
+;
+
+CREATE UNIQUE INDEX &custqual..X0FIN_RECORD&YYYYMM
+  ON &custqual..FIN_RECORD&YYYYMM
+(
+       TSTAMP_TRANS         ASC,
+       UNIQUENESS_KEY       ASC
+)
+  USING STOGROUP &sgcomn.
+    PRIQTY &fin_transactions. SECQTY &msecqty.
+  FREEPAGE 0 PCTFREE 0
+  BUFFERPOOL &bp02.
+  CLOSE NO
+;
+
+CREATE INDEX &custqual..X1FIN_RECORD&YYYYMM
+  ON &custqual..FIN_RECORD&YYYYMM
+(
+       INSERT_SEQUENCE_NO   ASC,
+       TSTAMP_TRANS         ASC,
+       UNIQUENESS_KEY       ASC,
+       TRAN_DISPOSITION     ASC
+)
+  USING STOGROUP &sgcomn.
+    PRIQTY &fin_transactions. SECQTY &msecqty.
+  FREEPAGE 0 PCTFREE 0
+  BUFFERPOOL &bp02.
+  CLOSE NO
+;
+
+ /* @NET_ID_ACQ,11,HOUR; */
+CREATE INDEX &custqual..X2FIN_RECORD&YYYYMM
+  ON &custqual..FIN_RECORD&YYYYMM
+(
+       NET_ID_ACQ           ASC,
+       TSTAMP_TRANS         ASC,
+       UNIQUENESS_KEY       ASC
+)
+  USING STOGROUP &sgcomn.
+    PRIQTY &fin_transactions. SECQTY &msecqty.
+  FREEPAGE 0 PCTFREE 0
+  BUFFERPOOL &bp02.
+  CLOSE NO
+;
+
+ /* @NET_ID_ISS,12,HOUR; */
+CREATE INDEX &custqual..X3FIN_RECORD&YYYYMM
+  ON &custqual..FIN_RECORD&YYYYMM
+(
+       NET_ID_ISS           ASC,
+       TSTAMP_TRANS         ASC,
+       UNIQUENESS_KEY       ASC
+)
+  USING STOGROUP &sgcomn.
+    PRIQTY &fin_transactions. SECQTY &msecqty.
+  FREEPAGE 0 PCTFREE 0
+  BUFFERPOOL &bp02.
+  CLOSE NO
+;
+
+COMMENT ON TABLE &custqual..FIN_RECORD&YYYYMM IS '<FR&YYYYMM>'
+;
+
+COMMIT
+;
